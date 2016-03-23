@@ -1,0 +1,19 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad3" name="Login" defaultSuccessPortDefinition="tlads0#ad3#spd3" defaultErrorPortDefinition="tlads0#ad3#epd3">
+  <Operations>
+    <Login gr:x="375" gr:y="55" id="tlads0#ad3#lgu1" name="Login">
+      <SuccessFlow id="tlads0#ad3#lgu1#sf9" to="tlads0#ad3#spd3" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad3#lgu1#ef4" to="tlads0#ad3#epd3" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad3#lgu1#ef5" to="tlads0#ad3#epd3" automaticCoupling="true" code="Internal Error"/>
+    </Login>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad3#ipd3" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad3#ipd3#pdp6" name="Password"/>
+    <PortDefinitionParameter id="tlads0#ad3#ipd3#pdp7" name="Username"/>
+    <SuccessFlow id="tlads0#ad3#ipd3#sf8" to="tlads0#ad3#lgu1">
+      <ParameterBinding id="tlads0#ad3#ipd3#sf8#par50" source="tlads0#ad3#ipd3#pdp6" target="password" name="Password - Password"/>
+      <ParameterBinding id="tlads0#ad3#ipd3#sf8#par51" source="tlads0#ad3#ipd3#pdp7" target="username" name="Username - Username"/>
+    </SuccessFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad3#spd3" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad3#epd3" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

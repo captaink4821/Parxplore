@@ -1,0 +1,41 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad1" name="Save Animal" defaultSuccessPortDefinition="tlads0#ad1#spd1" defaultErrorPortDefinition="tlads0#ad1#epd1">
+  <Operations>
+    <Create gr:x="335" gr:y="15" id="tlads0#ad1#cru1" dataBinding="cls2">
+      <SuccessFlow id="tlads0#ad1#cru1#sf2" to="tlads0#ad1#spd1" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad1#cru1#ef1" to="tlads0#ad1#epd1" automaticCoupling="true"/>
+    </Create>
+    <Update gr:x="350" gr:y="395" id="tlads0#ad1#mfu1" dataBinding="cls2">
+      <ConditionalExpression id="tlads0#ad1#mfu1#sc2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="tlads0#ad1#mfu1#sc2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <SuccessFlow id="tlads0#ad1#mfu1#sf5" to="tlads0#ad1#spd1" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad1#mfu1#ef2" to="tlads0#ad1#epd1" automaticCoupling="true"/>
+    </Update>
+    <Switch gr:x="205" gr:y="280" id="tlads0#ad1#switch1" name="Animal Exists">
+      <SuccessFlow id="tlads0#ad1#switch1#sf3" to="tlads0#ad1#cru1" automaticCoupling="true" code="&lt;EMPTY&gt;"/>
+      <SuccessFlow id="tlads0#ad1#switch1#sf4" to="tlads0#ad1#mfu1" automaticCoupling="true"/>
+    </Switch>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad1#ipd1" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp1" name="animal id"/>
+    <SuccessFlow id="tlads0#ad1#ipd1#sf1" to="tlads0#ad1#switch1">
+      <ParameterBinding id="tlads0#ad1#ipd1#sf1#par1" source="tlads0#ad1#ipd1#pdp1" target="switch" name="animal id - Switch"/>
+    </SuccessFlow>
+    <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp4" name="Seen"/>
+    <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp3" name="Species"/>
+    <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp2" name="Name"/>
+    <DataFlow id="tlads0#ad1#ipd1#df2" to="tlads0#ad1#cru1">
+      <ParameterBinding id="tlads0#ad1#ipd1#df2#par46" source="tlads0#ad1#ipd1#pdp2" target="cls2#att19" name="Name - Name"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df2#par47" source="tlads0#ad1#ipd1#pdp4" target="cls2#att21" name="Seen - Seen"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df2#par48" source="tlads0#ad1#ipd1#pdp3" target="cls2#att20" name="Species - Species"/>
+    </DataFlow>
+    <DataFlow id="tlads0#ad1#ipd1#df3" to="tlads0#ad1#mfu1" gr:bendpoints="-1.0 176.0">
+      <ParameterBinding id="tlads0#ad1#ipd1#df3#par42" source="tlads0#ad1#ipd1#pdp2" target="cls2#att19" name="Name - Name"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df3#par43" source="tlads0#ad1#ipd1#pdp4" target="cls2#att21" name="Seen - Seen"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df3#par44" source="tlads0#ad1#ipd1#pdp3" target="cls2#att20" name="Species - Species"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df3#par45" source="tlads0#ad1#ipd1#pdp1" target="tlads0#ad1#mfu1#sc2#kcond2.cls2#att18" name="animal id - KeyCondition2 [oid]"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad1#spd1" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad1#epd1" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

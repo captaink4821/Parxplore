@@ -1,0 +1,27 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad4" name="Register" defaultSuccessPortDefinition="tlads0#ad4#spd4" defaultErrorPortDefinition="tlads0#ad4#epd4">
+  <Operations>
+    <Register gr:x="390" gr:y="50" id="tlads0#ad4#ru1" name="Register" gr:showAllParts="true">
+      <SuccessFlow id="tlads0#ad4#ru1#sf11" to="tlads0#ad4#spd4">
+        <ParameterBinding id="tlads0#ad4#ru1#sf11#par20" source="password" target="tlads0#ad4#spd4#pdp12" name="Password - Password"/>
+        <ParameterBinding id="tlads0#ad4#ru1#sf11#par24" source="username" target="tlads0#ad4#spd4#pdp11" name="Username - Username"/>
+      </SuccessFlow>
+      <ErrorFlow id="tlads0#ad4#ru1#ef6" to="tlads0#ad4#epd4" automaticCoupling="true"/>
+      <Property id="tlads0#ad4#ru1#prop1" name="Email"/>
+    </Register>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad4#ipd4" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad4#ipd4#sf10" to="tlads0#ad4#ru1">
+      <ParameterBinding id="tlads0#ad4#ipd4#sf10#par5" source="tlads0#ad4#ipd4#pdp8" target="password" name="Password - Password"/>
+      <ParameterBinding id="tlads0#ad4#ipd4#sf10#par6" source="tlads0#ad4#ipd4#pdp9" target="MUser#att14" name="email - email"/>
+      <ParameterBinding id="tlads0#ad4#ipd4#sf10#par8" source="tlads0#ad4#ipd4#pdp10" target="username" name="Username - Username"/>
+    </SuccessFlow>
+    <PortDefinitionParameter id="tlads0#ad4#ipd4#pdp8" name="Password"/>
+    <PortDefinitionParameter id="tlads0#ad4#ipd4#pdp9" name="email"/>
+    <PortDefinitionParameter id="tlads0#ad4#ipd4#pdp10" name="Username"/>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad4#spd4" name="Success Port" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad4#spd4#pdp11" name="Username"/>
+    <PortDefinitionParameter id="tlads0#ad4#spd4#pdp12" name="Password"/>
+  </SuccessPortDefinition>
+  <ErrorPortDefinition id="tlads0#ad4#epd4" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

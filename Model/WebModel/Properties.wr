@@ -1,4 +1,4 @@
-<WebModel defaultLocale="lcl1" edtLvl="Mobile Platform Community Edition # 20160322" edtLvlCtrl="TW9iaWxlIFBsYXRmb3JtIENvbW11bml0eSBFZGl0aW9uICMgMjAxNjAzMjI=">
+<WebModel xmlns:layout="http://www.webratio.com/2006/WebML/Layout" defaultLocale="lcl1" edtLvl="Mobile Platform Community Edition # 20160303" edtLvlCtrl="TW9iaWxlIFBsYXRmb3JtIENvbW11bml0eSBFZGl0aW9uICMgMjAxNjAzMDM=" layout:attributeLayout="MobileDefault/Default">
   <Locale id="lcl1" language="en">
     <PatternConfiguration deviceDefault="true" type="boolean" pattern="yes|no"/>
     <PatternConfiguration deviceDefault="true" type="decimal" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>

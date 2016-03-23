@@ -1,0 +1,76 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="10" gr:y="-65" id="av1#scr4" name="Login">
+  <ViewComponents>
+    <Form gr:x="20" gr:y="0" id="av1#scr4#enu2" name="Login" fieldOrder="av1#scr4#enu2#fld3 av1#scr4#enu2#fld6" eventOrder="av1#scr4#enu2#oslte8 av1#scr4#enu2#oslte11">
+      <Field id="av1#scr4#enu2#fld6" name="Password" type="password" modifiable="true" preloaded="true"/>
+      <Field id="av1#scr4#enu2#fld3" name="Username" type="string" contentType="text/plain" modifiable="true" preloaded="true"/>
+      <Events>
+        <OnSelectEvent id="av1#scr4#enu2#oslte8" name="Login" validate="true">
+          <NavigationFlow id="av1#scr4#enu2#oslte8#nf5" to="av1#act3">
+            <ParameterBinding id="av1#scr4#enu2#oslte8#nf5#par2" source="av1#scr4#enu2#fld6" target="av1#act3.tlads0#ad3#ipd3#pdp6" name="Password - Password"/>
+            <ParameterBinding id="av1#scr4#enu2#oslte8#nf5#par3" source="av1#scr4#enu2#fld3" target="av1#act3.tlads0#ad3#ipd3#pdp7" name="Username - Username"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scr4#enu2#oslte11" name="Sign Up" validate="true">
+          <NavigationFlow id="av1#scr4#enu2#oslte11#nf11" to="av1#scr6#enu4" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </Form>
+    <Message gr:x="155" gr:y="75" id="av1#scr4#mssu1" name="Login Fail"/>
+    <Message gr:x="0" gr:y="110" id="av1#scr4#mssu3" name="Registration Message"/>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr4#enu2">
+          <layout:Field field="av1#scr4#enu2#fld3"/>
+          <layout:Field field="av1#scr4#enu2#fld6"/>
+          <layout:Event event="av1#scr4#enu2#oslte8" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr4#enu2#oslte11" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr4#mssu1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr4#mssu3"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>
