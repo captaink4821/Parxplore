@@ -15,7 +15,7 @@
         </OnSelectEvent>
         <OnSelectEvent id="av1#scr2#dau1#oslte7" name="Delete">
           <NavigationFlow id="av1#scr2#dau1#oslte7#nf8" to="av1#act2">
-            <ParameterBinding id="av1#scr2#dau1#oslte7#nf8#par22" source="data.cls1#att1" target="av1#act2.tlads0#ad2#ipd2#pdp5" name="oid - oid"/>
+            <ParameterBinding id="av1#scr2#dau1#oslte7#nf8#par22" source="data.cls2#att18" target="av1#act2.tlads0#ad2#ipd2#pdp5" name="oid - oid"/>
           </NavigationFlow>
         </OnSelectEvent>
       </Events>
