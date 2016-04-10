@@ -2,8 +2,10 @@
 
 <Plugins>
   <Plugin id="com.webratio.accountmanager" dir="C:\Users\admin\AppData\Local\Temp\native_plugins\1D853E8B917DFFFD488B887933E4F426"/>
+  <Plugin id="com.webratio.cordova.camera" dir="C:\Users\admin\AppData\Local\Temp\native_plugins\5B763CAE67B24F080AC09236ACD8CD62"/>
   <Plugin id="com.webratio.phonegap.plugins.dialogs" dir="C:\Users\admin\AppData\Local\Temp\native_plugins\975F6166EAB31EF1E89BC150C19B0A82\com.webratio.phonegap.plugins.dialogs"/>
   <Plugin id="com.webratio.phonegap.plugins.ionic.keyboard" dir="C:\Users\admin\AppData\Local\Temp\native_plugins\B7A42F58BB9A975AC4B64BB50C2C41B2\com.webratio.phonegap.plugins.ionic.keyboard"/>
+  <Plugin id="nl.x-services.plugins.actionsheet" dir="C:\Users\admin\AppData\Local\Temp\native_plugins\14310A56DCF416ABEB0948DCCD22CBDD\nl.x-services.plugins.actionsheet"/>
   <Plugin id="org.apache.cordova.device" dir="C:\Users\admin\AppData\Local\Temp\native_plugins\C4B534883FE4B20858E325C473A5A407\org.apache.cordova.device"/>
   <Plugin id="org.apache.cordova.file" dir="C:\Users\admin\AppData\Local\Temp\native_plugins\186485B1634508CE36EAC62C0440CFA1\org.apache.cordova.file"/>
   <Plugin id="org.apache.cordova.file-transfer" dir="C:\Users\admin\AppData\Local\Temp\native_plugins\5AA92BD6D2043ADA80512BB230B36A24\org.apache.cordova.file-transfer"/>

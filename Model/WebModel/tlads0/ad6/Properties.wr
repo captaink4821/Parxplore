@@ -1,0 +1,26 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad6" name="Add Sighting" defaultSuccessPortDefinition="tlads0#ad6#spd6" defaultErrorPortDefinition="tlads0#ad6#epd6">
+  <Operations>
+    <Create gr:x="400" gr:y="50" id="tlads0#ad6#cru2" dataBinding="cls14">
+      <SuccessFlow id="tlads0#ad6#cru2#sf15" to="tlads0#ad6#spd6" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad6#cru2#ef8" to="tlads0#ad6#epd6" automaticCoupling="true"/>
+    </Create>
+    <Selector gr:x="270" gr:y="280" id="tlads0#ad6#seu2" dataBinding="MUser">
+      <DataFlow id="tlads0#ad6#seu2#df1" to="tlads0#ad6#cru2">
+        <ParameterBinding id="tlads0#ad6#seu2#df1#par56" source="data.mUserOID" target="cls14#att143" name="oid - user_id"/>
+      </DataFlow>
+    </Selector>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad6#ipd6" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp16" name="image"/>
+    <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp15" name="address"/>
+    <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp14" name="name"/>
+    <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp13" name="animal_id"/>
+    <SuccessFlow id="tlads0#ad6#ipd6#sf14" to="tlads0#ad6#cru2">
+      <ParameterBinding id="tlads0#ad6#ipd6#sf14#par12" source="tlads0#ad6#ipd6#pdp15" target="cls13#att136" name="address - address"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#sf14#par13" source="tlads0#ad6#ipd6#pdp13" target="cls13#att135" name="animal_id - animal_id"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#sf14#par21" source="tlads0#ad6#ipd6#pdp16" passing="true" name="image - PASSING"/>
+    </SuccessFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad6#spd6" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad6#epd6" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

@@ -18,7 +18,6 @@
         <OnSelectEvent id="av1#scr1#enu3#oslte10" name="search" validate="true">
           <NavigationFlow id="av1#scr1#enu3#oslte10#nf17" to="av1#scr1#pwu1">
             <ParameterBinding id="av1#scr1#enu3#oslte10#nf17#par32" source="av1#scr1#enu3#fld4" target="av1#scr1#pwu1#sc6#acond3" name="Keyword - Name Condition"/>
-            <ParameterBinding id="av1#scr1#enu3#oslte10#nf17#par33" source="av1#scr1#enu3#fld5" target="av1#scr1#pwu1#sc6#acond5" name="Keyword - Seen Condition"/>
             <ParameterBinding id="av1#scr1#enu3#oslte10#nf17#par34" source="av1#scr1#enu3#fld4" target="av1#scr1#pwu1#sc6#acond4" name="Keyword - Species Condition"/>
           </NavigationFlow>
         </OnSelectEvent>

@@ -18,7 +18,7 @@
     <AssociationRole1 id="MUser2MRole" name="AppUserToAppRole" maxCard="N"/>
     <AssociationRole2 id="MRole2MUser" name="AppRoleToAppUser" maxCard="1"/>
   </Association>
-  <Class gr:x="305" gr:y="355" id="cls2" name="Animal" duration="persistent" attributeOrder="cls2#att18 cls2#att19 cls2#att20 cls2#att21 cls2#att1 cls2#att2 cls2#att5 cls2#att10 cls2#att11 cls2#att12" serverResourceMethods="read create update delete" serverResource="Animal" serverClass="cls1">
+  <Class gr:x="440" gr:y="340" id="cls2" name="Animal" duration="persistent" attributeOrder="cls2#att18 cls2#att19 cls2#att20 cls2#att21 cls2#att1 cls2#att2 cls2#att5 cls2#att10 cls2#att11 cls2#att12" serverResourceMethods="read create update delete" serverResource="Animal" serverClass="cls1">
     <Attribute id="cls2#att18" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
     <Attribute id="cls2#att21" name="Seen" type="boolean" serverProperty="seen" serverAttribute="cls1#att4"/>
     <Attribute id="cls2#att20" name="Species" type="string" serverProperty="species" serverAttribute="cls1#att3"/>
@@ -29,5 +29,20 @@
     <Attribute id="cls2#att10" name="remote createdAt" type="timestamp" key="false" serverAttribute="cls1#att5" serverProperty="createdAt"/>
     <Attribute id="cls2#att11" name="remote updatedAt" type="timestamp" key="false" serverAttribute="cls1#att6" serverProperty="updatedAt"/>
     <Attribute id="cls2#att12" name="park_id" type="integer" key="false" serverAttribute="cls1#att34" serverProperty="parkId"/>
+  </Class>
+  <Class id="cls14" name="Animal_Sighting" duration="persistent" serverClass="cls11" serverResource="AnimalSighting" serverResourceMethods="create delete read update" gr:x="110" gr:y="340">
+    <Attribute id="cls14#att141" name="oid" type="integer" key="true" specialBehavior="implicitOid"/>
+    <Attribute id="cls14#att142" name="remoteOid" type="integer" key="false" serverAttribute="cls11#att33" serverProperty="oid" specialBehavior="remoteOid"/>
+    <Attribute id="cls14#att143" name="user_id" type="integer" key="false" serverAttribute="cls11#att37" serverProperty="userId"/>
+    <Attribute id="cls14#att144" name="comment" type="string" key="false" serverAttribute="cls11#att40" serverProperty="comment"/>
+    <Attribute id="cls14#att145" name="remote createdAt" type="timestamp" key="false" serverAttribute="cls11#att64" serverProperty="createdAt"/>
+    <Attribute id="cls14#att146" name="remote updatedAt" type="timestamp" key="false" serverAttribute="cls11#att65" serverProperty="updatedAt"/>
+    <Attribute id="cls14#att147" name="animal_id" type="integer" key="false" serverAttribute="cls11#att87" serverProperty="animalId"/>
+    <Attribute id="cls14#att148" name="address" type="string" key="false" serverAttribute="cls11#att91" serverProperty="address"/>
+    <Attribute id="cls14#att149" name="latitude" type="float" key="false" serverAttribute="cls11#att90" serverProperty="latitude"/>
+    <Attribute id="cls14#att150" name="longitude" type="float" key="false" serverAttribute="cls11#att89" serverProperty="longitude"/>
+    <Attribute id="cls14#att151" name="image" type="blob" contentType="image" key="false" serverAttribute="cls11#att13" serverProperty="image"/>
+    <Attribute id="cls14#att152" name="createdAt" type="timestamp" key="false" specialBehavior="unsentCreateTimestamp"/>
+    <Attribute id="cls14#att153" name="updatedAt" type="timestamp" key="false" specialBehavior="unsentUpdateTimestamp"/>
   </Class>
 </DomainModel>

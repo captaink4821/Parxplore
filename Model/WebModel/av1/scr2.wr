@@ -1,6 +1,6 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="770" gr:y="190" id="av1#scr2" name="Animal Details">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="770" gr:y="175" id="av1#scr2" name="Animal Details">
   <ViewComponents>
-    <Details gr:x="0" gr:y="0" id="av1#scr2#dau1" name="Animal Details" eventOrder="av1#scr2#dau1#oslte5 av1#scr2#dau1#oslte3 av1#scr2#dau1#oslte7" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21">
+    <Details gr:x="0" gr:y="15" id="av1#scr2#dau1" name="Animal Details" eventOrder="av1#scr2#dau1#oslte5 av1#scr2#dau1#oslte3 av1#scr2#dau1#oslte7 av1#scr2#dau1#oslte14" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21">
       <ConditionalExpression id="av1#scr2#dau1#sc1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="av1#scr2#dau1#sc1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </ConditionalExpression>
@@ -18,20 +18,43 @@
             <ParameterBinding id="av1#scr2#dau1#oslte7#nf8#par22" source="data.cls2#att18" target="av1#act2.tlads0#ad2#ipd2#pdp5" name="oid - oid"/>
           </NavigationFlow>
         </OnSelectEvent>
+        <OnSelectEvent id="av1#scr2#dau1#oslte14" name="Add Sighting">
+          <NavigationFlow id="av1#scr2#dau1#oslte14#nf22" to="av1#scr7#seu3">
+            <ParameterBinding id="av1#scr2#dau1#oslte14#nf22#par57" source="data.cls2#att18" target="av1#scr7#seu3#sc5#kcond5.cls2#att18" name="oid - KeyCondition5 [oid]"/>
+          </NavigationFlow>
+        </OnSelectEvent>
       </Events>
     </Details>
+    <Message gr:x="125" gr:y="0" id="av1#scr2#mssu4" name="Message 4"/>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Component componentId="av1#scr2#dau1">
-          <layout:Event event="av1#scr2#dau1#oslte5" eventType="OnSelectEvent"/>
-          <layout:Event event="av1#scr2#dau1#oslte3" eventType="OnSelectEvent"/>
-          <layout:Event event="av1#scr2#dau1#oslte7" eventType="OnSelectEvent"/>
           <layout:Attribute attribute="cls2#att19"/>
           <layout:Attribute attribute="cls2#att20"/>
           <layout:Attribute attribute="cls2#att21"/>
+          <layout:Event event="av1#scr2#dau1#oslte5" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr2#dau1#oslte3" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr2#dau1#oslte7" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr2#dau1#oslte14" eventType="OnSelectEvent"/>
         </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr2#mssu4"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
