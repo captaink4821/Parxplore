@@ -12,8 +12,8 @@
   <InputPortDefinition id="tlads0#ad4#ipd4" gr:x="0" gr:y="30">
     <SuccessFlow id="tlads0#ad4#ipd4#sf10" to="tlads0#ad4#ru1">
       <ParameterBinding id="tlads0#ad4#ipd4#sf10#par5" source="tlads0#ad4#ipd4#pdp8" target="password" name="Password - Password"/>
-      <ParameterBinding id="tlads0#ad4#ipd4#sf10#par6" source="tlads0#ad4#ipd4#pdp9" target="MUser#att14" name="email - email"/>
       <ParameterBinding id="tlads0#ad4#ipd4#sf10#par8" source="tlads0#ad4#ipd4#pdp10" target="username" name="Username - Username"/>
+      <ParameterBinding id="tlads0#ad4#ipd4#sf10#par7" source="tlads0#ad4#ipd4#pdp9" target="MUser#att33" name="email - email"/>
     </SuccessFlow>
     <PortDefinitionParameter id="tlads0#ad4#ipd4#pdp8" name="Password"/>
     <PortDefinitionParameter id="tlads0#ad4#ipd4#pdp9" name="email"/>
