@@ -1,0 +1,54 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="100" gr:y="585" id="av1#scr8" name="Profile">
+  <ViewComponents>
+    <Details gr:x="0" gr:y="0" id="av1#scr8#dau2" name="User Profile" dataBinding="MUser" displayAttributes="mUsername MUser#att33 MUser#att15 MUser#att16 MUser#att154" eventOrder="av1#scr8#dau2#oslte16" gr:showAllParts="false">
+      <Events>
+        <OnSelectEvent id="av1#scr8#dau2#oslte16" name="Sightings">
+          <NavigationFlow id="av1#scr8#dau2#oslte16#nf27" to="av1#scr9#pwu2">
+            <ParameterBinding id="av1#scr8#dau2#oslte16#nf27#par68" source="data.mUserOID" target="av1#scr9#pwu2#sc10#acond2" name="oid - user"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Details>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr8#dau2">
+          <layout:Event event="av1#scr8#dau2#oslte16" eventType="OnSelectEvent"/>
+          <layout:Attribute attribute="mUsername"/>
+          <layout:Attribute attribute="MUser#att33"/>
+          <layout:Attribute attribute="MUser#att15"/>
+          <layout:Attribute attribute="MUser#att16"/>
+          <layout:Attribute attribute="MUser#att154"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Event eventType="BackEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

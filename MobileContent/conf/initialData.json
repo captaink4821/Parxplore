@@ -1,8 +1,1 @@
-{
-  "data.Animal" : [ {
-    "oid" : 1,
-    "Name" : "Brown Bear",
-    "Species" : "Bear",
-    "Native" : 1
-  } ]
-}
+{}

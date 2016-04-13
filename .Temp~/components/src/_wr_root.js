@@ -34,12 +34,15 @@
 	import * as mod10 from "wrm\/comp\/DeleteService";
 	wrm.defineModule("wrm\/comp\/DeleteService", mod10)
 
-	import * as mod11 from "wrm\/comp\/LoginService";
-	wrm.defineModule("wrm\/comp\/LoginService", mod11)
+	import * as mod11 from "wrm\/comp\/RestfulRequestResponseService";
+	wrm.defineModule("wrm\/comp\/RestfulRequestResponseService", mod11)
 
-	import * as mod12 from "wrm\/comp\/RegisterService";
-	wrm.defineModule("wrm\/comp\/RegisterService", mod12)
+	import * as mod12 from "wrm\/comp\/LoginService";
+	wrm.defineModule("wrm\/comp\/LoginService", mod12)
 
-	import * as mod13 from "wrm\/comp\/LogoutService";
-	wrm.defineModule("wrm\/comp\/LogoutService", mod13)
+	import * as mod13 from "wrm\/comp\/RegisterService";
+	wrm.defineModule("wrm\/comp\/RegisterService", mod13)
+
+	import * as mod14 from "wrm\/comp\/LogoutService";
+	wrm.defineModule("wrm\/comp\/LogoutService", mod14)
 

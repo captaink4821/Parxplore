@@ -1,0 +1,16 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad7" name="Retrieve Sightings" defaultSuccessPortDefinition="tlads0#ad7#spd7" defaultErrorPortDefinition="tlads0#ad7#epd7">
+  <Operations>
+    <RestfulRequestResponse gr:x="340" gr:y="60" id="tlads0#ad7#rfrr1" name="GetUserSightings" requestMethod="POST" requestContentType="FORM_DATA" responseContentType="json">
+      <SuccessFlow id="tlads0#ad7#rfrr1#sf17" to="tlads0#ad7#spd7" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad7#rfrr1#ef9" to="tlads0#ad7#epd7" automaticCoupling="true"/>
+    </RestfulRequestResponse>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad7#ipd7" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad7#ipd7#pdp17" name="user_id"/>
+    <SuccessFlow id="tlads0#ad7#ipd7#sf16" to="tlads0#ad7#rfrr1">
+      <ParameterBinding id="tlads0#ad7#ipd7#sf16#par60" source="tlads0#ad7#ipd7#pdp17" target="attachmentBlobs" name="user_id - Attachment BLOBs"/>
+    </SuccessFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad7#spd7" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad7#epd7" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

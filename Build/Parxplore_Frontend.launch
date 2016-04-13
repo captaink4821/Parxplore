@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.webratio.ide.deploy.core.AndroidMobileLaunchConfigurationType">
+<stringAttribute key="main.androidTargetDevices" value="phone"/>
+<stringAttribute key="main.appId" value="com.mycompany.parxplorefrontend"/>
+<stringAttribute key="main.appName" value="Parxplore_Frontend"/>
+<stringAttribute key="main.appVersion" value="0.0.1"/>
+<stringAttribute key="main.buildMode" value="debug"/>
+<stringAttribute key="model.general.outputPath" value="${mobileapps_loc}/${project_name}"/>
+<stringAttribute key="model.mobile.backEndBaseUrl" value="http://free13449-freeapp.eu.webratio.net/"/>
+</launchConfiguration>

@@ -25,7 +25,13 @@
         </OnSelectEvent>
       </Events>
     </Details>
-    <Message gr:x="125" gr:y="0" id="av1#scr2#mssu4" name="Message 4"/>
+    <Message gr:x="125" gr:y="0" id="av1#scr2#mssu4" name="Message 4" eventOrder="av1#scr2#mssu4#oslte22">
+      <Events>
+        <OnSelectEvent id="av1#scr2#mssu4#oslte22" name="Ok" gr:pinned="true" gr:side="2" gr:pos="0">
+          <NavigationFlow id="av1#scr2#mssu4#oslte22#nf33" to="av1#scr2" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </Message>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -54,7 +60,9 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Component componentId="av1#scr2#mssu4"/>
+        <layout:Component componentId="av1#scr2#mssu4">
+          <layout:Event event="av1#scr2#mssu4#oslte22" eventType="OnSelectEvent"/>
+        </layout:Component>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

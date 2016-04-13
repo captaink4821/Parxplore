@@ -1,0 +1,46 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-180" gr:y="745" id="av1#scr10" name="Sighting details">
+  <ViewComponents>
+    <Details gr:x="0" gr:y="0" id="av1#scr10#dau3" name="Sighting Details" dataBinding="cls14" displayAttributes="cls14#att148 cls14#att151">
+      <ConditionalExpression id="av1#scr10#dau3#sc9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="av1#scr10#dau3#sc9#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </ConditionalExpression>
+    </Details>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr10#dau3">
+          <layout:Attribute attribute="cls14#att148"/>
+          <layout:Attribute attribute="cls14#att151"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Event eventType="BackEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

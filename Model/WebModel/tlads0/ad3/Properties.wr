@@ -1,19 +1,59 @@
 <ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad3" name="Login" defaultSuccessPortDefinition="tlads0#ad3#spd3" defaultErrorPortDefinition="tlads0#ad3#epd3">
   <Operations>
-    <Login gr:x="375" gr:y="55" id="tlads0#ad3#lgu1" name="Login">
-      <SuccessFlow id="tlads0#ad3#lgu1#sf9" to="tlads0#ad3#spd3" automaticCoupling="true"/>
-      <ErrorFlow id="tlads0#ad3#lgu1#ef4" to="tlads0#ad3#epd3" automaticCoupling="true"/>
-      <ErrorFlow id="tlads0#ad3#lgu1#ef5" to="tlads0#ad3#epd3" automaticCoupling="true" code="Internal Error"/>
+    <RestfulRequestResponse gr:x="255" gr:y="25" id="tlads0#ad3#rfrr6" name="Call Login" requestMethod="POST" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/users/login">
+      <RequestParameter id="tlads0#ad3#rfrr6#rrp3" name="username" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad3#rfrr6#rrp4" name="password" isArray="false" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad3#rfrr6#rrsp3" name="token" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad3#rfrr6#rrsp4" name="username" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad3#rfrr6#rrsp5" name="email" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad3#rfrr6#rrsp6" name="userOID" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad3#rfrr6#rrsp7" name="roles" jsonType="string" isArray="true"/>
+      <ResponseParameter id="tlads0#ad3#rfrr6#rrsp8" name="createdAt" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad3#rfrr6#rrsp9" name="updatedAt" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad3#rfrr6#rrsp10" name="userTypeId" jsonType="string"/>
+      <SuccessFlow id="tlads0#ad3#rfrr6#sf30" to="tlads0#ad3#lgu3">
+        <ParameterBinding id="tlads0#ad3#rfrr6#sf30#par105" source="tlads0#ad3#rfrr6#rrsp3" target="token" name="token - Granted Token"/>
+      </SuccessFlow>
+      <DataFlow id="tlads0#ad3#rfrr6#df12" to="tlads0#ad3#cru5">
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par106" source="tlads0#ad3#rfrr6#rrsp5" target="MUser#att33" name="email - email"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par107" source="tlads0#ad3#rfrr6#rrsp8" target="MUser#att15" name="createdAt - remote createdAt"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par108" source="tlads0#ad3#rfrr6#rrsp9" target="MUser#att16" name="updatedAt - remote updatedAt"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par109" source="tlads0#ad3#rfrr6#rrsp6" target="MUser#att154" name="userOID - remote_oid"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par110" source="tlads0#ad3#rfrr6#rrsp10" target="MUser#att14" name="userTypeId - user_type_id"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par111" source="tlads0#ad3#rfrr6#rrsp4" target="mUsername" name="username - username"/>
+      </DataFlow>
+      <ErrorFlow id="tlads0#ad3#rfrr6#ef14" to="tlads0#ad3#epd3">
+        <ParameterBinding id="tlads0#ad3#rfrr6#ef14#par112" sourceValue="Invalid Login or Password" target="notificationMessage" name="&quot;Invalid Login or Password&quot; - Notification Message"/>
+      </ErrorFlow>
+    </RestfulRequestResponse>
+    <Login gr:x="580" gr:y="50" id="tlads0#ad3#lgu3" name="Login" gr:showAllParts="true">
+      <SuccessFlow id="tlads0#ad3#lgu3#sf40" to="tlads0#ad3#cru5"/>
+      <ErrorFlow id="tlads0#ad3#lgu3#ef16" to="tlads0#ad3#epd3" automaticCoupling="true"/>
     </Login>
+    <Create gr:x="505" gr:y="190" id="tlads0#ad3#cru5" name="Update User" dataBinding="MUser">
+      <SuccessFlow id="tlads0#ad3#cru5#sf41" to="tlads0#ad3#act10"/>
+    </Create>
   </Operations>
   <InputPortDefinition id="tlads0#ad3#ipd3" gr:x="0" gr:y="30">
-    <PortDefinitionParameter id="tlads0#ad3#ipd3#pdp6" name="Password"/>
-    <PortDefinitionParameter id="tlads0#ad3#ipd3#pdp7" name="Username"/>
-    <SuccessFlow id="tlads0#ad3#ipd3#sf8" to="tlads0#ad3#lgu1">
-      <ParameterBinding id="tlads0#ad3#ipd3#sf8#par50" source="tlads0#ad3#ipd3#pdp6" target="password" name="Password - Password"/>
-      <ParameterBinding id="tlads0#ad3#ipd3#sf8#par51" source="tlads0#ad3#ipd3#pdp7" target="username" name="Username - Username"/>
+    <SuccessFlow id="tlads0#ad3#ipd3#sf25" to="tlads0#ad3#rfrr6">
+      <ParameterBinding id="tlads0#ad3#ipd3#sf25#par89" source="password" target="tlads0#ad3#rfrr6#rrp4" name="Password - password"/>
+      <ParameterBinding id="tlads0#ad3#ipd3#sf25#par90" source="username" target="tlads0#ad3#rfrr6#rrp3" name="Username - username"/>
     </SuccessFlow>
+    <DataFlow id="tlads0#ad3#ipd3#df11" to="tlads0#ad3#lgu3">
+      <ParameterBinding id="tlads0#ad3#ipd3#df11#par113" source="password" target="password" name="Password - Password"/>
+      <ParameterBinding id="tlads0#ad3#ipd3#df11#par114" source="username" target="username" name="Username - Username"/>
+    </DataFlow>
   </InputPortDefinition>
   <SuccessPortDefinition id="tlads0#ad3#spd3" name="Success Port" gr:x="0" gr:y="30"/>
   <ErrorPortDefinition id="tlads0#ad3#epd3" name="Error Port" gr:x="0" gr:y="300"/>
+  <Action id="tlads0#ad3#act10" gr:x="770" gr:y="130" definition="tlads0#ad8">
+    <Events>
+      <SuccessEvent id="tlads0#ad3#act10#scce9" definition="tlads0#ad8#spd8">
+        <SuccessFlow id="tlads0#ad3#act10#scce9#sf42" to="tlads0#ad3#spd3" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad3#act10#erre9" definition="tlads0#ad8#epd8">
+        <ErrorFlow id="tlads0#ad3#act10#erre9#ef13" to="tlads0#ad3#epd3" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
 </ActionDefinition>

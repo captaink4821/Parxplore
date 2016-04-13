@@ -110,8 +110,6 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="2"/>
-      <layout:Cell/>
       <layout:Cell colspan="7">
         <layout:Event panelId="av1#scr1#tlb1" event="av1#scr1#tlb1#oslte13" eventType="OnSelectEvent"/>
       </layout:Cell>
@@ -121,7 +119,11 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="3"/>
+      <layout:Cell colspan="5">
+        <layout:Event panelId="av1#scr1#tlb1" event="av1#scr1#tlb1#oslte20" eventType="OnSelectEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
@@ -134,6 +136,9 @@
       </OnSelectEvent>
       <OnSelectEvent id="av1#scr1#tlb1#oslte13" name="Logout">
         <NavigationFlow id="av1#scr1#tlb1#oslte13#nf19" to="av1#act5" automaticCoupling="true"/>
+      </OnSelectEvent>
+      <OnSelectEvent id="av1#scr1#tlb1#oslte20" name="Profile">
+        <NavigationFlow id="av1#scr1#tlb1#oslte20#nf31" to="av1#scr8" automaticCoupling="true"/>
       </OnSelectEvent>
     </Events>
   </Toolbar>

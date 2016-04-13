@@ -12,9 +12,11 @@
             <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par37" source="av1#scr7#enu5#fld13" target="av1#act6.tlads0#ad6#ipd6#pdp13" name="animal_id - animal_id"/>
             <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par52" source="av1#scr7#enu5#fld12" target="av1#act6.tlads0#ad6#ipd6#pdp16" name="Image - image"/>
             <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par53" source="av1#scr7#enu5#fld10" target="av1#act6.tlads0#ad6#ipd6#pdp14" name="Animal - name"/>
+            <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par67" source="av1#scr7#enu5#fld14" target="av1#act6.tlads0#ad6#ipd6#pdp18" name="user_id - user_id"/>
           </NavigationFlow>
         </OnSelectEvent>
       </Events>
+      <Field id="av1#scr7#enu5#fld14" name="user_id" type="integer" preloaded="true" hidden="true"/>
     </Form>
     <Selector gr:x="5" gr:y="95" id="av1#scr7#seu3" dataBinding="cls2" distinctAttributes="cls2#att18 cls2#att19">
       <ConditionalExpression id="av1#scr7#seu3#sc5" defaultPolicy="fill" booleanOperator="and">
@@ -23,6 +25,11 @@
       <DataFlow id="av1#scr7#seu3#df6" to="av1#scr7#enu5">
         <ParameterBinding id="av1#scr7#seu3#df6#par58" source="data.cls2#att19" target="av1#scr7#enu5#fld10_preload" name="Name - Animal"/>
         <ParameterBinding id="av1#scr7#seu3#df6#par59" source="data.cls2#att18" target="av1#scr7#enu5#fld13_preload" name="oid - animal_id"/>
+      </DataFlow>
+    </Selector>
+    <Selector gr:x="130" gr:y="125" id="av1#scr7#seu5" dataBinding="MUser">
+      <DataFlow id="av1#scr7#seu5#df7" to="av1#scr7#enu5">
+        <ParameterBinding id="av1#scr7#seu5#df7#par66" source="data.MUser#att6" target="av1#scr7#enu5#fld14_preload" name="oid - user_id"/>
       </DataFlow>
     </Selector>
   </ViewComponents>

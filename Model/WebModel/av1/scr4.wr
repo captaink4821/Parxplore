@@ -6,8 +6,8 @@
       <Events>
         <OnSelectEvent id="av1#scr4#enu2#oslte8" name="Login" validate="true">
           <NavigationFlow id="av1#scr4#enu2#oslte8#nf5" to="av1#act3">
-            <ParameterBinding id="av1#scr4#enu2#oslte8#nf5#par2" source="av1#scr4#enu2#fld6" target="av1#act3.tlads0#ad3#ipd3#pdp6" name="Password - Password"/>
-            <ParameterBinding id="av1#scr4#enu2#oslte8#nf5#par3" source="av1#scr4#enu2#fld3" target="av1#act3.tlads0#ad3#ipd3#pdp7" name="Username - Username"/>
+            <ParameterBinding id="av1#scr4#enu2#oslte8#nf5#par98" source="av1#scr4#enu2#fld6" target="av1#act3.password" name="Password - Password"/>
+            <ParameterBinding id="av1#scr4#enu2#oslte8#nf5#par99" source="av1#scr4#enu2#fld3" target="av1#act3.username" name="Username - Username"/>
           </NavigationFlow>
         </OnSelectEvent>
         <OnSelectEvent id="av1#scr4#enu2#oslte11" name="Sign Up" validate="true">
