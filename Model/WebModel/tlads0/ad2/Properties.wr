@@ -1,18 +1,27 @@
 <ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad2" name="Delete Animal" defaultSuccessPortDefinition="tlads0#ad2#spd2" defaultErrorPortDefinition="tlads0#ad2#epd2">
   <Operations>
-    <Delete gr:x="365" gr:y="15" id="tlads0#ad2#dlu1" dataBinding="cls2">
+    <Delete gr:x="430" gr:y="60" id="tlads0#ad2#dlu1" dataBinding="cls2">
       <ConditionalExpression id="tlads0#ad2#dlu1#sc4" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="tlads0#ad2#dlu1#sc4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </ConditionalExpression>
       <SuccessFlow id="tlads0#ad2#dlu1#sf7" to="tlads0#ad2#spd2" automaticCoupling="true"/>
       <ErrorFlow id="tlads0#ad2#dlu1#ef3" to="tlads0#ad2#epd2" automaticCoupling="true"/>
     </Delete>
+    <RestfulRequestResponse gr:x="160" gr:y="165" id="tlads0#ad2#rfrr7" name="Delete Animal" requestMethod="DELETE" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/data/Animal/{objectId}">
+      <SuccessFlow id="tlads0#ad2#rfrr7#sf24" to="tlads0#ad2#dlu1"/>
+      <RequestHeader id="tlads0#ad2#rfrr7#rrh5" name="Authorization"/>
+    </RestfulRequestResponse>
   </Operations>
   <InputPortDefinition id="tlads0#ad2#ipd2" gr:x="0" gr:y="30">
-    <PortDefinitionParameter id="tlads0#ad2#ipd2#pdp5" name="oid"/>
-    <SuccessFlow id="tlads0#ad2#ipd2#sf6" to="tlads0#ad2#dlu1">
-      <ParameterBinding id="tlads0#ad2#ipd2#sf6#par49" source="tlads0#ad2#ipd2#pdp5" target="tlads0#ad2#dlu1#sc4#kcond4.cls2#att18" name="oid - KeyCondition4 [oid]"/>
+    <PortDefinitionParameter id="tlads0#ad2#ipd2#pdp5" name="animal remote oid"/>
+    <SuccessFlow id="tlads0#ad2#ipd2#sf6" to="tlads0#ad2#rfrr7">
+      <ParameterBinding id="tlads0#ad2#ipd2#sf6#par82" source="tlads0#ad2#ipd2#pdp5" target="path.objectId" name="animal remote oid - Path.objectId"/>
+      <ParameterBinding id="tlads0#ad2#ipd2#sf6#par85" sourceValue="$$TOKEN$$" target="tlads0#ad2#rfrr7#rrh5" name="&quot;$$TOKEN$$&quot; - Authorization"/>
     </SuccessFlow>
+    <DataFlow id="tlads0#ad2#ipd2#df10" to="tlads0#ad2#dlu1">
+      <ParameterBinding id="tlads0#ad2#ipd2#df10#par83" source="tlads0#ad2#ipd2#pdp7" target="tlads0#ad2#dlu1#sc4#kcond4.cls2#att18" name="animal oid - KeyCondition4 [oid]"/>
+    </DataFlow>
+    <PortDefinitionParameter id="tlads0#ad2#ipd2#pdp7" name="animal oid"/>
   </InputPortDefinition>
   <SuccessPortDefinition id="tlads0#ad2#spd2" name="Success Port" gr:x="0" gr:y="30"/>
   <ErrorPortDefinition id="tlads0#ad2#epd2" name="Error Port" gr:x="0" gr:y="300"/>

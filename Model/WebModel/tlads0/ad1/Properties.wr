@@ -1,10 +1,10 @@
 <ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad1" name="Save Animal" defaultSuccessPortDefinition="tlads0#ad1#spd1" defaultErrorPortDefinition="tlads0#ad1#epd1">
   <Operations>
-    <Create gr:x="335" gr:y="15" id="tlads0#ad1#cru1" dataBinding="cls2">
+    <Create gr:x="660" gr:y="20" id="tlads0#ad1#cru1" dataBinding="cls2">
       <SuccessFlow id="tlads0#ad1#cru1#sf2" to="tlads0#ad1#spd1" automaticCoupling="true"/>
       <ErrorFlow id="tlads0#ad1#cru1#ef1" to="tlads0#ad1#epd1" automaticCoupling="true"/>
     </Create>
-    <Update gr:x="350" gr:y="395" id="tlads0#ad1#mfu1" dataBinding="cls2">
+    <Update gr:x="480" gr:y="395" id="tlads0#ad1#mfu1" dataBinding="cls2">
       <ConditionalExpression id="tlads0#ad1#mfu1#sc2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="tlads0#ad1#mfu1#sc2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </ConditionalExpression>
@@ -12,30 +12,74 @@
       <ErrorFlow id="tlads0#ad1#mfu1#ef2" to="tlads0#ad1#epd1" automaticCoupling="true"/>
     </Update>
     <Switch gr:x="205" gr:y="280" id="tlads0#ad1#switch1" name="Animal Exists">
-      <SuccessFlow id="tlads0#ad1#switch1#sf3" to="tlads0#ad1#cru1" automaticCoupling="true" code="&lt;EMPTY&gt;"/>
-      <SuccessFlow id="tlads0#ad1#switch1#sf4" to="tlads0#ad1#mfu1" automaticCoupling="true"/>
+      <SuccessFlow id="tlads0#ad1#switch1#sf3" to="tlads0#ad1#rfrr2" code="&lt;EMPTY&gt;">
+        <ParameterBinding id="tlads0#ad1#switch1#sf3#par35" sourceValue="$$TOKEN$$" target="tlads0#ad1#rfrr2#rrh1" name="&quot;$$TOKEN$$&quot; - Authorization"/>
+      </SuccessFlow>
+      <SuccessFlow id="tlads0#ad1#switch1#sf4" to="tlads0#ad1#rfrr3">
+        <ParameterBinding id="tlads0#ad1#switch1#sf4#par47" sourceValue="$$TOKEN$$" target="tlads0#ad1#rfrr3#rrh3" name="&quot;$$TOKEN$$&quot; - Authorization"/>
+      </SuccessFlow>
     </Switch>
+    <RestfulRequestResponse gr:x="210" gr:y="15" id="tlads0#ad1#rfrr2" name="Create Animal" requestMethod="POST" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/data/Animal">
+      <SuccessFlow id="tlads0#ad1#rfrr2#sf8" to="tlads0#ad1#cru1">
+        <ParameterBinding id="tlads0#ad1#rfrr2#sf8#par23" source="tlads0#ad1#rfrr2#rrsp12" target="cls2#att10" name="createdAt - remote createdAt"/>
+        <ParameterBinding id="tlads0#ad1#rfrr2#sf8#par33" source="tlads0#ad1#rfrr2#rrsp11" target="cls2#att155" name="oid - remoteOid"/>
+      </SuccessFlow>
+      <RequestParameter id="tlads0#ad1#rfrr2#rrp2" name="species" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad1#rfrr2#rrp5" name="name" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad1#rfrr2#rrp6" name="seen" isArray="false" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad1#rfrr2#rrsp11" name="oid" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad1#rfrr2#rrsp12" name="createdAt" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad1#rfrr2#rrsp13" name="timestamp" jsonType="string"/>
+      <RequestHeader id="tlads0#ad1#rfrr2#rrh1" name="Authorization"/>
+    </RestfulRequestResponse>
+    <RestfulRequestResponse gr:x="195" gr:y="420" id="tlads0#ad1#rfrr3" name="Update Animal" requestMethod="PUT" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/data/Animal/{objectId}">
+      <SuccessFlow id="tlads0#ad1#rfrr3#sf9" to="tlads0#ad1#mfu1">
+        <ParameterBinding id="tlads0#ad1#rfrr3#sf9#par51" source="tlads0#ad1#rfrr3#rrsp15" target="cls2#att10" name="createdAt - remote createdAt"/>
+        <ParameterBinding id="tlads0#ad1#rfrr3#sf9#par56" source="tlads0#ad1#rfrr3#rrsp14" target="cls2#att11" name="updatedAt - remote updatedAt"/>
+        <ParameterBinding id="tlads0#ad1#rfrr3#sf9#par61" source="tlads0#ad1#rfrr3#rrsp16" target="cls2#att12" name="parkId - park_id"/>
+      </SuccessFlow>
+      <RequestParameter id="tlads0#ad1#rfrr3#rrp7" name="species" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad1#rfrr3#rrp8" name="name" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad1#rfrr3#rrp9" name="seen" isArray="false" jsonType="string"/>
+      <RequestHeader id="tlads0#ad1#rfrr3#rrh3" name="Authorization"/>
+      <ResponseParameter id="tlads0#ad1#rfrr3#rrsp14" name="updatedAt" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad1#rfrr3#rrsp15" name="createdAt" jsonType="string"/>
+      <ResponseParameter id="tlads0#ad1#rfrr3#rrsp16" name="parkId" jsonType="string"/>
+    </RestfulRequestResponse>
   </Operations>
   <InputPortDefinition id="tlads0#ad1#ipd1" gr:x="0" gr:y="30">
-    <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp1" name="animal id"/>
+    <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp1" name="animal  remote id"/>
     <SuccessFlow id="tlads0#ad1#ipd1#sf1" to="tlads0#ad1#switch1">
       <ParameterBinding id="tlads0#ad1#ipd1#sf1#par1" source="tlads0#ad1#ipd1#pdp1" target="switch" name="animal id - Switch"/>
     </SuccessFlow>
     <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp4" name="Seen"/>
     <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp3" name="Species"/>
     <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp2" name="Name"/>
-    <DataFlow id="tlads0#ad1#ipd1#df2" to="tlads0#ad1#cru1">
-      <ParameterBinding id="tlads0#ad1#ipd1#df2#par46" source="tlads0#ad1#ipd1#pdp2" target="cls2#att19" name="Name - Name"/>
-      <ParameterBinding id="tlads0#ad1#ipd1#df2#par47" source="tlads0#ad1#ipd1#pdp4" target="cls2#att21" name="Seen - Seen"/>
-      <ParameterBinding id="tlads0#ad1#ipd1#df2#par48" source="tlads0#ad1#ipd1#pdp3" target="cls2#att20" name="Species - Species"/>
+    <DataFlow id="tlads0#ad1#ipd1#df2" to="tlads0#ad1#rfrr2">
+      <ParameterBinding id="tlads0#ad1#ipd1#df2#par75" source="tlads0#ad1#ipd1#pdp2" target="tlads0#ad1#rfrr2#rrp5" name="Name - name"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df2#par76" source="tlads0#ad1#ipd1#pdp4" target="tlads0#ad1#rfrr2#rrp6" name="Seen - seen"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df2#par77" source="tlads0#ad1#ipd1#pdp3" target="tlads0#ad1#rfrr2#rrp2" name="Species - species"/>
     </DataFlow>
-    <DataFlow id="tlads0#ad1#ipd1#df3" to="tlads0#ad1#mfu1" gr:bendpoints="-1.0 176.0">
-      <ParameterBinding id="tlads0#ad1#ipd1#df3#par42" source="tlads0#ad1#ipd1#pdp2" target="cls2#att19" name="Name - Name"/>
-      <ParameterBinding id="tlads0#ad1#ipd1#df3#par43" source="tlads0#ad1#ipd1#pdp4" target="cls2#att21" name="Seen - Seen"/>
-      <ParameterBinding id="tlads0#ad1#ipd1#df3#par44" source="tlads0#ad1#ipd1#pdp3" target="cls2#att20" name="Species - Species"/>
-      <ParameterBinding id="tlads0#ad1#ipd1#df3#par45" source="tlads0#ad1#ipd1#pdp1" target="tlads0#ad1#mfu1#sc2#kcond2.cls2#att18" name="animal id - KeyCondition2 [oid]"/>
+    <DataFlow id="tlads0#ad1#ipd1#df3" to="tlads0#ad1#rfrr3" gr:bendpoints="-1.0 176.0">
+      <ParameterBinding id="tlads0#ad1#ipd1#df3#par43" source="tlads0#ad1#ipd1#pdp2" target="tlads0#ad1#rfrr3#rrp8" name="Name - name"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df3#par45" source="tlads0#ad1#ipd1#pdp4" target="tlads0#ad1#rfrr3#rrp9" name="Seen - seen"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df3#par46" source="tlads0#ad1#ipd1#pdp3" target="tlads0#ad1#rfrr3#rrp7" name="Species - species"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df3#par81" source="tlads0#ad1#ipd1#pdp1" target="path.objectId" name="animal  remote id - Path.objectId"/>
     </DataFlow>
+    <DataFlow id="tlads0#ad1#ipd1#df1" to="tlads0#ad1#mfu1">
+      <ParameterBinding id="tlads0#ad1#ipd1#df1#par3" source="tlads0#ad1#ipd1#pdp2" target="cls2#att19" name="Name - Name"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df1#par6" source="tlads0#ad1#ipd1#pdp4" target="cls2#att21" name="Seen - Seen"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df1#par9" source="tlads0#ad1#ipd1#pdp3" target="cls2#att20" name="Species - Species"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df1#par48" source="tlads0#ad1#ipd1#pdp1" target="cls2#att155" name="animal  remote id - remoteOid"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df1#par50" source="tlads0#ad1#ipd1#pdp6" target="tlads0#ad1#mfu1#sc2#kcond2.cls2#att18" name="animal id - KeyCondition2 [oid]"/>
+    </DataFlow>
+    <DataFlow id="tlads0#ad1#ipd1#df8" to="tlads0#ad1#cru1">
+      <ParameterBinding id="tlads0#ad1#ipd1#df8#par11" source="tlads0#ad1#ipd1#pdp2" target="cls2#att19" name="Name - Name"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df8#par12" source="tlads0#ad1#ipd1#pdp4" target="cls2#att21" name="Seen - Seen"/>
+      <ParameterBinding id="tlads0#ad1#ipd1#df8#par13" source="tlads0#ad1#ipd1#pdp3" target="cls2#att20" name="Species - Species"/>
+    </DataFlow>
+    <PortDefinitionParameter id="tlads0#ad1#ipd1#pdp6" name="animal id"/>
   </InputPortDefinition>
-  <SuccessPortDefinition id="tlads0#ad1#spd1" name="Success Port" gr:x="0" gr:y="30"/>
-  <ErrorPortDefinition id="tlads0#ad1#epd1" name="Error Port" gr:x="0" gr:y="300"/>
+  <SuccessPortDefinition id="tlads0#ad1#spd1" name="Success Port" gr:x="0" gr:y="35"/>
+  <ErrorPortDefinition id="tlads0#ad1#epd1" name="Error Port" gr:x="0" gr:y="305"/>
 </ActionDefinition>

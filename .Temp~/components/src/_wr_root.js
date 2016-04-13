@@ -10,17 +10,17 @@
 	import * as mod2 from "wrm\/comp\/MessageService";
 	wrm.defineModule("wrm\/comp\/MessageService", mod2)
 
-	import * as mod3 from "wrm\/comp\/SelectorService";
-	wrm.defineModule("wrm\/comp\/SelectorService", mod3)
+	import * as mod3 from "wrm\/comp\/DetailsService";
+	wrm.defineModule("wrm\/comp\/DetailsService", mod3)
 
-	import * as mod4 from "wrm\/comp\/val\/EMailValidationRuleService";
-	wrm.defineModule("wrm\/comp\/val\/EMailValidationRuleService", mod4)
+	import * as mod4 from "wrm\/comp\/SelectorService";
+	wrm.defineModule("wrm\/comp\/SelectorService", mod4)
 
-	import * as mod5 from "wrm\/comp\/val\/MandatoryValidationRuleService";
-	wrm.defineModule("wrm\/comp\/val\/MandatoryValidationRuleService", mod5)
+	import * as mod5 from "wrm\/comp\/val\/EMailValidationRuleService";
+	wrm.defineModule("wrm\/comp\/val\/EMailValidationRuleService", mod5)
 
-	import * as mod6 from "wrm\/comp\/DetailsService";
-	wrm.defineModule("wrm\/comp\/DetailsService", mod6)
+	import * as mod6 from "wrm\/comp\/val\/MandatoryValidationRuleService";
+	wrm.defineModule("wrm\/comp\/val\/MandatoryValidationRuleService", mod6)
 
 	import * as mod7 from "wrm\/comp\/CreateService";
 	wrm.defineModule("wrm\/comp\/CreateService", mod7)
@@ -31,18 +31,15 @@
 	import * as mod9 from "wrm\/comp\/SwitchService";
 	wrm.defineModule("wrm\/comp\/SwitchService", mod9)
 
-	import * as mod10 from "wrm\/comp\/DeleteService";
-	wrm.defineModule("wrm\/comp\/DeleteService", mod10)
+	import * as mod10 from "wrm\/comp\/RestfulRequestResponseService";
+	wrm.defineModule("wrm\/comp\/RestfulRequestResponseService", mod10)
 
-	import * as mod11 from "wrm\/comp\/RestfulRequestResponseService";
-	wrm.defineModule("wrm\/comp\/RestfulRequestResponseService", mod11)
+	import * as mod11 from "wrm\/comp\/DeleteService";
+	wrm.defineModule("wrm\/comp\/DeleteService", mod11)
 
 	import * as mod12 from "wrm\/comp\/LoginService";
 	wrm.defineModule("wrm\/comp\/LoginService", mod12)
 
-	import * as mod13 from "wrm\/comp\/RegisterService";
-	wrm.defineModule("wrm\/comp\/RegisterService", mod13)
-
-	import * as mod14 from "wrm\/comp\/LogoutService";
-	wrm.defineModule("wrm\/comp\/LogoutService", mod14)
+	import * as mod13 from "wrm\/comp\/LogoutService";
+	wrm.defineModule("wrm\/comp\/LogoutService", mod13)
 

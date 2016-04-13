@@ -58,19 +58,19 @@
 
 	var mod2 = _interopRequireWildcard(_import3);
 
-	var _import4 = __webpack_require__(5);
+	var _import4 = __webpack_require__(4);
 
 	var mod3 = _interopRequireWildcard(_import4);
 
-	var _import5 = __webpack_require__(14);
+	var _import5 = __webpack_require__(5);
 
 	var mod4 = _interopRequireWildcard(_import5);
 
-	var _import6 = __webpack_require__(15);
+	var _import6 = __webpack_require__(13);
 
 	var mod5 = _interopRequireWildcard(_import6);
 
-	var _import7 = __webpack_require__(4);
+	var _import7 = __webpack_require__(14);
 
 	var mod6 = _interopRequireWildcard(_import7);
 
@@ -102,23 +102,19 @@
 
 	var mod13 = _interopRequireWildcard(_import14);
 
-	var _import15 = __webpack_require__(13);
-
-	var mod14 = _interopRequireWildcard(_import15);
-
 	wrm.defineModule("wrm/comp/ListService", mod0);
 
 	wrm.defineModule("wrm/comp/FormService", mod1);
 
 	wrm.defineModule("wrm/comp/MessageService", mod2);
 
-	wrm.defineModule("wrm/comp/SelectorService", mod3);
+	wrm.defineModule("wrm/comp/DetailsService", mod3);
 
-	wrm.defineModule("wrm/comp/val/EMailValidationRuleService", mod4);
+	wrm.defineModule("wrm/comp/SelectorService", mod4);
 
-	wrm.defineModule("wrm/comp/val/MandatoryValidationRuleService", mod5);
+	wrm.defineModule("wrm/comp/val/EMailValidationRuleService", mod5);
 
-	wrm.defineModule("wrm/comp/DetailsService", mod6);
+	wrm.defineModule("wrm/comp/val/MandatoryValidationRuleService", mod6);
 
 	wrm.defineModule("wrm/comp/CreateService", mod7);
 
@@ -126,15 +122,13 @@
 
 	wrm.defineModule("wrm/comp/SwitchService", mod9);
 
-	wrm.defineModule("wrm/comp/DeleteService", mod10);
+	wrm.defineModule("wrm/comp/RestfulRequestResponseService", mod10);
 
-	wrm.defineModule("wrm/comp/RestfulRequestResponseService", mod11);
+	wrm.defineModule("wrm/comp/DeleteService", mod11);
 
 	wrm.defineModule("wrm/comp/LoginService", mod12);
 
-	wrm.defineModule("wrm/comp/RegisterService", mod13);
-
-	wrm.defineModule("wrm/comp/LogoutService", mod14);
+	wrm.defineModule("wrm/comp/LogoutService", mod13);
 
 /***/ },
 /* 1 */
@@ -1870,77 +1864,6 @@
 	    value: true
 	});
 	/**
-	 * Service for Delete operations.
-	 * 
-	 * @constructor
-	 * @extends wrm.core.AbstractOperationService
-	 * @param {string} id
-	 * @param {!Object} descr
-	 * @param {!wrm.core.Manager} manager
-	 */
-	exports.default = wrm.defineService(wrm.core.AbstractOperationService, {
-
-	    /** @override */
-	    initialize: function (descr) {
-	        var thisService = this;
-
-	        /**
-	         * @private
-	         * @type {!string}
-	         */
-	        this._entityId = descr["entity"];
-
-	        // TODO cache query instead
-	        /**
-	         * @private
-	         * @type {!Object}
-	         */
-	        this._condExpr; // init'd below
-
-	        /**
-	         * @private
-	         * @type {!wrm.data.DataService}
-	         */
-	        this._dataService; // init'd below
-
-	        return this.getManager().getDataService().then(function (dataService) {
-	            thisService._dataService = dataService;
-	            thisService._condExpr = descr["condExprs"];
-	        });
-	    },
-
-	    /** @override */
-	    executeOperation: function (context) {
-	        var thisService = this;
-	        var input = context.getInput();
-
-	        var resultsPromise = this._dataService.execute(function (d) {
-
-	            var options = {
-	                filter: thisService._condExpr
-	            };
-
-	            return d["delete"](thisService._entityId, options, input);
-	        });
-
-	        return resultsPromise.then(function (numberDeletedObj) {
-	            var code = numberDeletedObj === 0 ? "success.Not Found" : "success";
-	            return new wrm.nav.Output(code);
-	        }, function (e) {
-	            thisService.getLog().error(e);
-	            return new wrm.nav.Output("error");
-	        });
-	    } });
-	module.exports = exports.default;
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	/**
 	 * Service for Restful Request Response operations.
 	 * 
 	 * @constructor
@@ -2503,6 +2426,77 @@
 	/** @type {!Object} */
 
 /***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	/**
+	 * Service for Delete operations.
+	 * 
+	 * @constructor
+	 * @extends wrm.core.AbstractOperationService
+	 * @param {string} id
+	 * @param {!Object} descr
+	 * @param {!wrm.core.Manager} manager
+	 */
+	exports.default = wrm.defineService(wrm.core.AbstractOperationService, {
+
+	    /** @override */
+	    initialize: function (descr) {
+	        var thisService = this;
+
+	        /**
+	         * @private
+	         * @type {!string}
+	         */
+	        this._entityId = descr["entity"];
+
+	        // TODO cache query instead
+	        /**
+	         * @private
+	         * @type {!Object}
+	         */
+	        this._condExpr; // init'd below
+
+	        /**
+	         * @private
+	         * @type {!wrm.data.DataService}
+	         */
+	        this._dataService; // init'd below
+
+	        return this.getManager().getDataService().then(function (dataService) {
+	            thisService._dataService = dataService;
+	            thisService._condExpr = descr["condExprs"];
+	        });
+	    },
+
+	    /** @override */
+	    executeOperation: function (context) {
+	        var thisService = this;
+	        var input = context.getInput();
+
+	        var resultsPromise = this._dataService.execute(function (d) {
+
+	            var options = {
+	                filter: thisService._condExpr
+	            };
+
+	            return d["delete"](thisService._entityId, options, input);
+	        });
+
+	        return resultsPromise.then(function (numberDeletedObj) {
+	            var code = numberDeletedObj === 0 ? "success.Not Found" : "success";
+	            return new wrm.nav.Output(code);
+	        }, function (e) {
+	            thisService.getLog().error(e);
+	            return new wrm.nav.Output("error");
+	        });
+	    } });
+	module.exports = exports.default;
+
+/***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2630,91 +2624,6 @@
 	    value: true
 	});
 	/**
-	 * Service for Register operations.
-	 * 
-	 * @constructor
-	 * @extends wrm.core.AbstractOperationService
-	 * @param {string} id
-	 * @param {!Object} descr
-	 * @param {!wrm.core.Manager} manager
-	 */
-	exports.default = wrm.defineService(wrm.core.AbstractOperationService, {
-
-	    /** @override */
-	    initialize: function (descr) {
-	        var thisService = this;
-
-	        /**
-	         * @private
-	         * @type {!wrm.data.meta.Entity}
-	         */
-	        this._userEntity; // set below
-
-	        return this.getManager().getSecurityService().then(function (securityService) {
-	            thisService._userEntity = securityService.getUserEntity();
-	            if (!securityService.isUserServiceAvailable()) {
-	                throw new Error("User services are not available");
-	            }
-	        });
-	    },
-
-	    /** @override */
-	    executeOperation: function (context) {
-	        var manager = this.getManager();
-	        var input = context.getInput();
-	        var username = wrm.data.toString(input["username"]);
-	        var password = wrm.data.toString(input["password"]);
-
-	        /* Compute the user object */
-	        var userObject = this._computeUserObject(input);
-
-	        /* Invoke the back-end user registration service */
-	        var promise = manager.getSecurityService().then(function (securityService) {
-	            if (typeof username !== "string" || typeof password !== "string") {
-	                throw new Error("Missing username or password");
-	            }
-	            return securityService.registerUser(username, password, userObject);
-	        }).then(function (newUserInfo) {
-	            return new wrm.nav.Output("success", {
-	                "username": username,
-	                "password": password
-	            });
-	        });
-
-	        /* In case of error, return an appropriate output code */
-	        promise = promise["catch"](function (e) {
-	            return new wrm.nav.Output("error", {
-	                "errorMessage": e.message
-	            });
-	        });
-	        return promise;
-	    },
-
-	    /**
-	     * @private
-	     * @param {!wrm.nav.Input} input
-	     * @returns {!Object}
-	     */
-	    _computeUserObject: function (input) {
-	        var result = {};
-	        this._userEntity.getProperties().forEach(function (property) {
-	            var propertyId = property.getId();
-	            if (input[propertyId] !== undefined) {
-	                result[propertyId] = input[propertyId];
-	            }
-	        });
-	        return result;
-	    } });
-	module.exports = exports.default;
-
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	/**
 	 * Service for Logout operations.
 	 * 
 	 * @constructor
@@ -2761,7 +2670,7 @@
 	module.exports = exports.default;
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, "__esModule", {
@@ -2796,7 +2705,7 @@
 	module.exports = exports.default;
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, "__esModule", {

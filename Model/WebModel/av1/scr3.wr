@@ -24,10 +24,11 @@
         <ParameterBinding id="av1#scr3#seu1#df4#par38" source="data.cls2#att21" target="av1#scr3#enu1#fld5_preload" name="Seen - seen"/>
       </DataFlow>
       <DataFlow id="av1#scr3#seu1#df5" to="av1#act1" gr:bendpoints="243,-99,-32,161">
-        <ParameterBinding id="av1#scr3#seu1#df5#par17" source="data.cls2#att18" target="av1#act1.tlads0#ad1#ipd1#pdp1" name="oid - animal id"/>
+        <ParameterBinding id="av1#scr3#seu1#df5#par17" source="data.cls2#att155" target="av1#act1.tlads0#ad1#ipd1#pdp1" name="oid - animal id"/>
         <ParameterBinding id="av1#scr3#seu1#df5#par39" source="data.cls2#att19" target="av1#act1.tlads0#ad1#ipd1#pdp2" name="Name - Name"/>
         <ParameterBinding id="av1#scr3#seu1#df5#par40" source="data.cls2#att21" target="av1#act1.tlads0#ad1#ipd1#pdp4" name="Seen - Seen"/>
         <ParameterBinding id="av1#scr3#seu1#df5#par41" source="data.cls2#att20" target="av1#act1.tlads0#ad1#ipd1#pdp3" name="Species - Species"/>
+        <ParameterBinding id="av1#scr3#seu1#df5#par80" source="data.cls2#att18" target="av1#act1.tlads0#ad1#ipd1#pdp6" name="oid - animal id"/>
       </DataFlow>
     </Selector>
   </ViewComponents>

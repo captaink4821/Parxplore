@@ -15,7 +15,8 @@
         </OnSelectEvent>
         <OnSelectEvent id="av1#scr2#dau1#oslte7" name="Delete">
           <NavigationFlow id="av1#scr2#dau1#oslte7#nf8" to="av1#act2">
-            <ParameterBinding id="av1#scr2#dau1#oslte7#nf8#par22" source="data.cls2#att18" target="av1#act2.tlads0#ad2#ipd2#pdp5" name="oid - oid"/>
+            <ParameterBinding id="av1#scr2#dau1#oslte7#nf8#par22" source="data.cls2#att155" target="av1#act2.tlads0#ad2#ipd2#pdp5" name="oid - oid"/>
+            <ParameterBinding id="av1#scr2#dau1#oslte7#nf8#par84" source="data.cls2#att18" target="av1#act2.tlads0#ad2#ipd2#pdp7" name="oid - animal oid"/>
           </NavigationFlow>
         </OnSelectEvent>
         <OnSelectEvent id="av1#scr2#dau1#oslte14" name="Add Sighting">
