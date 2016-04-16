@@ -1,0 +1,29 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad9" name="Delete Sighting" defaultSuccessPortDefinition="tlads0#ad9#spd9" defaultErrorPortDefinition="tlads0#ad9#epd9">
+  <Operations>
+    <Delete gr:x="350" gr:y="70" id="tlads0#ad9#dlu2" dataBinding="cls14">
+      <ConditionalExpression id="tlads0#ad9#dlu2#sc8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="tlads0#ad9#dlu2#sc8#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <SuccessFlow id="tlads0#ad9#dlu2#sf28" to="tlads0#ad9#spd9" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad9#dlu2#ef11" to="tlads0#ad9#epd9" automaticCoupling="true"/>
+    </Delete>
+    <RestfulRequestResponse gr:x="205" gr:y="25" id="tlads0#ad9#rfrr9" name="Delete Sighting" requestMethod="DELETE" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/data/AnimalSighting/{objectId}">
+      <RequestHeader id="tlads0#ad9#rfrr9#rrh7" name="Authorization"/>
+      <SuccessFlow id="tlads0#ad9#rfrr9#sf29" to="tlads0#ad9#dlu2" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad9#rfrr9#ef12" to="tlads0#ad9#epd9" automaticCoupling="true"/>
+    </RestfulRequestResponse>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad9#ipd9" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad9#ipd9#sf27" to="tlads0#ad9#rfrr9">
+      <ParameterBinding id="tlads0#ad9#ipd9#sf27#par63" sourceValue="$$TOKEN$$" target="tlads0#ad9#rfrr9#rrh7" name="&quot;$$TOKEN$$&quot; - Authorization"/>
+      <ParameterBinding id="tlads0#ad9#ipd9#sf27#par130" source="tlads0#ad9#ipd9#pdp12" target="path.objectId" name="remoteSightingId - Path.objectId"/>
+    </SuccessFlow>
+    <PortDefinitionParameter id="tlads0#ad9#ipd9#pdp11" name="localSightingId"/>
+    <PortDefinitionParameter id="tlads0#ad9#ipd9#pdp12" name="remoteSightingId"/>
+    <DataFlow id="tlads0#ad9#ipd9#df7" to="tlads0#ad9#dlu2">
+      <ParameterBinding id="tlads0#ad9#ipd9#df7#par93" source="tlads0#ad9#ipd9#pdp11" target="tlads0#ad9#dlu2#sc8#kcond8.cls14#att141" name="localSightingId - KeyCondition8 [oid]"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad9#spd9" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad9#epd9" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

@@ -12,27 +12,27 @@
       <ResponseParameter id="tlads0#ad3#rfrr6#rrsp9" name="updatedAt" jsonType="string"/>
       <ResponseParameter id="tlads0#ad3#rfrr6#rrsp10" name="userTypeId" jsonType="string"/>
       <SuccessFlow id="tlads0#ad3#rfrr6#sf30" to="tlads0#ad3#lgu3">
-        <ParameterBinding id="tlads0#ad3#rfrr6#sf30#par105" source="tlads0#ad3#rfrr6#rrsp3" target="token" name="token - Granted Token"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#sf30#par2" target="token" name="&quot;token&quot; - Granted Token" source="tlads0#ad3#rfrr6#rrsp3"/>
       </SuccessFlow>
-      <DataFlow id="tlads0#ad3#rfrr6#df12" to="tlads0#ad3#cru5">
-        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par106" source="tlads0#ad3#rfrr6#rrsp5" target="MUser#att33" name="email - email"/>
-        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par107" source="tlads0#ad3#rfrr6#rrsp8" target="MUser#att15" name="createdAt - remote createdAt"/>
-        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par108" source="tlads0#ad3#rfrr6#rrsp9" target="MUser#att16" name="updatedAt - remote updatedAt"/>
-        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par109" source="tlads0#ad3#rfrr6#rrsp6" target="MUser#att154" name="userOID - remote_oid"/>
-        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par110" source="tlads0#ad3#rfrr6#rrsp10" target="MUser#att14" name="userTypeId - user_type_id"/>
-        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par111" source="tlads0#ad3#rfrr6#rrsp4" target="mUsername" name="username - username"/>
+      <DataFlow id="tlads0#ad3#rfrr6#df12" to="tlads0#ad3#mfu2">
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par5" source="tlads0#ad3#rfrr6#rrsp5" target="MUser#att33" name="email - email"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par7" source="tlads0#ad3#rfrr6#rrsp8" target="MUser#att15" name="createdAt - remote createdAt"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par8" source="tlads0#ad3#rfrr6#rrsp9" target="MUser#att16" name="updatedAt - remote updatedAt"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par10" source="tlads0#ad3#rfrr6#rrsp6" target="MUser#att154" name="userOID - remote_oid"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par15" source="tlads0#ad3#rfrr6#rrsp10" target="MUser#att14" name="userTypeId - user_type_id"/>
+        <ParameterBinding id="tlads0#ad3#rfrr6#df12#par18" source="tlads0#ad3#rfrr6#rrsp4" target="mUsername" name="username - username"/>
       </DataFlow>
       <ErrorFlow id="tlads0#ad3#rfrr6#ef14" to="tlads0#ad3#epd3">
         <ParameterBinding id="tlads0#ad3#rfrr6#ef14#par112" sourceValue="Invalid Login or Password" target="notificationMessage" name="&quot;Invalid Login or Password&quot; - Notification Message"/>
       </ErrorFlow>
     </RestfulRequestResponse>
     <Login gr:x="580" gr:y="50" id="tlads0#ad3#lgu3" name="Login" gr:showAllParts="true">
-      <SuccessFlow id="tlads0#ad3#lgu3#sf40" to="tlads0#ad3#cru5"/>
+      <SuccessFlow id="tlads0#ad3#lgu3#sf40" to="tlads0#ad3#mfu2" automaticCoupling="true"/>
       <ErrorFlow id="tlads0#ad3#lgu3#ef16" to="tlads0#ad3#epd3" automaticCoupling="true"/>
     </Login>
-    <Create gr:x="505" gr:y="190" id="tlads0#ad3#cru5" name="Update User" dataBinding="MUser">
-      <SuccessFlow id="tlads0#ad3#cru5#sf41" to="tlads0#ad3#act10"/>
-    </Create>
+    <Update gr:x="490" gr:y="175" id="tlads0#ad3#mfu2" dataBinding="MUser">
+      <SuccessFlow id="tlads0#ad3#mfu2#sf22" to="tlads0#ad3#act10" automaticCoupling="true"/>
+    </Update>
   </Operations>
   <InputPortDefinition id="tlads0#ad3#ipd3" gr:x="0" gr:y="30">
     <SuccessFlow id="tlads0#ad3#ipd3#sf25" to="tlads0#ad3#rfrr6">
@@ -43,6 +43,7 @@
       <ParameterBinding id="tlads0#ad3#ipd3#df11#par113" source="password" target="password" name="Password - Password"/>
       <ParameterBinding id="tlads0#ad3#ipd3#df11#par114" source="username" target="username" name="Username - Username"/>
     </DataFlow>
+    <PortDefinitionParameter id="tlads0#ad3#ipd3#pdp24" name="email"/>
   </InputPortDefinition>
   <SuccessPortDefinition id="tlads0#ad3#spd3" name="Success Port" gr:x="0" gr:y="30"/>
   <ErrorPortDefinition id="tlads0#ad3#epd3" name="Error Port" gr:x="0" gr:y="300"/>

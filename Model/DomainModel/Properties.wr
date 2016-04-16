@@ -28,7 +28,7 @@
     <Attribute id="cls2#att12" name="park_id" type="integer" key="false"/>
     <Attribute id="cls2#att155" name="remoteOid" type="integer"/>
   </Class>
-  <Class id="cls14" name="Animal_Sighting" duration="persistent" serverResourceMethods="create delete read update" gr:x="110" gr:y="340" dataSyncManual="true" attributeOrder="cls14#att141 cls14#att143 cls14#att144 cls14#att145 cls14#att146 cls14#att147 cls14#att148 cls14#att149 cls14#att150 cls14#att151">
+  <Class id="cls14" name="Animal_Sighting" duration="persistent" serverResourceMethods="create delete read update" gr:x="110" gr:y="340" dataSyncManual="true" attributeOrder="cls14#att141 cls14#att143 cls14#att144 cls14#att145 cls14#att146 cls14#att147 cls14#att148 cls14#att149 cls14#att150 cls14#att151 cls14#att1">
     <Attribute id="cls14#att141" name="oid" type="integer" key="true" specialBehavior="implicitOid"/>
     <Attribute id="cls14#att143" name="user_id" type="integer" key="false"/>
     <Attribute id="cls14#att144" name="comment" type="string" key="false"/>
@@ -39,13 +39,6 @@
     <Attribute id="cls14#att149" name="latitude" type="float" key="false"/>
     <Attribute id="cls14#att150" name="longitude" type="float" key="false"/>
     <Attribute id="cls14#att151" name="image" type="blob" contentType="image" key="false"/>
+    <Attribute id="cls14#att1" name="remoteId" type="integer"/>
   </Class>
-  <Association id="as1" name="Animal_Animal_Sighting" sourceClass="cls2" targetClass="cls14">
-    <AssociationRole1 id="as1#role1" name="AnimalToAnimal_Sighting" maxCard="N"/>
-    <AssociationRole2 id="as1#role2" name="Animal_SightingToAnimal" maxCard="1"/>
-  </Association>
-  <Association id="as2" name="App User_Animal_Sighting" sourceClass="MUser" targetClass="cls14">
-    <AssociationRole1 id="as2#role3" name="App UserToAnimal_Sighting" maxCard="N"/>
-    <AssociationRole2 id="as2#role4" name="Animal_SightingToApp User" maxCard="1"/>
-  </Association>
 </DomainModel>

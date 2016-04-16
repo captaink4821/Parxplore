@@ -1,0 +1,60 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad10" name="Load Sightings" defaultSuccessPortDefinition="tlads0#ad10#spd10" defaultErrorPortDefinition="tlads0#ad10#epd10">
+  <Operations>
+    <RestfulRequestResponse gr:x="210" gr:y="25" id="tlads0#ad10#rfrr10" name="Get Sightings" requestMethod="GET" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/data/AnimalSighting/">
+      <SuccessFlow id="tlads0#ad10#rfrr10#sf32" to="tlads0#ad10#cru4"/>
+      <ErrorFlow id="tlads0#ad10#rfrr10#ef15" to="tlads0#ad10#epd10" automaticCoupling="true"/>
+      <RequestHeader id="tlads0#ad10#rfrr10#rrh8" name="Authorization"/>
+      <ResponseParameter id="tlads0#ad10#rfrr10#rrsp2" name="response" jsonType="string">
+        <ComplexParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2" name="data" isArray="true">
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf24" name="comment" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf25" name="createdAt" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf26" name="image" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf27" name="latitude" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf28" name="longitude" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf29" name="oid" jsonType="integer"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf30" name="updatedAt" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf31" name="userId" jsonType="integer"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf32" name="animalId" jsonType="integer"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf35" name="address" jsonType="string"/>
+        </ComplexParameterFragment>
+        <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#spf34" name="deletedObjectIds" jsonType="string" isArray="true"/>
+      </ResponseParameter>
+      <RequestParameter id="tlads0#ad10#rfrr10#rrp21" name="Delta" isArray="false" jsonType="string"/>
+      <DataFlow id="tlads0#ad10#rfrr10#df17" to="tlads0#ad10#cru4">
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par110" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf35" target="cls14#att148" name="response/data/address - address"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par111" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf32" target="cls14#att147" name="response/data/animalId - animal_id"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par115" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf24" target="cls14#att144" name="response/data/comment - comment"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par123" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf26" target="cls14#att151" name="response/data/image - image"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par124" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf27" target="cls14#att149" name="response/data/latitude - latitude"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par125" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf28" target="cls14#att150" name="response/data/longitude - longitude"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par126" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf25" target="cls14#att145" name="response/data/createdAt - remote createdAt"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par127" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf30" target="cls14#att146" name="response/data/updatedAt - remote updatedAt"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par128" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf31" target="cls14#att143" name="response/data/userId - user_id"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par131" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf29" target="cls14#att1" name="response/data/oid - remoteId"/>
+      </DataFlow>
+    </RestfulRequestResponse>
+    <Create gr:x="450" gr:y="35" id="tlads0#ad10#cru4" dataBinding="cls14" bulk="true">
+      <SuccessFlow id="tlads0#ad10#cru4#sf35" to="tlads0#ad10#spd10" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad10#cru4#ef17" to="tlads0#ad10#epd10" automaticCoupling="true"/>
+    </Create>
+    <Selector gr:x="55" gr:y="390" id="tlads0#ad10#seu5" dataBinding="cls14">
+      <SuccessFlow id="tlads0#ad10#seu5#sf36" to="tlads0#ad10#dlu4">
+        <ParameterBinding id="tlads0#ad10#seu5#sf36#par135" source="data.cls14#att141" target="tlads0#ad10#dlu4#sc13#kcond10.cls14#att141" name="oid - KeyCondition10 [oid]"/>
+      </SuccessFlow>
+    </Selector>
+    <Delete gr:x="90" gr:y="200" id="tlads0#ad10#dlu4" dataBinding="cls14">
+      <ConditionalExpression id="tlads0#ad10#dlu4#sc13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="tlads0#ad10#dlu4#sc13#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <SuccessFlow id="tlads0#ad10#dlu4#sf37" to="tlads0#ad10#rfrr10" automaticCoupling="true"/>
+    </Delete>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad10#ipd10" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad10#ipd10#sf31" to="tlads0#ad10#seu5" automaticCoupling="true"/>
+    <DataFlow id="tlads0#ad10#ipd10#df21" to="tlads0#ad10#rfrr10">
+      <ParameterBinding id="tlads0#ad10#ipd10#df21#par136" sourceValue="$$TOKEN$$" target="tlads0#ad10#rfrr10#rrh8" name="&quot;$$TOKEN$$&quot; - Authorization"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad10#spd10" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad10#epd10" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

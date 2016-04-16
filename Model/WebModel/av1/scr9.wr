@@ -1,4 +1,4 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="70" gr:y="800" id="av1#scr9" name="Sightings">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-10" gr:y="840" id="av1#scr9" name="Sightings">
   <ViewComponents>
     <List gr:x="0" gr:y="0" id="av1#scr9#pwu2" name="Animal Sightings" checkable="false" dataBinding="cls14" eventOrder="av1#scr9#pwu2#oslte18" displayAttributes="cls14#att143 cls14#att147 cls14#att148 cls14#att151">
       <Events>
@@ -7,10 +7,13 @@
         </OnSelectEvent>
       </Events>
       <SortAttribute attribute="cls14#att141" order="ascending"/>
-      <ConditionalExpression id="av1#scr9#pwu2#sc10" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="av1#scr9#pwu2#sc10#acond2" name="user" predicate="eq" booleanOperator="or" implied="false" attributes="cls14#att143"/>
-      </ConditionalExpression>
     </List>
+    <Message gr:x="60" gr:y="115" id="av1#scr9#mssu6" name="Fail Message"/>
+    <Selector gr:x="175" gr:y="0" id="av1#scr9#seu6" dataBinding="cls14">
+      <ConditionalExpression id="av1#scr9#seu6#sc17" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="av1#scr9#seu6#sc17#acond5" name="AttCondition5" predicate="eq" booleanOperator="or" implied="false" attributes="cls14#att143"/>
+      </ConditionalExpression>
+    </Selector>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -44,7 +47,39 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="6"/>
+      <layout:Cell colspan="6">
+        <layout:Event eventType="HomeEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr9#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

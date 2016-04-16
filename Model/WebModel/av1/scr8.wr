@@ -1,25 +1,26 @@
 <Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="100" gr:y="585" id="av1#scr8" name="Profile">
   <ViewComponents>
-    <Details gr:x="0" gr:y="0" id="av1#scr8#dau2" name="User Profile" dataBinding="MUser" displayAttributes="mUsername MUser#att33 MUser#att15 MUser#att16 MUser#att154" eventOrder="av1#scr8#dau2#oslte16" gr:showAllParts="false">
+    <Details gr:x="0" gr:y="0" id="av1#scr8#dau2" name="User Profile" dataBinding="MUser" displayAttributes="mUsername MUser#att33 MUser#att15 MUser#att16 MUser#att154" gr:showAllParts="false" eventOrder="av1#scr8#dau2#oslte21">
       <Events>
-        <OnSelectEvent id="av1#scr8#dau2#oslte16" name="Sightings">
-          <NavigationFlow id="av1#scr8#dau2#oslte16#nf27" to="av1#scr9#pwu2">
-            <ParameterBinding id="av1#scr8#dau2#oslte16#nf27#par68" source="data.mUserOID" target="av1#scr9#pwu2#sc10#acond2" name="oid - user"/>
-          </NavigationFlow>
+        <OnSelectEvent id="av1#scr8#dau2#oslte21" name="Sightings">
+          <NavigationFlow id="av1#scr8#dau2#oslte21#nf35" to="av1#act9" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>
+      <DataFlow id="av1#scr8#dau2#df23" to="av1#scr9#seu6">
+        <ParameterBinding id="av1#scr8#dau2#df23#par140" source="data.MUser#att154" target="av1#scr9#seu6#sc17#acond5" name="remote_oid - AttCondition5"/>
+      </DataFlow>
     </Details>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Component componentId="av1#scr8#dau2">
-          <layout:Event event="av1#scr8#dau2#oslte16" eventType="OnSelectEvent"/>
           <layout:Attribute attribute="mUsername"/>
           <layout:Attribute attribute="MUser#att33"/>
           <layout:Attribute attribute="MUser#att15"/>
           <layout:Attribute attribute="MUser#att16"/>
           <layout:Attribute attribute="MUser#att154"/>
+          <layout:Event event="av1#scr8#dau2#oslte21" eventType="OnSelectEvent"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>

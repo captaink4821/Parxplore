@@ -1,23 +1,54 @@
 <ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad6" name="Add Sighting" defaultSuccessPortDefinition="tlads0#ad6#spd6" defaultErrorPortDefinition="tlads0#ad6#epd6">
   <Operations>
-    <Create gr:x="400" gr:y="50" id="tlads0#ad6#cru2" dataBinding="cls14">
-      <SuccessFlow id="tlads0#ad6#cru2#sf15" to="tlads0#ad6#spd6" automaticCoupling="true"/>
+    <Create gr:x="535" gr:y="85" id="tlads0#ad6#cru2" dataBinding="cls14">
       <ErrorFlow id="tlads0#ad6#cru2#ef8" to="tlads0#ad6#epd6" automaticCoupling="true"/>
+      <SuccessFlow id="tlads0#ad6#cru2#sf15" to="tlads0#ad6#spd6" automaticCoupling="true"/>
     </Create>
+    <RestfulRequestResponse gr:x="270" gr:y="5" id="tlads0#ad6#rfrr5" name="Post Sighting" requestMethod="POST" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/data/AnimalSighting/">
+      <RequestParameter id="tlads0#ad6#rfrr5#rrp13" name="image" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad6#rfrr5#rrp14" name="comment" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad6#rfrr5#rrp15" name="longitude" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad6#rfrr5#rrp16" name="latitude" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad6#rfrr5#rrp17" name="address" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad6#rfrr5#rrp18" name="animalId" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad6#rfrr5#rrp19" name="userId" isArray="false" jsonType="string"/>
+      <RequestHeader id="tlads0#ad6#rfrr5#rrh6" name="Authorization"/>
+      <SuccessFlow id="tlads0#ad6#rfrr5#sf10" to="tlads0#ad6#cru2"/>
+      <ErrorFlow id="tlads0#ad6#rfrr5#ef6" to="tlads0#ad6#epd6" automaticCoupling="true"/>
+    </RestfulRequestResponse>
+    <Selector gr:x="370" gr:y="340" id="tlads0#ad6#seu2" dataBinding="MUser">
+      <DataFlow id="tlads0#ad6#seu2#df19" to="tlads0#ad6#cru2">
+        <ParameterBinding id="tlads0#ad6#seu2#df19#par94" source="data.MUser#att154" target="cls14#att143" name="remote_oid - user_id"/>
+      </DataFlow>
+      <SuccessFlow id="tlads0#ad6#seu2#sf26" to="tlads0#ad6#rfrr5">
+        <ParameterBinding id="tlads0#ad6#seu2#sf26#par21" name="remote_oid - userId" source="data.MUser#att154" target="tlads0#ad6#rfrr5#rrp19"/>
+      </SuccessFlow>
+    </Selector>
   </Operations>
   <InputPortDefinition id="tlads0#ad6#ipd6" gr:x="0" gr:y="30">
     <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp16" name="image"/>
     <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp15" name="address"/>
     <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp14" name="name"/>
     <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp13" name="animal_id"/>
-    <SuccessFlow id="tlads0#ad6#ipd6#sf14" to="tlads0#ad6#cru2">
-      <ParameterBinding id="tlads0#ad6#ipd6#sf14#par21" source="tlads0#ad6#ipd6#pdp16" passing="true" name="image - PASSING"/>
-      <ParameterBinding id="tlads0#ad6#ipd6#sf14#par62" source="tlads0#ad6#ipd6#pdp18" target="cls14#att143" name="user_id - user_id"/>
-      <ParameterBinding id="tlads0#ad6#ipd6#sf14#par63" source="tlads0#ad6#ipd6#pdp15" target="cls14#att148" name="address - address"/>
-      <ParameterBinding id="tlads0#ad6#ipd6#sf14#par64" source="tlads0#ad6#ipd6#pdp13" target="cls14#att147" name="animal_id - animal_id"/>
-      <ParameterBinding id="tlads0#ad6#ipd6#sf14#par65" source="tlads0#ad6#ipd6#pdp16" target="cls14#att151" name="image - image"/>
-    </SuccessFlow>
+    <SuccessFlow id="tlads0#ad6#ipd6#sf14" to="tlads0#ad6#seu2" automaticCoupling="true"/>
     <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp18" name="user_id"/>
+    <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp10" name="latitude"/>
+    <PortDefinitionParameter id="tlads0#ad6#ipd6#pdp8" name="longitude"/>
+    <DataFlow id="tlads0#ad6#ipd6#df15" to="tlads0#ad6#cru2">
+      <ParameterBinding id="tlads0#ad6#ipd6#df15#par19" source="tlads0#ad6#ipd6#pdp15" target="cls14#att148" name="address - address"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df15#par20" source="tlads0#ad6#ipd6#pdp13" target="cls14#att147" name="animal_id - animal_id"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df15#par24" source="tlads0#ad6#ipd6#pdp16" target="cls14#att151" name="image - image"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df15#par25" source="tlads0#ad6#ipd6#pdp10" target="cls14#att149" name="latitude - latitude"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df15#par26" source="tlads0#ad6#ipd6#pdp8" target="cls14#att150" name="longitude - longitude"/>
+    </DataFlow>
+    <DataFlow id="tlads0#ad6#ipd6#df18" to="tlads0#ad6#rfrr5">
+      <ParameterBinding id="tlads0#ad6#ipd6#df18#par66" source="tlads0#ad6#ipd6#pdp15" target="tlads0#ad6#rfrr5#rrp17" name="address - address"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df18#par67" source="tlads0#ad6#ipd6#pdp13" target="tlads0#ad6#rfrr5#rrp18" name="animal_id - animalId"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df18#par87" source="tlads0#ad6#ipd6#pdp16" target="tlads0#ad6#rfrr5#rrp13" name="image - image"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df18#par88" source="tlads0#ad6#ipd6#pdp10" target="tlads0#ad6#rfrr5#rrp16" name="latitude - latitude"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df18#par91" source="tlads0#ad6#ipd6#pdp8" target="tlads0#ad6#rfrr5#rrp15" name="longitude - longitude"/>
+      <ParameterBinding id="tlads0#ad6#ipd6#df18#par92" sourceValue="$$TOKEN$$" target="tlads0#ad6#rfrr5#rrh6" name="&quot;$$TOKEN$$&quot; - Authorization"/>
+    </DataFlow>
   </InputPortDefinition>
   <SuccessPortDefinition id="tlads0#ad6#spd6" name="Success Port" gr:x="0" gr:y="30"/>
   <ErrorPortDefinition id="tlads0#ad6#epd6" name="Error Port" gr:x="0" gr:y="300"/>

@@ -1,10 +1,25 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-180" gr:y="745" id="av1#scr10" name="Sighting details">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-265" gr:y="665" id="av1#scr10" name="Sighting details">
   <ViewComponents>
-    <Details gr:x="0" gr:y="0" id="av1#scr10#dau3" name="Sighting Details" dataBinding="cls14" displayAttributes="cls14#att148 cls14#att151">
+    <Details gr:x="85" gr:y="80" id="av1#scr10#dau3" name="Sighting Details" dataBinding="cls14" displayAttributes="cls14#att148 cls14#att151" eventOrder="av1#scr10#dau3#oslte17">
       <ConditionalExpression id="av1#scr10#dau3#sc9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="av1#scr10#dau3#sc9#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </ConditionalExpression>
+      <Events>
+        <OnSelectEvent id="av1#scr10#dau3#oslte17" name="Delete">
+          <NavigationFlow id="av1#scr10#dau3#oslte17#nf28" to="av1#act7">
+            <ParameterBinding id="av1#scr10#dau3#oslte17#nf28#par132" source="data.cls14#att141" target="av1#act7.tlads0#ad9#ipd9#pdp11" name="oid - localSightingId"/>
+            <ParameterBinding id="av1#scr10#dau3#oslte17#nf28#par133" source="data.cls14#att1" target="av1#act7.tlads0#ad9#ipd9#pdp12" name="remoteId - remoteSightingId"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
     </Details>
+    <Message id="av1#scr10#mssu5" name="Message 4" eventOrder="av1#scr10#mssu5#oslte19" gr:x="0" gr:y="0">
+      <Events>
+        <OnSelectEvent id="av1#scr10#mssu5#oslte19" name="Ok" gr:pinned="true" gr:side="2" gr:pos="0">
+          <NavigationFlow id="av1#scr10#mssu5#oslte19#nf34" to="av1#scr9" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </Message>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -12,6 +27,7 @@
         <layout:Component componentId="av1#scr10#dau3">
           <layout:Attribute attribute="cls14#att148"/>
           <layout:Attribute attribute="cls14#att151"/>
+          <layout:Event event="av1#scr10#dau3#oslte17" eventType="OnSelectEvent"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>
@@ -29,6 +45,24 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Event eventType="BackEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr10#mssu5">
+          <layout:Event eventType="OnSelectEvent" event="av1#scr10#mssu5#oslte19"/>
+        </layout:Component>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

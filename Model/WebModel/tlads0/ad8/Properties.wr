@@ -30,6 +30,7 @@
     </RestfulRequestResponse>
     <Create gr:x="550" gr:y="130" id="tlads0#ad8#cru3" name="Create Animals" dataBinding="cls2" bulk="true">
       <SuccessFlow id="tlads0#ad8#cru3#sf21" to="tlads0#ad8#spd8" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad8#cru3#ef18" to="tlads0#ad8#epd8" automaticCoupling="true"/>
     </Create>
   </Operations>
   <InputPortDefinition id="tlads0#ad8#ipd8" gr:x="0" gr:y="30">
