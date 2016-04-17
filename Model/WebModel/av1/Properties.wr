@@ -62,10 +62,10 @@
   <Action id="av1#act7" gr:x="-55" gr:y="550" definition="tlads0#ad9">
     <Events>
       <SuccessEvent id="av1#act7#scce7" definition="tlads0#ad9#spd9">
-        <NavigationFlow id="av1#act7#scce7#nf30" to="av1#scr9" automaticCoupling="true"/>
+        <NavigationFlow id="av1#act7#scce7#nf30" to="av1#scs2#scr15" automaticCoupling="true"/>
       </SuccessEvent>
       <ErrorEvent id="av1#act7#erre7" definition="tlads0#ad9#epd9">
-        <NavigationFlow id="av1#act7#erre7#nf32" to="av1#scr10#mssu5">
+        <NavigationFlow id="av1#act7#erre7#nf32" to="av1#scs2#scr11#mssu7">
           <ParameterBinding id="av1#act7#erre7#nf32#par95" sourceValue="Unable to delete sighting" target="messages" name="&quot;Unable to delete sighting&quot; - Shown Messages"/>
         </NavigationFlow>
       </ErrorEvent>
@@ -74,10 +74,10 @@
   <Action id="av1#act9" gr:x="420" gr:y="955" definition="tlads0#ad10">
     <Events>
       <SuccessEvent id="av1#act9#scce10" definition="tlads0#ad10#spd10">
-        <NavigationFlow id="av1#act9#scce10#nf36" to="av1#scr9" automaticCoupling="true"/>
+        <NavigationFlow id="av1#act9#scce10#nf36" to="av1#scs2#scr15" automaticCoupling="true"/>
       </SuccessEvent>
       <ErrorEvent id="av1#act9#erre10" definition="tlads0#ad10#epd10">
-        <NavigationFlow id="av1#act9#erre10#nf37" to="av1#scr9#mssu6">
+        <NavigationFlow id="av1#act9#erre10#nf37" to="av1#scs2#scr15#mssu11">
           <ParameterBinding id="av1#act9#erre10#nf37#par129" sourceValue="Failed to get sightings" target="messages" name="&quot;Failed to get sightings&quot; - Shown Messages"/>
         </NavigationFlow>
       </ErrorEvent>

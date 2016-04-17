@@ -1,0 +1,93 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="av1#scs2#scr11" name="Sighting details">
+  <ViewComponents>
+    <Details gr:x="85" gr:y="80" id="av1#scs2#scr11#dau4" name="Sighting Details" dataBinding="cls14" displayAttributes="cls14#att3 cls14#att151 cls14#att2 cls14#att148 cls14#att149 cls14#att150" eventOrder="av1#scs2#scr11#dau4#oslte1 av1#scs2#scr11#dau4#oslte2">
+      <ConditionalExpression id="av1#scs2#scr11#dau4#sc6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="av1#scs2#scr11#dau4#sc6#kcond6" name="KeyCondition7" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <Events>
+        <OnSelectEvent id="av1#scs2#scr11#dau4#oslte1" name="Delete">
+          <NavigationFlow id="av1#scs2#scr11#dau4#oslte1#nf1" to="av1#act7">
+            <ParameterBinding id="av1#scs2#scr11#dau4#oslte1#nf1#par32" source="data.cls14#att141" target="av1#act7.tlads0#ad9#ipd9#pdp11" name="oid - localSightingId"/>
+            <ParameterBinding id="av1#scs2#scr11#dau4#oslte1#nf1#par34" source="data.cls14#att1" target="av1#act7.tlads0#ad9#ipd9#pdp12" name="remoteId - remoteSightingId"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scs2#scr11#dau4#oslte2" name="Location">
+          <NavigationFlow id="av1#scs2#scr11#dau4#oslte2#nf2" to="av1#scs2#scr1#mpcmpnt2">
+            <ParameterBinding id="av1#scs2#scr11#dau4#oslte2#nf2#par62" source="data.cls14#att148" target="addresses" name="address - Addresses"/>
+            <ParameterBinding id="av1#scs2#scr11#dau4#oslte2#nf2#par65" source="data.cls14#att149" target="latitudes" name="latitude - Latitudes"/>
+            <ParameterBinding id="av1#scs2#scr11#dau4#oslte2#nf2#par68" source="data.cls14#att150" target="longitudes" name="longitude - Longitudes"/>
+            <ParameterBinding id="av1#scs2#scr11#dau4#oslte2#nf2#par74" source="data.cls14#att2" target="titles" name="animalName - Titles"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Details>
+    <Message id="av1#scs2#scr11#mssu7" name="Message 4" eventOrder="av1#scs2#scr11#mssu7#oslte5" gr:x="0" gr:y="0">
+      <Events>
+        <OnSelectEvent id="av1#scs2#scr11#mssu7#oslte5" name="Ok" gr:pinned="true" gr:side="2" gr:pos="0">
+          <NavigationFlow id="av1#scs2#scr11#mssu7#oslte5#nf6" to="av1#scs2#scr15" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </Message>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs2#scr11#dau4">
+          <layout:Event event="av1#scs2#scr11#dau4#oslte1" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scs2#scr11#dau4#oslte2" eventType="OnSelectEvent"/>
+          <layout:Attribute attribute="cls14#att3"/>
+          <layout:Attribute attribute="cls14#att151"/>
+          <layout:Attribute attribute="cls14#att2"/>
+          <layout:Attribute attribute="cls14#att148"/>
+          <layout:Attribute attribute="cls14#att149"/>
+          <layout:Attribute attribute="cls14#att150"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Event eventType="BackEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs2#scr11#mssu7">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs2#scr11#mssu7#oslte5"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

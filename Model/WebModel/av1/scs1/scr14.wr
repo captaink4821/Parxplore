@@ -6,7 +6,7 @@
           <NavigationFlow id="av1#scs1#scr14#gctu2#oslte46#nf59" to="av1#scr8" automaticCoupling="true"/>
         </OnSelectEvent>
         <OnSelectEvent id="av1#scs1#scr14#gctu2#oslte47" name="sighting details" gr:pinned="true" gr:side="3" gr:pos="0">
-          <NavigationFlow id="av1#scs1#scr14#gctu2#oslte47#nf60" to="av1#scr10" automaticCoupling="true"/>
+          <NavigationFlow id="av1#scs1#scr14#gctu2#oslte47#nf60" to="av1#scs2#scr11" automaticCoupling="true"/>
         </OnSelectEvent>
         <OnSelectEvent id="av1#scs1#scr14#gctu2#oslte48" name="More" gr:pinned="true" gr:side="2" gr:pos="2">
           <NavigationFlow id="av1#scs1#scr14#gctu2#oslte48#nf61" to="av1#scr21" automaticCoupling="true"/>

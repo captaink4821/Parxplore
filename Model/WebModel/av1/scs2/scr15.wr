@@ -1,25 +1,25 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-10" gr:y="840" id="av1#scr9" name="Sightings">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="255" gr:y="175" id="av1#scs2#scr15" name="Sightings">
   <ViewComponents>
-    <List gr:x="0" gr:y="0" id="av1#scr9#pwu2" name="Animal Sightings" checkable="false" dataBinding="cls14" eventOrder="av1#scr9#pwu2#oslte18" displayAttributes="cls14#att3 cls14#att143 cls14#att148 cls14#att151 cls14#att2">
+    <List gr:x="0" gr:y="0" id="av1#scs2#scr15#pwu1" name="Animal Sightings" checkable="false" dataBinding="cls14" eventOrder="av1#scs2#scr15#pwu1#oslte6" displayAttributes="cls14#att3 cls14#att143 cls14#att148 cls14#att151 cls14#att2">
       <Events>
-        <OnSelectEvent id="av1#scr9#pwu2#oslte18" name="select sighting" validate="true">
-          <NavigationFlow id="av1#scr9#pwu2#oslte18#nf29" to="av1#scr10#dau3" automaticCoupling="true"/>
+        <OnSelectEvent id="av1#scs2#scr15#pwu1#oslte6" name="select sighting" validate="true">
+          <NavigationFlow id="av1#scs2#scr15#pwu1#oslte6#nf7" to="av1#scs2#scr11#dau4" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>
       <SortAttribute attribute="cls14#att141" order="ascending"/>
     </List>
-    <Message gr:x="60" gr:y="115" id="av1#scr9#mssu6" name="Fail Message"/>
-    <Selector gr:x="175" gr:y="0" id="av1#scr9#seu6" dataBinding="cls14">
-      <ConditionalExpression id="av1#scr9#seu6#sc17" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="av1#scr9#seu6#sc17#acond5" name="AttCondition5" predicate="eq" booleanOperator="or" implied="false" attributes="cls14#att143"/>
+    <Message gr:x="60" gr:y="115" id="av1#scs2#scr15#mssu11" name="Fail Message"/>
+    <Selector gr:x="175" gr:y="0" id="av1#scs2#scr15#seu4" dataBinding="cls14">
+      <ConditionalExpression id="av1#scs2#scr15#seu4#sc10" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="av1#scs2#scr15#seu4#sc10#acond3" name="AttCondition5" predicate="eq" booleanOperator="or" implied="false" attributes="cls14#att143"/>
       </ConditionalExpression>
     </Selector>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Component componentId="av1#scr9#pwu2">
-          <layout:Event event="av1#scr9#pwu2#oslte18" eventType="OnSelectEvent"/>
+        <layout:Component componentId="av1#scs2#scr15#pwu1">
+          <layout:Event event="av1#scs2#scr15#pwu1#oslte6" eventType="OnSelectEvent"/>
           <layout:Attribute attribute="cls14#att3"/>
           <layout:Attribute attribute="cls14#att143"/>
           <layout:Attribute attribute="cls14#att148"/>
@@ -59,7 +59,7 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Component componentId="av1#scr9#mssu6"/>
+        <layout:Component componentId="av1#scs2#scr15#mssu11"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
