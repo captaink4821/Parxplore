@@ -1,0 +1,30 @@
+<Toolbar xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="620" gr:y="180" id="av1#scs1#tlb4" name="main toolbar">
+  <ViewComponents/>
+  <Events>
+    <OnSelectEvent id="av1#scs1#tlb4#oslte52" name="More" gr:pinned="true" gr:side="0" gr:pos="1">
+      <NavigationFlow id="av1#scs1#tlb4#oslte52#nf67" to="av1#scs1#scr14" automaticCoupling="true"/>
+    </OnSelectEvent>
+    <OnSelectEvent id="av1#scs1#tlb4#oslte53" name="Animals">
+      <NavigationFlow id="av1#scs1#tlb4#oslte53#nf68" to="av1#scs1#scr13" automaticCoupling="true"/>
+    </OnSelectEvent>
+  </Events>
+  <layout:CustomLocation name="Bottom Bar">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Event panelId="av1#scs1#tlb4" event="av1#scs1#tlb4#oslte53" eventType="OnSelectEvent"/>
+          <layout:Event panelId="av1#scs1#tlb4" event="av1#scs1#tlb4#oslte52" eventType="OnSelectEvent"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="Top Bar">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Fragment type="screenTitle"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</Toolbar>

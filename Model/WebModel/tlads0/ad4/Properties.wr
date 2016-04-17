@@ -8,10 +8,7 @@
       <RequestParameter id="tlads0#ad4#rfrr8#rrp12" name="data" isArray="false" jsonType="string">
         <SimpleParameterFragment id="tlads0#ad4#rfrr8#rrp12#spf14" name="email" jsonType="string"/>
         <SimpleParameterFragment id="tlads0#ad4#rfrr8#rrp12#spf15" name="userTypeId" jsonType="integer" value="0"/>
-        <SimpleParameterFragment id="tlads0#ad4#rfrr8#rrp12#spf16" name="createdAt" jsonType="string"/>
-        <SimpleParameterFragment id="tlads0#ad4#rfrr8#rrp12#spf17" name="updatedAt" jsonType="string"/>
       </RequestParameter>
-      <RequestHeader id="tlads0#ad4#rfrr8#rrh4" name="Authorization"/>
     </RestfulRequestResponse>
   </Operations>
   <InputPortDefinition id="tlads0#ad4#ipd4" gr:x="0" gr:y="30">
@@ -28,7 +25,6 @@
       <ParameterBinding id="tlads0#ad4#ipd4#sf11#par71" sourceValue="0" target="tlads0#ad4#rfrr8#rrp12#spf15" name="&quot;0&quot; - data/userTypeId"/>
       <ParameterBinding id="tlads0#ad4#ipd4#sf11#par72" source="tlads0#ad4#ipd4#pdp20" target="tlads0#ad4#rfrr8#rrp11" name="password - password"/>
       <ParameterBinding id="tlads0#ad4#ipd4#sf11#par73" source="tlads0#ad4#ipd4#pdp21" target="tlads0#ad4#rfrr8#rrp10" name="username - username"/>
-      <ParameterBinding id="tlads0#ad4#ipd4#sf11#par74" sourceValue="WR_dXNlcjE=:QyNJQiLQa8Er4a379fbPuwxyTbk=" target="tlads0#ad4#rfrr8#rrh4" name="&quot;WR_dXNlcjE=:QyNJQiLQa8Er4a379fbPuwxyTbk=&quot; - Authorization"/>
     </SuccessFlow>
   </InputPortDefinition>
   <SuccessPortDefinition id="tlads0#ad4#spd4" name="Success Port" gr:x="0" gr:y="30"/>

@@ -55,9 +55,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Event panelId="av1#scr3#tlb2" event="av1#scr3#tlb2#oslte6" eventType="OnSelectEvent"/>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -74,8 +72,8 @@
   <Toolbar gr:x="45" gr:y="220" id="av1#scr3#tlb2" name="toolbar">
     <ViewComponents/>
     <Events>
-      <OnSelectEvent id="av1#scr3#tlb2#oslte6" name="Cancel">
-        <NavigationFlow id="av1#scr3#tlb2#oslte6#nf7" to="av1#scr1" automaticCoupling="true"/>
+      <OnSelectEvent id="av1#scr3#tlb2#oslte42" name="Cancel">
+        <NavigationFlow id="av1#scr3#tlb2#oslte42#nf55" to="av1#scs1#scr13" automaticCoupling="true"/>
       </OnSelectEvent>
     </Events>
   </Toolbar>

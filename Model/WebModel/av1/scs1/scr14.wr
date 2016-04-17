@@ -1,18 +1,21 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-235" gr:y="410" id="av1#scr11" name="General Info">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scr14" name="General Info" gr:x="640" gr:y="0">
   <ViewComponents>
-    <ViewComponent gr:x="0" gr:y="0" id="av1#scr11#gctu1" name="Menu" eventOrder="av1#scr11#gctu1#oslte17 av1#scr11#gctu1#oslte19 av1#scr11#gctu1#oslte23 av1#scr11#gctu1#oslte28">
+    <ViewComponent id="av1#scs1#scr14#gctu2" name="Menu" eventOrder="av1#scs1#scr14#gctu2#oslte46 av1#scs1#scr14#gctu2#oslte47 av1#scs1#scr14#gctu2#oslte48 av1#scs1#scr14#gctu2#oslte49 av1#scs1#scr14#gctu2#oslte51" gr:x="0" gr:y="0">
       <Events>
-        <OnSelectEvent id="av1#scr11#gctu1#oslte17" name="Profile">
-          <NavigationFlow id="av1#scr11#gctu1#oslte17#nf30" to="av1#scr8" automaticCoupling="true"/>
+        <OnSelectEvent id="av1#scs1#scr14#gctu2#oslte46" name="Profile">
+          <NavigationFlow id="av1#scs1#scr14#gctu2#oslte46#nf59" to="av1#scr8" automaticCoupling="true"/>
         </OnSelectEvent>
-        <OnSelectEvent id="av1#scr11#gctu1#oslte19" name="Animals">
-          <NavigationFlow id="av1#scr11#gctu1#oslte19#nf32" to="av1#scr1" automaticCoupling="true"/>
+        <OnSelectEvent id="av1#scs1#scr14#gctu2#oslte47" name="sighting details" gr:pinned="true" gr:side="3" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scr14#gctu2#oslte47#nf60" to="av1#scr10" automaticCoupling="true"/>
         </OnSelectEvent>
-        <OnSelectEvent id="av1#scr11#gctu1#oslte23" name="sighting details" gr:pinned="true" gr:side="3" gr:pos="0">
-          <NavigationFlow id="av1#scr11#gctu1#oslte23#nf35" to="av1#scr10" automaticCoupling="true"/>
+        <OnSelectEvent id="av1#scs1#scr14#gctu2#oslte48" name="More" gr:pinned="true" gr:side="2" gr:pos="2">
+          <NavigationFlow id="av1#scs1#scr14#gctu2#oslte48#nf61" to="av1#scr21" automaticCoupling="true"/>
         </OnSelectEvent>
-        <OnSelectEvent id="av1#scr11#gctu1#oslte28" name="More" gr:pinned="true" gr:side="2" gr:pos="2">
-          <NavigationFlow id="av1#scr11#gctu1#oslte28#nf58" to="av1#scr21" automaticCoupling="true"/>
+        <OnSelectEvent id="av1#scs1#scr14#gctu2#oslte49" name="Animals">
+          <NavigationFlow id="av1#scs1#scr14#gctu2#oslte49#nf64" to="av1#scs1#scr13" automaticCoupling="true"/>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scs1#scr14#gctu2#oslte51" name="Logout" gr:pinned="true" gr:side="0" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scr14#gctu2#oslte51#nf66" to="av1#act5" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>
     </ViewComponent>
@@ -34,11 +37,12 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell>
-        <layout:Component componentId="av1#scr11#gctu1">
-          <layout:Event event="av1#scr11#gctu1#oslte17" eventType="OnSelectEvent"/>
-          <layout:Event event="av1#scr11#gctu1#oslte19" eventType="OnSelectEvent"/>
-          <layout:Event event="av1#scr11#gctu1#oslte23" eventType="OnSelectEvent"/>
-          <layout:Event event="av1#scr11#gctu1#oslte28" eventType="OnSelectEvent"/>
+        <layout:Component componentId="av1#scs1#scr14#gctu2">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scr14#gctu2#oslte46"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scr14#gctu2#oslte47"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scr14#gctu2#oslte48"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scr14#gctu2#oslte49"/>
+          <layout:Event panelId="av1#scs1#scr13#tlb3" eventType="OnSelectEvent" event="av1#scs1#scr14#gctu2#oslte51"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell colspan="11"/>

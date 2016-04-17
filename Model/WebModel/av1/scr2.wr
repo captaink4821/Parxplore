@@ -1,6 +1,6 @@
 <Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="785" gr:y="185" id="av1#scr2" name="Animal Details">
   <ViewComponents>
-    <Details gr:x="0" gr:y="15" id="av1#scr2#dau1" name="Animal Details" eventOrder="av1#scr2#dau1#oslte5 av1#scr2#dau1#oslte3 av1#scr2#dau1#oslte7 av1#scr2#dau1#oslte14" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21">
+    <Details gr:x="0" gr:y="15" id="av1#scr2#dau1" name="Animal Details" eventOrder="av1#scr2#dau1#oslte3 av1#scr2#dau1#oslte7 av1#scr2#dau1#oslte14 av1#scr2#dau1#oslte45" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21">
       <ConditionalExpression id="av1#scr2#dau1#sc1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="av1#scr2#dau1#sc1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </ConditionalExpression>
@@ -9,9 +9,6 @@
           <NavigationFlow id="av1#scr2#dau1#oslte3#nf3" to="av1#scr3#seu1" gr:bendpoints="62,425,402,-5">
             <ParameterBinding id="av1#scr2#dau1#oslte3#nf3#par27" source="data.cls2#att18" target="av1#scr3#seu1#sc3#kcond3.cls2#att18" name="oid - oid [oid]"/>
           </NavigationFlow>
-        </OnSelectEvent>
-        <OnSelectEvent id="av1#scr2#dau1#oslte5" name="Back">
-          <NavigationFlow id="av1#scr2#dau1#oslte5#nf6" to="av1#scr1" automaticCoupling="true"/>
         </OnSelectEvent>
         <OnSelectEvent id="av1#scr2#dau1#oslte7" name="Delete">
           <NavigationFlow id="av1#scr2#dau1#oslte7#nf8" to="av1#act2">
@@ -24,13 +21,14 @@
             <ParameterBinding id="av1#scr2#dau1#oslte14#nf22#par57" source="data.cls2#att18" target="av1#scr7#seu3#sc5#kcond5.cls2#att18" name="oid - KeyCondition5 [oid]"/>
           </NavigationFlow>
         </OnSelectEvent>
+        <OnSelectEvent id="av1#scr2#dau1#oslte45" name="Back">
+          <NavigationFlow id="av1#scr2#dau1#oslte45#nf57" to="av1#scs1#scr13" automaticCoupling="true"/>
+        </OnSelectEvent>
       </Events>
     </Details>
     <Message gr:x="125" gr:y="0" id="av1#scr2#mssu4" name="Message 4" eventOrder="av1#scr2#mssu4#oslte22">
       <Events>
-        <OnSelectEvent id="av1#scr2#mssu4#oslte22" name="Ok" gr:pinned="true" gr:side="2" gr:pos="0">
-          <NavigationFlow id="av1#scr2#mssu4#oslte22#nf33" to="av1#scr1" automaticCoupling="true"/>
-        </OnSelectEvent>
+        <OnSelectEvent id="av1#scr2#mssu4#oslte22" name="Ok" gr:pinned="true" gr:side="2" gr:pos="0"/>
       </Events>
     </Message>
   </ViewComponents>
@@ -41,10 +39,10 @@
           <layout:Attribute attribute="cls2#att19"/>
           <layout:Attribute attribute="cls2#att20"/>
           <layout:Attribute attribute="cls2#att21"/>
-          <layout:Event event="av1#scr2#dau1#oslte5" eventType="OnSelectEvent"/>
           <layout:Event event="av1#scr2#dau1#oslte3" eventType="OnSelectEvent"/>
           <layout:Event event="av1#scr2#dau1#oslte7" eventType="OnSelectEvent"/>
           <layout:Event event="av1#scr2#dau1#oslte14" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr2#dau1#oslte45" eventType="OnSelectEvent"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>

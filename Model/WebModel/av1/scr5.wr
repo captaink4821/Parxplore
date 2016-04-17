@@ -1,9 +1,9 @@
 <Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="925" gr:y="600" id="av1#scr5" name="Error">
   <ViewComponents>
-    <Message gr:x="0" gr:y="0" id="av1#scr5#mssu2" name="Error Message" eventOrder="av1#scr5#mssu2#oslte9">
+    <Message gr:x="0" gr:y="0" id="av1#scr5#mssu2" name="Error Message" eventOrder="av1#scr5#mssu2#oslte44">
       <Events>
-        <OnSelectEvent id="av1#scr5#mssu2#oslte9" name="OK">
-          <NavigationFlow id="av1#scr5#mssu2#oslte9#nf16" to="av1#scr1" automaticCoupling="true" gr:bendpoints="-164,-131,521,119"/>
+        <OnSelectEvent id="av1#scr5#mssu2#oslte44" name="OK">
+          <NavigationFlow id="av1#scr5#mssu2#oslte44#nf56" to="av1#scs1#scr13" automaticCoupling="true" gr:bendpoints="-164,-131,521,119"/>
         </OnSelectEvent>
       </Events>
     </Message>
@@ -12,7 +12,7 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Component componentId="av1#scr5#mssu2">
-          <layout:Event event="av1#scr5#mssu2#oslte9" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr5#mssu2#oslte44" eventType="OnSelectEvent"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>

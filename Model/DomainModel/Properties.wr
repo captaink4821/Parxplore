@@ -18,7 +18,7 @@
     <AssociationRole1 id="MUser2MRole" name="AppUserToAppRole" maxCard="N"/>
     <AssociationRole2 id="MRole2MUser" name="AppRoleToAppUser" maxCard="1"/>
   </Association>
-  <Class gr:x="440" gr:y="340" id="cls2" name="Animal" duration="persistent" attributeOrder="cls2#att18 cls2#att19 cls2#att20 cls2#att21 cls2#att10 cls2#att11 cls2#att12 cls2#att155" serverResourceMethods="read create update delete" dataSyncManual="true">
+  <Class gr:x="380" gr:y="340" id="cls2" name="Animal" duration="persistent" attributeOrder="cls2#att18 cls2#att19 cls2#att20 cls2#att21 cls2#att10 cls2#att11 cls2#att12 cls2#att155" serverResourceMethods="read create update delete" dataSyncManual="true">
     <Attribute id="cls2#att18" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
     <Attribute id="cls2#att21" name="Seen" type="boolean"/>
     <Attribute id="cls2#att20" name="Species" type="string"/>
@@ -28,7 +28,7 @@
     <Attribute id="cls2#att12" name="park_id" type="integer" key="false"/>
     <Attribute id="cls2#att155" name="remoteOid" type="integer"/>
   </Class>
-  <Class id="cls14" name="Animal_Sighting" duration="persistent" serverResourceMethods="create delete read update" gr:x="110" gr:y="340" dataSyncManual="true" attributeOrder="cls14#att141 cls14#att143 cls14#att144 cls14#att145 cls14#att146 cls14#att147 cls14#att148 cls14#att149 cls14#att150 cls14#att151 cls14#att1 cls14#att2 cls14#att3">
+  <Class id="cls14" name="Animal_Sighting" duration="persistent" serverResourceMethods="create delete read update" gr:x="690" gr:y="315" dataSyncManual="true" attributeOrder="cls14#att141 cls14#att143 cls14#att144 cls14#att145 cls14#att146 cls14#att147 cls14#att148 cls14#att149 cls14#att150 cls14#att151 cls14#att1 cls14#att2 cls14#att3">
     <Attribute id="cls14#att141" name="oid" type="integer" key="true" specialBehavior="implicitOid"/>
     <Attribute id="cls14#att143" name="user_id" type="integer" key="false"/>
     <Attribute id="cls14#att144" name="comment" type="string" key="false"/>
@@ -42,5 +42,18 @@
     <Attribute id="cls14#att1" name="remoteId" type="integer"/>
     <Attribute id="cls14#att2" name="animalName" type="string"/>
     <Attribute id="cls14#att3" name="title" type="string"/>
+  </Class>
+  <Class id="cls1" name="blog_post" duration="persistent" serverClass="cls13" serverResource="BlogPost" serverResourceMethods="create delete read update" gr:x="110" gr:y="340">
+    <Attribute id="cls1#att4" name="oid" type="integer" key="true" specialBehavior="implicitOid"/>
+    <Attribute id="cls1#att5" name="remoteOid" type="integer" key="false" serverAttribute="cls13#att52" serverProperty="oid" specialBehavior="remoteOid"/>
+    <Attribute id="cls1#att6" name="user_id" type="integer" key="false" serverAttribute="cls13#att56" serverProperty="userId"/>
+    <Attribute id="cls1#att7" name="date_created" type="timestamp" key="false" serverAttribute="cls13#att55" serverProperty="dateCreated"/>
+    <Attribute id="cls1#att8" name="Body" type="string" key="false" serverAttribute="cls13#att54" serverProperty="body"/>
+    <Attribute id="cls1#att9" name="Title" type="string" key="false" serverAttribute="cls13#att53" serverProperty="title"/>
+    <Attribute id="cls1#att13" name="remote createdAt" type="timestamp" key="false" serverAttribute="cls13#att76" serverProperty="createdAt"/>
+    <Attribute id="cls1#att17" name="remote updatedAt" type="timestamp" key="false" serverAttribute="cls13#att77" serverProperty="updatedAt"/>
+    <Attribute id="cls1#att22" name="animal_sighting_id" type="string" key="false" serverAttribute="cls13#att19" serverProperty="animalSightingId"/>
+    <Attribute id="cls1#att23" name="createdAt" type="timestamp" key="false" specialBehavior="unsentCreateTimestamp"/>
+    <Attribute id="cls1#att24" name="updatedAt" type="timestamp" key="false" specialBehavior="unsentUpdateTimestamp"/>
   </Class>
 </DomainModel>

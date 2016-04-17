@@ -1,3 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Warnings></Warnings>
+<Warnings> 
+  <Warning key="INTERACTION.EMPTY_AUTO_BINDING" error="false" xpath="id('av1#scr21#gctu6#oslte33#nf44')">
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow av1#scr21#gctu6#oslte33#nf44</Message>
+    <Resolution>rO0ABXNyADFjb20ud2VicmF0aW8uaWRlLnVpLnZhbGlkYXRpb24uQ2hhbmdlQXR0cmlidXRlRml433a5EcdW3OUCAAJMAAlhdHRyaWJ1dGV0ABJMamF2YS9sYW5nL1N0cmluZztMAAV2YWx1ZXEAfgABeHIALGNvbS53ZWJyYXRpby5pZGUudWkudmFsaWRhdGlvbi5BYnN0cmFjdFdSRml4Bvx6tWHK5uQCAAB4cgAxY29tLndlYnJhdGlvLmNvbW1vbnMubWYudWkudmFsaWRhdGlvbi5BYnN0cmFjdEZpeDpVNH60XThZAgABTAALZGVzY3JpcHRpb25xAH4AAXhwdAAoUmVtb3ZlIHRoZSAnQXV0b21hdGljIENvdXBsaW5nJyBwcm9wZXJ0eXQAEWF1dG9tYXRpY0NvdXBsaW5ncA==</Resolution>
+  </Warning>
+  <Warning key="INTERACTION.EMPTY_AUTO_BINDING" error="false" xpath="id('av1#scr21#gctu7#oslte34#nf45')">
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow av1#scr21#gctu7#oslte34#nf45</Message>
+    <Resolution>rO0ABXNyADFjb20ud2VicmF0aW8uaWRlLnVpLnZhbGlkYXRpb24uQ2hhbmdlQXR0cmlidXRlRml433a5EcdW3OUCAAJMAAlhdHRyaWJ1dGV0ABJMamF2YS9sYW5nL1N0cmluZztMAAV2YWx1ZXEAfgABeHIALGNvbS53ZWJyYXRpby5pZGUudWkudmFsaWRhdGlvbi5BYnN0cmFjdFdSRml4Bvx6tWHK5uQCAAB4cgAxY29tLndlYnJhdGlvLmNvbW1vbnMubWYudWkudmFsaWRhdGlvbi5BYnN0cmFjdEZpeDpVNH60XThZAgABTAALZGVzY3JpcHRpb25xAH4AAXhwdAAoUmVtb3ZlIHRoZSAnQXV0b21hdGljIENvdXBsaW5nJyBwcm9wZXJ0eXQAEWF1dG9tYXRpY0NvdXBsaW5ncA==</Resolution>
+  </Warning>
+  <Warning key="INTERACTION.EMPTY_AUTO_BINDING" error="false" xpath="id('av1#scr21#gctu9#oslte36#nf47')">
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow av1#scr21#gctu9#oslte36#nf47</Message>
+    <Resolution>rO0ABXNyADFjb20ud2VicmF0aW8uaWRlLnVpLnZhbGlkYXRpb24uQ2hhbmdlQXR0cmlidXRlRml433a5EcdW3OUCAAJMAAlhdHRyaWJ1dGV0ABJMamF2YS9sYW5nL1N0cmluZztMAAV2YWx1ZXEAfgABeHIALGNvbS53ZWJyYXRpby5pZGUudWkudmFsaWRhdGlvbi5BYnN0cmFjdFdSRml4Bvx6tWHK5uQCAAB4cgAxY29tLndlYnJhdGlvLmNvbW1vbnMubWYudWkudmFsaWRhdGlvbi5BYnN0cmFjdEZpeDpVNH60XThZAgABTAALZGVzY3JpcHRpb25xAH4AAXhwdAAoUmVtb3ZlIHRoZSAnQXV0b21hdGljIENvdXBsaW5nJyBwcm9wZXJ0eXQAEWF1dG9tYXRpY0NvdXBsaW5ncA==</Resolution>
+  </Warning>
+  <Warning key="INTERACTION.EMPTY_AUTO_BINDING" error="false" xpath="id('av1#scr4#enu2#oslte11#nf11')">
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow av1#scr4#enu2#oslte11#nf11</Message>
+    <Resolution>rO0ABXNyADFjb20ud2VicmF0aW8uaWRlLnVpLnZhbGlkYXRpb24uQ2hhbmdlQXR0cmlidXRlRml433a5EcdW3OUCAAJMAAlhdHRyaWJ1dGV0ABJMamF2YS9sYW5nL1N0cmluZztMAAV2YWx1ZXEAfgABeHIALGNvbS53ZWJyYXRpby5pZGUudWkudmFsaWRhdGlvbi5BYnN0cmFjdFdSRml4Bvx6tWHK5uQCAAB4cgAxY29tLndlYnJhdGlvLmNvbW1vbnMubWYudWkudmFsaWRhdGlvbi5BYnN0cmFjdEZpeDpVNH60XThZAgABTAALZGVzY3JpcHRpb25xAH4AAXhwdAAoUmVtb3ZlIHRoZSAnQXV0b21hdGljIENvdXBsaW5nJyBwcm9wZXJ0eXQAEWF1dG9tYXRpY0NvdXBsaW5ncA==</Resolution>
+  </Warning>
+  <Warning key="COMPONENT.MAJOR_ISSUE" error="true" xpath="id('av1#scr12#mpcmpnt1')">
+    <Message>Both addresses and latitudes/longitudes specified</Message>
+  </Warning>
+  <Warning key="STRUCTURE.REFERENCE_MISSING" error="true" xpath="id('av1')" tab="general">
+    <Message>Missing Home Element</Message>
+  </Warning>
+  <Warning key="STRUCTURE.REFERENCE_INVALID" error="true" xpath="id('av1#scr25#enu11#oslte41#nf63')" tab="general">
+    <Message>Invalid NavigationFlow Target</Message>
+    <Resolution>rO0ABXNyACxjb20ud2VicmF0aW8uaWRlLnVpLnZhbGlkYXRpb24uUmVtb3ZlRWxlbWVudD3DjNJ82tlxAgAAeHIALGNvbS53ZWJyYXRpby5pZGUudWkudmFsaWRhdGlvbi5BYnN0cmFjdFdSRml4Bvx6tWHK5uQCAAB4cgAxY29tLndlYnJhdGlvLmNvbW1vbnMubWYudWkudmFsaWRhdGlvbi5BYnN0cmFjdEZpeDpVNH60XThZAgABTAALZGVzY3JpcHRpb250ABJMamF2YS9sYW5nL1N0cmluZzt4cHQAIVJlbW92ZSB0aGUgaW52YWxpZCBOYXZpZ2F0aW9uRmxvdw==</Resolution>
+  </Warning>
+  <Warning key="INTERACTION.PARAM_MISSING" error="true" xpath="id('av1#scr4#enu2')">
+    <Message>The mandatory input parameter Password is not provided to the component Login</Message>
+  </Warning>
+  <Warning key="INTERACTION.PARAM_MISSING" error="true" xpath="id('av1#scr4#enu2')">
+    <Message>The mandatory input parameter Username is not provided to the component Login</Message>
+  </Warning>
+  <Warning key="INTERACTION.PARAM_MISSING" error="true" xpath="id('av1#scr25#enu10')">
+    <Message>The mandatory input parameter Format is not provided to the component Barcode Info</Message>
+  </Warning>
+  <Warning key="INTERACTION.PARAM_MISSING" error="true" xpath="id('av1#scr25#enu10')">
+    <Message>The mandatory input parameter Value Type is not provided to the component Barcode Info</Message>
+  </Warning>
+  <Warning key="INTERACTION.PARAM_MISSING" error="true" xpath="id('av1#scr25#enu10')">
+    <Message>The mandatory input parameter Value is not provided to the component Barcode Info</Message>
+  </Warning>
+</Warnings>
