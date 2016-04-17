@@ -1,0 +1,38 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr18" name="Rules" gr:x="140" gr:y="1220">
+  <ViewComponents>
+    <Message id="av1#scr18#mssu9" name="Rules" eventOrder="av1#scr18#mssu9#oslte30" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">RULES &amp; REGULATIONS
+Section 26-1. Rules and Regulations Adopted
+
+(a) The terms &#8220;Parks,&#8221; &#8220;Parkways,&#8221; &#8220;Recreational Areas,&#8221; &#8220;Marinas&#8221; and other &#8220;Areas Operated and Maintained by the Miami-Dade County Parks, Recreation and Open Spaces Department&#8221; are defined to mean parks, wayside parks, parkways, playground, recreation fields, museums, auditoriums, ranges and buildings, natural areas, forests or preserves, lakes, streams, canals, lagoons, waterways, water areas and beaches therein and all public service facilities conducted on grounds, buildings, and structures in Miami-Dade County that are under the control of or assigned for upkeep, maintenance or operation by the Miami-Dade County Parks, Recreation and Open Spaces Department, and all beaches and ocean areas available to the public in the unincorporated area of the County.
+(b) The term &#8220;Park Property&#8221; when used hereinafter is defined to cover all areas, buildings, locations, and facilities described in the foregoing paragraph.
+(c) The terms &#8220;Park Department,&#8221; &#8220;the Department&#8221; when used hereinafter are defined as &#8220;The Miami-Dade County Parks, Recreation and Open Spaces Department&#8221; and the term &#8220;Department Director&#8221; refers to the Director of said Department.
+(d) The term &#8220;Department Employee&#8221; refers to individuals employed by the Parks, Recreation and Open Spaces Department with responsibilities for the safe management, security, operation or maintenance of park facilities.
+(e) In construing the provisions hereof and each and every word, phase or part thereof where the context will permit, the definitions provided in Sections 1.01 Florida Statues shall apply.  (Ord. No. 59-14, Rules, Definitions, &#167;&#167; 1, 2, 6-16-59; Ord. No. 74-85, &#167; 1, 10-1-74) 
+
+Traffic
+Rule 2. Traffic ordinances and state vehicle laws
+Rule 3. Roads and driveways within parks
+Rule 4. Trucks, buses, other heavy vehicles
+Rule 5. Non-Motorized Equipment Use
+Rule 6. Parking
+Rule 7. Use of vehicles
+Park Property
+Rule 8. Preservation of property
+Rule 9. Protection and preservation of wildlife
+Rule 10. Control of Nuisance Animals
+Rule 11. Domestic animals
+Rule 12. Aircraft
+Rule 13. Closing of parks
+Recreational Activities by Permit Only
+Rule 22. Boating
+Rule 23. Permit to operate boats for rent or hire
+Rule 24. Picnic shelter permit
+Rule 25. Camping
+Sanitation
+Rule 26. Pollution of waters
+More Rules and Regulations
+
+
+http://www.miamidade.gov/parks/rules-regulations.asp
+</Message>      <Events>        <OnSelectEvent id="av1#scr18#mssu9#oslte30" name="Back To General Info" gr:pinned="true" gr:side="2" gr:pos="0">          <NavigationFlow id="av1#scr18#mssu9#oslte30#nf41" to="av1#scr21" automaticCoupling="true"/>        </OnSelectEvent>      </Events>    </Message>  </ViewComponents>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Component componentId="av1#scr18#mssu9">          <layout:Event eventType="OnSelectEvent" event="av1#scr18#mssu9#oslte30"/>        </layout:Component>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Screen>
