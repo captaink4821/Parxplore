@@ -1,17 +1,17 @@
-<Toolbar xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="370" gr:y="835" id="av1#tlb8" name="main_toolbar">
+<Toolbar xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="605" gr:y="830" id="av1#scs1#tlb3" name="main_toolbar">
   <ViewComponents/>
   <Events>
-    <OnSelectEvent id="av1#tlb8#oslte104" name="sighting details" gr:pinned="true" gr:side="2" gr:pos="2">
-      <NavigationFlow id="av1#tlb8#oslte104#nf99" to="av1#scs2#scr26" automaticCoupling="true"/>
+    <OnSelectEvent id="av1#scs1#tlb3#oslte34" name="sighting details" gr:pinned="true" gr:side="2" gr:pos="2">
+      <NavigationFlow id="av1#scs1#tlb3#oslte34#nf54" to="av1#scs1#scs5#scr1" automaticCoupling="true"/>
     </OnSelectEvent>
-    <OnSelectEvent id="av1#tlb8#oslte105" name="Profile" gr:pinned="true" gr:side="0" gr:pos="0">
-      <NavigationFlow id="av1#tlb8#oslte105#nf103" to="av1#scr8#dau2" automaticCoupling="true"/>
+    <OnSelectEvent id="av1#scs1#tlb3#oslte35" name="Profile" gr:pinned="true" gr:side="0" gr:pos="0">
+      <NavigationFlow id="av1#scs1#tlb3#oslte35#nf57" to="av1#scs1#scr19#dau4" automaticCoupling="true"/>
     </OnSelectEvent>
-    <OnSelectEvent id="av1#tlb8#oslte106" name="Animals" gr:pinned="true" gr:side="1" gr:pos="1">
-      <NavigationFlow id="av1#tlb8#oslte106#nf101" to="av1#scs4#scr36" automaticCoupling="true"/>
+    <OnSelectEvent id="av1#scs1#tlb3#oslte36" name="Animals" gr:pinned="true" gr:side="1" gr:pos="1">
+      <NavigationFlow id="av1#scs1#tlb3#oslte36#nf110" to="av1#scs1#scr24" automaticCoupling="true"/>
     </OnSelectEvent>
-    <OnSelectEvent id="av1#tlb8#oslte107" name="More" gr:pinned="true" gr:side="3" gr:pos="1">
-      <NavigationFlow id="av1#tlb8#oslte107#nf102" to="av1#scs3#scr28" automaticCoupling="true"/>
+    <OnSelectEvent id="av1#scs1#tlb3#oslte37" name="More" gr:pinned="true" gr:side="3" gr:pos="1">
+      <NavigationFlow id="av1#scs1#tlb3#oslte37#nf60" to="av1#scs1#scs7#scr12" automaticCoupling="true"/>
     </OnSelectEvent>
   </Events>
   <layout:CustomLocation name="Top Bar">
@@ -30,19 +30,19 @@
     <layout:Grid containerType="cell">
       <layout:Row>
         <layout:Cell layout:cellLayout="MobileDefault/ButtonBar">
-          <layout:Event panelId="av1#tlb8" event="av1#tlb8#oslte106" eventType="OnSelectEvent">
+          <layout:Event panelId="av1#scs1#tlb3" event="av1#scs1#tlb3#oslte36" eventType="OnSelectEvent">
             <layout:LayoutParameter name="show" value="icon" type="event"/>
             <layout:LayoutParameter name="icon" value="ios-list-outline" type="event"/>
           </layout:Event>
-          <layout:Event panelId="av1#tlb8" event="av1#tlb8#oslte107" eventType="OnSelectEvent">
+          <layout:Event panelId="av1#scs1#tlb3" event="av1#scs1#tlb3#oslte37" eventType="OnSelectEvent">
             <layout:LayoutParameter name="show" value="icon" type="event"/>
             <layout:LayoutParameter name="icon" value="ios-gear" type="event"/>
           </layout:Event>
-          <layout:Event panelId="av1#tlb8" event="av1#tlb8#oslte104" eventType="OnSelectEvent">
+          <layout:Event panelId="av1#scs1#tlb3" event="av1#scs1#tlb3#oslte34" eventType="OnSelectEvent">
             <layout:LayoutParameter name="show" value="icon" type="event"/>
             <layout:LayoutParameter name="icon" value="camera" type="event"/>
           </layout:Event>
-          <layout:Event panelId="av1#tlb8" event="av1#tlb8#oslte105" eventType="OnSelectEvent">
+          <layout:Event panelId="av1#scs1#tlb3" event="av1#scs1#tlb3#oslte35" eventType="OnSelectEvent">
             <layout:LayoutParameter name="show" value="icon" type="event"/>
             <layout:LayoutParameter name="icon" value="person" type="event"/>
           </layout:Event>

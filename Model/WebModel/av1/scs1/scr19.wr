@@ -1,24 +1,24 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="245" gr:y="345" id="av1#scr8" name="Profile">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="480" gr:y="340" id="av1#scs1#scr19" name="Profile">
   <ViewComponents>
-    <Details gr:x="0" gr:y="0" id="av1#scr8#dau2" name="User Profile" dataBinding="MUser" displayAttributes="mUsername MUser#att33 MUser#att15 MUser#att16 MUser#att154" gr:showAllParts="false" eventOrder="av1#scr8#dau2#oslte21">
+    <Details gr:x="0" gr:y="0" id="av1#scs1#scr19#dau4" name="User Profile" dataBinding="MUser" displayAttributes="mUsername MUser#att33 MUser#att15 MUser#att16 MUser#att154" gr:showAllParts="false" eventOrder="av1#scs1#scr19#dau4#oslte38">
       <Events>
-        <OnSelectEvent id="av1#scr8#dau2#oslte21" name="Sightings">
-          <NavigationFlow id="av1#scr8#dau2#oslte21#nf35" to="av1#act9" automaticCoupling="true"/>
+        <OnSelectEvent id="av1#scs1#scr19#dau4#oslte38" name="Sightings">
+          <NavigationFlow id="av1#scs1#scr19#dau4#oslte38#nf92" to="av1#scs1#act12" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>
-      <DataFlow id="av1#scr8#dau2#df23" to="av1#scs2#scr16#seu9"/>
+      <DataFlow id="av1#scs1#scr19#dau4#df14" to="av1#scs1#scs5#scr3#seu1"/>
     </Details>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Component componentId="av1#scr8#dau2">
+        <layout:Component componentId="av1#scs1#scr19#dau4">
           <layout:Attribute attribute="mUsername"/>
           <layout:Attribute attribute="MUser#att33"/>
           <layout:Attribute attribute="MUser#att15"/>
           <layout:Attribute attribute="MUser#att16"/>
           <layout:Attribute attribute="MUser#att154"/>
-          <layout:Event event="av1#scr8#dau2#oslte21" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scs1#scr19#dau4#oslte38" eventType="OnSelectEvent"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>

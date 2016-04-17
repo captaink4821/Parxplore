@@ -1,0 +1,74 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs6#scr10" name="Animal Sighting" gr:x="0" gr:y="555">
+  <ViewComponents>
+    <Form id="av1#scs1#scs6#scr10#enu5" name="Add Sighting" gr:x="0" gr:y="0" fieldOrder="av1#scs1#scs6#scr10#enu5#fld12 av1#scs1#scs6#scr10#enu5#fld11 av1#scs1#scs6#scr10#enu5#fld10 av1#scs1#scs6#scr10#enu5#fld14" eventOrder="av1#scs1#scs6#scr10#enu5#oslte22">
+      <Field id="av1#scs1#scs6#scr10#enu5#fld10" name="Address" type="string" modifiable="true"/>
+      <Field id="av1#scs1#scs6#scr10#enu5#fld11" name="Animal" type="string" modifiable="false" preloaded="true"/>
+      <Field id="av1#scs1#scs6#scr10#enu5#fld12" name="Image" type="blob" contentType="image" modifiable="true"/>
+      <Field id="av1#scs1#scs6#scr10#enu5#fld13" name="animal_id" type="integer" preloaded="true" hidden="true"/>
+      <Field id="av1#scs1#scs6#scr10#enu5#fld14" name="Title" type="string" modifiable="true"/>
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs6#scr10#enu5#oslte22" name="Save" validate="true" gr:pinned="true" gr:side="0" gr:pos="1">
+          <NavigationFlow id="av1#scs1#scs6#scr10#enu5#oslte22#nf38" to="av1#scs1#act15">
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par52" name="Address - address" source="av1#scr7#enu5#fld11" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp15"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par53" name="animal_id - animal_id" source="av1#scr7#enu5#fld13" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp13"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par54" name="Image - image" source="av1#scr7#enu5#fld12" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp16"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par55" name="Animal - animalName" source="av1#scr7#enu5#fld10" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp19"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par57" name="Title - title" source="av1#scr7#enu5#fld14" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp22"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Form>
+    <Selector id="av1#scs1#scs6#scr10#seu4" gr:x="5" gr:y="95" dataBinding="cls2" distinctAttributes="cls2#att18 cls2#att19">
+      <ConditionalExpression id="av1#scs1#scs6#scr10#seu4#sc9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="av1#scs1#scs6#scr10#seu4#sc9#kcond6" name="oid" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <DataFlow id="av1#scs1#scs6#scr10#seu4#df6" to="av1#scs1#scs6#scr10#enu5">
+        <ParameterBinding id="av1#scs1#scs6#scr10#seu4#df6#par58" name="Name - Animal" source="data.cls2#att19" target="av1#scs1#scs6#scr10#enu5#fld11_preload"/>
+        <ParameterBinding id="av1#scs1#scs6#scr10#seu4#df6#par59" name="oid - animal_id" source="data.cls2#att155" target="av1#scs1#scs6#scr10#enu5#fld13_preload"/>
+      </DataFlow>
+    </Selector>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs6#scr10#enu5">
+          <layout:Field field="av1#scs1#scs6#scr10#enu5#fld12"/>
+          <layout:Field field="av1#scs1#scs6#scr10#enu5#fld11"/>
+          <layout:Field field="av1#scs1#scs6#scr10#enu5#fld10"/>
+          <layout:Field field="av1#scs1#scs6#scr10#enu5#fld14"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs6#scr10#enu5#oslte22"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Events>
+    <BackEvent id="av1#scs1#scs6#scr10#bke1" gr:pinned="true" gr:side="3" gr:pos="4">
+      <NavigationFlow id="av1#scs1#scs6#scr10#bke1#nf39" to="av1#scs1#scs6#scr7" automaticCoupling="true"/>
+    </BackEvent>
+  </Events>
+</Screen>

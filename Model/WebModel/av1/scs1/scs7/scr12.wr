@@ -1,0 +1,152 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs7#scr12" name="General Info" gr:x="0" gr:y="0">
+  <ViewComponents>
+    <ViewComponent id="av1#scs1#scs7#scr12#gctu1" name="Rules Regulations" eventOrder="av1#scs1#scs7#scr12#gctu1#oslte24" gr:x="0" gr:y="0">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs7#scr12#gctu1#oslte24" name="Rules" gr:pinned="true" gr:side="1" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scs7#scr12#gctu1#oslte24#nf41" to="av1#scs1#scs7#scr17" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <ViewComponent id="av1#scs1#scs7#scr12#gctu6" name="Activities" eventOrder="av1#scs1#scs7#scr12#gctu6#oslte25" gr:x="0" gr:y="80">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs7#scr12#gctu6#oslte25" name="Activities" gr:pinned="true" gr:side="1" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scs7#scr12#gctu6#oslte25#nf42" to="av1#scs1#scs7#scr14" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <ViewComponent id="av1#scs1#scs7#scr12#gctu7" name="Photo Gallery" eventOrder="av1#scs1#scs7#scr12#gctu7#oslte26" gr:x="0" gr:y="165">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs7#scr12#gctu7#oslte26" name="Photo Gallery" gr:pinned="true" gr:side="1" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scs7#scr12#gctu7#oslte26#nf43" to="av1#scs1#scs7#scr13#enu6" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <ViewComponent id="av1#scs1#scs7#scr12#gctu8" name="Contact Us" eventOrder="av1#scs1#scs7#scr12#gctu8#oslte27" gr:x="5" gr:y="255">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs7#scr12#gctu8#oslte27" name="Contact Us" gr:pinned="true" gr:side="1" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scs7#scr12#gctu8#oslte27#nf44" to="av1#scs1#scs7#scr18#mssu9" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <ViewComponent id="av1#scs1#scs7#scr12#gctu9" name="Paparazzi Awards" eventOrder="av1#scs1#scs7#scr12#gctu9#oslte28" gr:x="5" gr:y="345">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs7#scr12#gctu9#oslte28" name="Paparazzi Awards" gr:pinned="true" gr:side="2" gr:pos="5">
+          <NavigationFlow id="av1#scs1#scs7#scr12#gctu9#oslte28#nf45" to="av1#scs1#scs7#scr15#enu7" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs7#scr12#gctu1">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs7#scr12#gctu1#oslte24"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs7#scr12#gctu6">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs7#scr12#gctu6#oslte25"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs7#scr12#gctu7">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs7#scr12#gctu7#oslte26"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs7#scr12#gctu8">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs7#scr12#gctu8#oslte27"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs7#scr12#gctu9">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs7#scr12#gctu9#oslte28"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:CustomLocation name="Top Bar" customizeContent="true">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell label="General Info"/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</Screen>

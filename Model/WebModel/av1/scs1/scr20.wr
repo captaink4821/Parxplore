@@ -1,0 +1,54 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scr20" name="Connect to Park" gr:x="2712" gr:y="1749">
+  <ViewComponents>
+    <Form id="av1#scs1#scr20#enu8" name="Barcode Info" gr:x="0" gr:y="0" fieldOrder="av1#scs1#scr20#enu8#fld19 av1#scs1#scr20#enu8#fld18 av1#scs1#scr20#enu8#fld17">
+      <Field id="av1#scs1#scr20#enu8#fld17" name="Value Type" type="string" preloaded="true" modifiable="true"/>
+      <Field id="av1#scs1#scr20#enu8#fld18" name="Value" type="string" preloaded="true" modifiable="true"/>
+      <Field id="av1#scs1#scr20#enu8#fld19" name="Format" type="string" preloaded="true" modifiable="true"/>
+    </Form>
+    <Form id="av1#scs1#scr20#enu9" name="Scan Bar Code" eventOrder="av1#scs1#scr20#enu9#oslte39" gr:x="0" gr:y="80">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scr20#enu9#oslte39" name="Scan" validate="true" gr:pinned="true" gr:side="1" gr:pos="0"/>
+      </Events>
+    </Form>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scr20#enu8">
+          <layout:Field field="av1#scs1#scr20#enu8#fld19"/>
+          <layout:Field field="av1#scs1#scr20#enu8#fld18"/>
+          <layout:Field field="av1#scs1#scr20#enu8#fld17"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scr20#enu9">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scr20#enu9#oslte39"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

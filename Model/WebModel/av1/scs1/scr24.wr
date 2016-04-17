@@ -1,24 +1,24 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs4#scr36" name="Animals" protected="true" gr:x="20" gr:y="25">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scr24" name="Animals" protected="false" gr:x="935" gr:y="35">
   <ViewComponents>
-    <List id="av1#scs4#scr36#pwu6" name="Animals" gr:x="260" gr:y="0" checkable="false" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21" eventOrder="av1#scs4#scr36#pwu6#oslte78">
-      <ConditionalExpression id="av1#scs4#scr36#pwu6#sc14" defaultPolicy="fill" booleanOperator="or">
-        <AttributesCondition id="av1#scs4#scr36#pwu6#sc14#acond7" name="Name Condition" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="cls2#att19"/>
-        <AttributesCondition id="av1#scs4#scr36#pwu6#sc14#acond8" name="Species Condition" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="cls2#att20"/>
+    <List id="av1#scs1#scr24#pwu3" name="Animals" eventOrder="av1#scs1#scr24#pwu3#oslte44" gr:x="260" gr:y="0" checkable="false" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21">
+      <ConditionalExpression id="av1#scs1#scr24#pwu3#sc10" defaultPolicy="fill" booleanOperator="or">
+        <AttributesCondition id="av1#scs1#scr24#pwu3#sc10#acond5" name="Name Condition" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="cls2#att19"/>
+        <AttributesCondition id="av1#scs1#scr24#pwu3#sc10#acond6" name="Species Condition" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="cls2#att20"/>
       </ConditionalExpression>
       <SortAttribute attribute="cls2#att19" order="ascending"/>
       <Events>
-        <OnSelectEvent id="av1#scs4#scr36#pwu6#oslte78" name="Select Animal" validate="true" gr:pinned="true" gr:side="1" gr:pos="2">
-          <NavigationFlow id="av1#scs4#scr36#pwu6#oslte78#nf79" to="av1#scs4#scr37#dau6" automaticCoupling="true"/>
+        <OnSelectEvent id="av1#scs1#scr24#pwu3#oslte44" name="Select Animal" validate="true" gr:pinned="true" gr:side="1" gr:pos="2">
+          <NavigationFlow id="av1#scs1#scr24#pwu3#oslte44#nf104" to="av1#scs1#scs6#scr7#dau3" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>
     </List>
-    <Form id="av1#scs4#scr36#enu13" name="Search Animals by Keyword" eventOrder="av1#scs4#scr36#enu13#oslte69" gr:x="30" gr:y="20" fieldOrder="av1#scs4#scr36#enu13#fld23">
-      <Field id="av1#scs4#scr36#enu13#fld23" name="Keyword" type="string" modifiable="true"/>
+    <Form id="av1#scs1#scr24#enu12" name="Search Animals by Keyword" eventOrder="av1#scs1#scr24#enu12#oslte45" gr:x="30" gr:y="20" fieldOrder="av1#scs1#scr24#enu12#fld25">
+      <Field id="av1#scs1#scr24#enu12#fld25" name="Keyword" type="string" modifiable="true"/>
       <Events>
-        <OnSelectEvent id="av1#scs4#scr36#enu13#oslte69" name="search" validate="true">
-          <NavigationFlow id="av1#scs4#scr36#enu13#oslte69#nf74" to="av1#scs4#scr36#pwu6">
-            <ParameterBinding id="av1#scs4#scr36#enu13#oslte69#nf74#par133" name="Keyword - Name Condition" source="av1#scs4#scr36#enu13#fld23" target="av1#scs4#scr36#pwu6#sc14#acond7"/>
-            <ParameterBinding id="av1#scs4#scr36#enu13#oslte69#nf74#par134" name="Keyword - Species Condition" source="av1#scs4#scr36#enu13#fld23" target="av1#scs4#scr36#pwu6#sc14#acond8"/>
+        <OnSelectEvent id="av1#scs1#scr24#enu12#oslte45" name="search" validate="true">
+          <NavigationFlow id="av1#scs1#scr24#enu12#oslte45#nf105" to="av1#scs1#scr24#pwu3">
+            <ParameterBinding id="av1#scs1#scr24#enu12#oslte45#nf105#par86" name="Keyword - Name Condition" source="av1#scs1#scr24#enu12#fld25" target="av1#scs1#scr24#pwu3#sc10#acond5"/>
+            <ParameterBinding id="av1#scs1#scr24#enu12#oslte45#nf105#par95" name="Keyword - Species Condition" source="av1#scs1#scr24#enu12#fld25" target="av1#scs1#scr24#pwu3#sc10#acond6"/>
           </NavigationFlow>
         </OnSelectEvent>
       </Events>
@@ -41,11 +41,11 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Component componentId="av1#scs4#scr36#pwu6">
+        <layout:Component componentId="av1#scs1#scr24#pwu3">
           <layout:Attribute attribute="cls2#att19"/>
           <layout:Attribute attribute="cls2#att20"/>
           <layout:Attribute attribute="cls2#att21"/>
-          <layout:Event eventType="OnSelectEvent" event="av1#scs4#scr36#pwu6#oslte78"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scr24#pwu3#oslte44"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>
@@ -145,21 +145,6 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Toolbar id="av1#scs4#scr36#tlb4" name="Toolbar" gr:x="415" gr:y="130">
-    <ViewComponents/>
-    <Events>
-      <OnSelectEvent id="av1#scs4#scr36#tlb4#oslte74" name="Profile" gr:pinned="true" gr:side="2" gr:pos="1">
-        <NavigationFlow id="av1#scs4#scr36#tlb4#oslte74#nf75" to="av1#scr8" automaticCoupling="true"/>
-      </OnSelectEvent>
-      <OnSelectEvent id="av1#scs4#scr36#tlb4#oslte75" name="Add New" gr:pinned="true" gr:side="1" gr:pos="0">
-        <NavigationFlow id="av1#scs4#scr36#tlb4#oslte75#nf76" to="av1#scs4#scr38" automaticCoupling="true"/>
-      </OnSelectEvent>
-      <OnSelectEvent id="av1#scs4#scr36#tlb4#oslte76" name="Logout" gr:pinned="true" gr:side="0" gr:pos="1">
-        <NavigationFlow id="av1#scs4#scr36#tlb4#oslte76#nf77" to="av1#act5" automaticCoupling="true"/>
-      </OnSelectEvent>
-      <OnSelectEvent id="av1#scs4#scr36#tlb4#oslte77" name="Menu" gr:pinned="true" gr:side="3" gr:pos="0"/>
-    </Events>
-  </Toolbar>
   <layout:CustomLocation name="Bottom Bar">
     <layout:Grid containerType="cell">
       <layout:Row>
@@ -167,15 +152,15 @@
           <layout:Grid containerType="cell">
             <layout:Row>
               <layout:Cell layout:cellLayout="MobileDefault/ButtonBar">
-                <layout:Event panelId="av1#tlb1" event="av1#tlb1#oslte1" eventType="OnSelectEvent">
+                <layout:Event panelId="av1#tlb1" eventType="OnSelectEvent" event="av1#tlb1#oslte1">
                   <layout:LayoutParameter name="show" value="icon" type="event"/>
                   <layout:LayoutParameter name="icon" value="android-globe" type="event"/>
                 </layout:Event>
-                <layout:Event panelId="av1#tlb1" event="av1#tlb1#oslte2" eventType="OnSelectEvent">
+                <layout:Event panelId="av1#tlb1" eventType="OnSelectEvent" event="av1#tlb1#oslte2">
                   <layout:LayoutParameter name="show" value="icon" type="event"/>
                   <layout:LayoutParameter name="icon" value="android-contacts" type="event"/>
                 </layout:Event>
-                <layout:Event panelId="av1#tlb1" event="av1#tlb1#oslte3" eventType="OnSelectEvent">
+                <layout:Event panelId="av1#tlb1" eventType="OnSelectEvent" event="av1#tlb1#oslte3">
                   <layout:LayoutParameter name="show" value="icon" type="event"/>
                   <layout:LayoutParameter name="icon" value="calendar events" type="event"/>
                 </layout:Event>
@@ -194,8 +179,8 @@
             <layout:LayoutParameter name="show" value="icon" type="event"/>
             <layout:LayoutParameter name="icon" value="android-sunny" type="event"/>
           </layout:Event>
-          <layout:Field componentId="av1#scs4#scr36#enu13" mode="full" field="av1#scs4#scr36#enu13#fld23"/>
-          <layout:Event componentId="av1#scs4#scr36#enu13" event="av1#scs4#scr36#enu13#oslte69" eventType="OnSelectEvent">
+          <layout:Field componentId="av1#scs1#scr24#enu12" field="av1#scs1#scr24#enu12#fld25" mode="full"/>
+          <layout:Event componentId="av1#scs1#scr24#enu12" eventType="OnSelectEvent" event="av1#scs1#scr24#enu12#oslte45">
             <layout:LayoutParameter name="show" value="icon" type="event"/>
             <layout:LayoutParameter name="icon" value="search" type="event"/>
           </layout:Event>

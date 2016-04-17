@@ -1,11 +1,11 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs2#scr24" name="Sighting Location" gr:x="0" gr:y="355">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs5#scr2" name="Sighting Location" gr:x="0" gr:y="355">
   <ViewComponents>
-    <Map id="av1#scs2#scr24#mpcmpnt4" name="Sighting Location" gr:x="0" gr:y="0" mapsProvider="sdp1"/>
+    <Map id="av1#scs1#scs5#scr2#mpcmpnt1" name="Sighting Location" gr:x="0" gr:y="0" mapsProvider="sdp1"/>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Component componentId="av1#scs2#scr24#mpcmpnt4"/>
+        <layout:Component componentId="av1#scs1#scs5#scr2#mpcmpnt1"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

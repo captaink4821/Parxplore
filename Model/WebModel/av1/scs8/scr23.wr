@@ -1,0 +1,76 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="215" gr:y="30" id="av1#scs8#scr23" name="Login" ignoreToolbars="true">
+  <ViewComponents>
+    <Form gr:x="20" gr:y="0" id="av1#scs8#scr23#enu11" name="Login" fieldOrder="av1#scs8#scr23#enu11#fld24 av1#scs8#scr23#enu11#fld23" eventOrder="av1#scs8#scr23#enu11#oslte42 av1#scs8#scr23#enu11#oslte43">
+      <Field id="av1#scs8#scr23#enu11#fld23" name="Password" type="password" modifiable="true" preloaded="true"/>
+      <Field id="av1#scs8#scr23#enu11#fld24" name="Username" type="string" contentType="text/plain" modifiable="true" preloaded="true"/>
+      <Events>
+        <OnSelectEvent id="av1#scs8#scr23#enu11#oslte42" name="Login" validate="true">
+          <NavigationFlow id="av1#scs8#scr23#enu11#oslte42#nf98" to="av1#scs8#act19">
+            <ParameterBinding id="av1#scs8#scr23#enu11#oslte42#nf98#par68" source="av1#scs8#scr23#enu11#fld23" target="av1#scs8#act19.password" name="Password - Password"/>
+            <ParameterBinding id="av1#scs8#scr23#enu11#oslte42#nf98#par80" source="av1#scs8#scr23#enu11#fld24" target="av1#scs8#act19.username" name="Username - Username"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scs8#scr23#enu11#oslte43" name="Sign Up" validate="true">
+          <NavigationFlow id="av1#scs8#scr23#enu11#oslte43#nf99" to="av1#scs8#scr22#enu10" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </Form>
+    <Message gr:x="155" gr:y="75" id="av1#scs8#scr23#mssu11" name="Login Fail"/>
+    <Message gr:x="0" gr:y="110" id="av1#scs8#scr23#mssu12" name="Registration Message"/>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs8#scr23#enu11">
+          <layout:Field field="av1#scs8#scr23#enu11#fld24"/>
+          <layout:Field field="av1#scs8#scr23#enu11#fld23"/>
+          <layout:Event event="av1#scs8#scr23#enu11#oslte42" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scs8#scr23#enu11#oslte43" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs8#scr23#mssu11"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs8#scr23#mssu12"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

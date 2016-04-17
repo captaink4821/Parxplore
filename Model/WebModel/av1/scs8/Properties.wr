@@ -1,0 +1,24 @@
+<ScreenSet xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-230" gr:y="-140" id="av1#scs8" name="Public Area">
+  <Action id="av1#scs8#act17" gr:x="745" gr:y="235" definition="tlads0#ad4">
+    <Events>
+      <SuccessEvent id="av1#scs8#act17#scce17" definition="tlads0#ad4#spd4">
+        <NavigationFlow id="av1#scs8#act17#scce17#nf109" to="av1#scs1#scr24" automaticCoupling="true" gr:bendpoints="31,205,-309,-140;16,140,-324,99"/>
+      </SuccessEvent>
+      <ErrorEvent id="av1#scs8#act17#erre17" definition="tlads0#ad4#epd4">
+        <NavigationFlow id="av1#scs8#act17#erre17#nf95" to="av1#scs8#scr22" gr:bendpoints="-71,-15,-66,100"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+  <Action id="av1#scs8#act19" gr:x="740" gr:y="105" definition="tlads0#ad3">
+    <Events>
+      <SuccessEvent id="av1#scs8#act19#scce19" definition="tlads0#ad3#spd3">
+        <NavigationFlow id="av1#scs8#act19#scce19#nf112" to="av1#scs1#scr24" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="av1#scs8#act19#erre19" definition="tlads0#ad3#epd3" gr:pinned="true" gr:side="6" gr:pos="0">
+        <NavigationFlow id="av1#scs8#act19#erre19#nf101" to="av1#scs8#scr23#mssu11" gr:bendpoints="-57,47,108,22">
+          <ParameterBinding id="av1#scs8#act19#erre19#nf101#par84" sourceValue="The login attempt failed" target="messages" name="&quot;The login attempt failed&quot; - Shown Messages"/>
+        </NavigationFlow>
+      </ErrorEvent>
+    </Events>
+  </Action>
+</ScreenSet>

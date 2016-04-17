@@ -1,0 +1,80 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs6#scr5" name="Manage Animals" gr:x="955" gr:y="0">
+  <ViewComponents>
+    <Form id="av1#scs1#scs6#scr5#enu1" name="Animal" gr:x="0" gr:y="0" fieldOrder="av1#scs1#scs6#scr5#enu1#fld2 av1#scs1#scs6#scr5#enu1#fld1 av1#scs1#scs6#scr5#enu1#fld4" eventOrder="av1#scs1#scs6#scr5#enu1#oslte5">
+      <Field id="av1#scs1#scs6#scr5#enu1#fld1" name="Species" type="string" preloaded="true" modifiable="true"/>
+      <Field id="av1#scs1#scs6#scr5#enu1#fld2" name="Name" type="string" preloaded="true" modifiable="true"/>
+      <Field id="av1#scs1#scs6#scr5#enu1#fld4" name="seen" type="boolean" preloaded="true" modifiable="true"/>
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs6#scr5#enu1#oslte5" name="Save" validate="true" gr:pinned="true" gr:side="3" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scs6#scr5#enu1#oslte5#nf16" to="av1#scs1#act16">
+            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par17" name="Name - Name" source="av1#scr3#enu1#fld1" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp2"/>
+            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par22" name="Native - Native" source="av1#scr3#enu1#fld5" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp4"/>
+            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par27" name="Species - Species" source="av1#scr3#enu1#fld2" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp3"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Form>
+    <Selector id="av1#scs1#scs6#scr5#seu3" gr:x="15" gr:y="100" dataBinding="cls2" distinctAttributes="cls2#att18 cls2#att19 cls2#att20 cls2#att21">
+      <ConditionalExpression id="av1#scs1#scs6#scr5#seu3#sc5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="av1#scs1#scs6#scr5#seu3#sc5#kcond3" name="oid" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <DataFlow id="av1#scs1#scs6#scr5#seu3#df4" to="av1#scs1#scs6#scr5#enu1">
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df4#par28" name="Name - Name" source="data.cls2#att19" target="av1#scs1#scs6#scr5#enu1#fld2_preload"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df4#par29" name="Species - Species" source="data.cls2#att20" target="av1#scs1#scs6#scr5#enu1#fld1_preload"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df4#par30" name="Seen - seen" source="data.cls2#att21" target="av1#scs1#scs6#scr5#enu1#fld4_preload"/>
+      </DataFlow>
+      <DataFlow id="av1#scs1#scs6#scr5#seu3#df5" to="av1#scs1#act16" gr:bendpoints="243,-99,-32,161">
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par31" name="oid - animal id" source="data.cls2#att155" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp1"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par32" name="Name - Name" source="data.cls2#att19" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp2"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par34" name="Seen - Seen" source="data.cls2#att21" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp4"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par36" name="Species - Species" source="data.cls2#att20" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp3"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par37" name="oid - animal id" source="data.cls2#att18" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp6"/>
+      </DataFlow>
+    </Selector>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs6#scr5#enu1">
+          <layout:Field field="av1#scs1#scs6#scr5#enu1#fld2"/>
+          <layout:Field field="av1#scs1#scs6#scr5#enu1#fld1"/>
+          <layout:Field field="av1#scs1#scs6#scr5#enu1#fld4"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs6#scr5#enu1#oslte5"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Toolbar id="av1#scs1#scs6#scr5#tlb1" name="toolbar" gr:x="45" gr:y="220">
+    <ViewComponents/>
+    <Events>
+      <OnSelectEvent id="av1#scs1#scs6#scr5#tlb1#oslte6" name="Cancel" gr:pinned="true" gr:side="2" gr:pos="2">
+        <NavigationFlow id="av1#scs1#scs6#scr5#tlb1#oslte6#nf115" to="av1#scs1#scr24" automaticCoupling="true"/>
+      </OnSelectEvent>
+    </Events>
+  </Toolbar>
+</Screen>

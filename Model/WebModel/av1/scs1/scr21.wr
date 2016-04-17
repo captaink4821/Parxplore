@@ -1,0 +1,32 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scr21" name="Message Error" gr:x="2702" gr:y="1464">
+  <ViewComponents>
+    <Message id="av1#scs1#scr21#mssu10" name="Error" eventOrder="av1#scs1#scr21#mssu10#oslte40" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Error!!!!!!!!!!!!!!</Message>
+      <Events>
+        <OnSelectEvent id="av1#scs1#scr21#mssu10#oslte40" name="back to Connect to Park" gr:pinned="true" gr:side="3" gr:pos="1">
+          <NavigationFlow id="av1#scs1#scr21#mssu10#oslte40#nf93" to="av1#scs1#scr20" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </Message>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scr21#mssu10">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scr21#mssu10#oslte40"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

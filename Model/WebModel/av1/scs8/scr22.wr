@@ -1,0 +1,54 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="35" id="av1#scs8#scr22" name="Registration">
+  <ViewComponents>
+    <Form gr:x="0" gr:y="0" id="av1#scs8#scr22#enu10" name="Registration" fieldOrder="av1#scs8#scr22#enu10#fld22 av1#scs8#scr22#enu10#fld21 av1#scs8#scr22#enu10#fld20" eventOrder="av1#scs8#scr22#enu10#oslte41">
+      <Field id="av1#scs8#scr22#enu10#fld20" name="Email" type="string" modifiable="true" contentType="text/plain">
+        <VRules>
+          <EMailValidationRule id="av1#scs8#scr22#enu10#fld20#email2" name="EMail"/>
+          <MandatoryValidationRule id="av1#scs8#scr22#enu10#fld20#mnd4" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="av1#scs8#scr22#enu10#fld21" name="Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="av1#scs8#scr22#enu10#fld21#mnd5" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="av1#scs8#scr22#enu10#fld22" name="Username" type="string" modifiable="true" contentType="text/plain">
+        <VRules>
+          <MandatoryValidationRule id="av1#scs8#scr22#enu10#fld22#mnd6" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Events>
+        <OnSelectEvent id="av1#scs8#scr22#enu10#oslte41" name="Register" validate="true">
+          <NavigationFlow id="av1#scs8#scr22#enu10#oslte41#nf96" to="av1#scs8#act17">
+            <ParameterBinding id="av1#scs8#scr22#enu10#oslte41#nf96#par62" source="av1#scs8#scr22#enu10#fld20" target="av1#scs8#act17.tlads0#ad4#ipd4#pdp9" name="Email - email"/>
+            <ParameterBinding id="av1#scs8#scr22#enu10#oslte41#nf96#par64" source="av1#scs8#scr22#enu10#fld21" target="av1#scs8#act17.tlads0#ad4#ipd4#pdp20" name="Password - password"/>
+            <ParameterBinding id="av1#scs8#scr22#enu10#oslte41#nf96#par65" source="av1#scs8#scr22#enu10#fld22" target="av1#scs8#act17.tlads0#ad4#ipd4#pdp21" name="Username - username"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Form>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs8#scr22#enu10">
+          <layout:Field field="av1#scs8#scr22#enu10#fld22"/>
+          <layout:Field field="av1#scs8#scr22#enu10#fld21"/>
+          <layout:Field field="av1#scs8#scr22#enu10#fld20"/>
+          <layout:Event event="av1#scs8#scr22#enu10#oslte41" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

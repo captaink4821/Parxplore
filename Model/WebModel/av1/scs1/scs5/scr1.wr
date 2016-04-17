@@ -1,0 +1,88 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs5#scr1" name="Sighting details" gr:x="320" gr:y="440">
+  <ViewComponents>
+    <Details id="av1#scs1#scs5#scr1#dau1" name="Sighting Details" gr:x="85" gr:y="80" dataBinding="cls14" displayAttributes="cls14#att3 cls14#att151 cls14#att2 cls14#att148 cls14#att149 cls14#att150" eventOrder="av1#scs1#scs5#scr1#dau1#oslte1 av1#scs1#scs5#scr1#dau1#oslte2">
+      <ConditionalExpression id="av1#scs1#scs5#scr1#dau1#sc1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="av1#scs1#scs5#scr1#dau1#sc1#kcond1" name="KeyCondition7" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs5#scr1#dau1#oslte1" name="On Select Event 48">
+          <NavigationFlow id="av1#scs1#scs5#scr1#dau1#oslte1#nf1" to="av1#scs1#scs5#scr2#mpcmpnt1"/>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scs1#scs5#scr1#dau1#oslte2" name="On Select Event 49">
+          <NavigationFlow id="av1#scs1#scs5#scr1#dau1#oslte2#nf2" to="av1#scs1#act14">
+            <ParameterBinding id="av1#scs1#scs5#scr1#dau1#oslte2#nf2#par14" name="oid - localSightingId" source="data.cls14#att141" target="av1#scs1#act14.tlads0#ad9#ipd9#pdp11"/>
+            <ParameterBinding id="av1#scs1#scs5#scr1#dau1#oslte2#nf2#par16" name="remoteId - remoteSightingId" source="data.cls14#att1" target="av1#scs1#act14.tlads0#ad9#ipd9#pdp12"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Details>
+    <Message id="av1#scs1#scs5#scr1#mssu2" name="Message 4" eventOrder="av1#scs1#scs5#scr1#mssu2#oslte3" gr:x="0" gr:y="0">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs5#scr1#mssu2#oslte3" name="Ok" gr:pinned="true" gr:side="2" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scs5#scr1#mssu2#oslte3#nf3" to="av1#scs1#scs5#scr3" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </Message>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs5#scr1#dau1">
+          <layout:Attribute attribute="cls14#att3"/>
+          <layout:Attribute attribute="cls14#att151"/>
+          <layout:Attribute attribute="cls14#att2"/>
+          <layout:Attribute attribute="cls14#att148"/>
+          <layout:Attribute attribute="cls14#att149"/>
+          <layout:Attribute attribute="cls14#att150"/>
+          <layout:Event event="av1#scs1#scs5#scr1#dau1#oslte1" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scs1#scs5#scr1#dau1#oslte2" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Event eventType="BackEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs5#scr1#mssu2">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs5#scr1#mssu2#oslte3"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

@@ -1,0 +1,47 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs7#scr13" name="Photo Gallery" gr:x="311" gr:y="420">
+  <ViewComponents>
+    <Form id="av1#scs1#scs7#scr13#enu6" name="Gallery" eventOrder="av1#scs1#scs7#scr13#enu6#oslte29" gr:x="0" gr:y="0" fieldOrder="av1#scs1#scs7#scr13#enu6#fld15">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs7#scr13#enu6#oslte29" name="Back to General Info" gr:pinned="true" gr:side="3" gr:pos="1">
+          <NavigationFlow id="av1#scs1#scs7#scr13#enu6#oslte29#nf46" to="av1#scs1#scs7#scr12" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+      <Field id="av1#scs1#scs7#scr13#enu6#fld15" name="images" type="blob" modifiable="true"/>
+    </Form>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs7#scr13#enu6">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs7#scr13#enu6#oslte29"/>
+          <layout:Field field="av1#scs1#scs7#scr13#enu6#fld15"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

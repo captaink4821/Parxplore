@@ -1,0 +1,47 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs7#scr15" name="Paparazzi Awards" gr:x="28" gr:y="643">
+  <ViewComponents>
+    <Form id="av1#scs1#scs7#scr15#enu7" name="Paparazzi pictures" eventOrder="av1#scs1#scs7#scr15#enu7#oslte31" gr:x="0" gr:y="0" fieldOrder="av1#scs1#scs7#scr15#enu7#fld16">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs7#scr15#enu7#oslte31" name="Back to General Info" gr:pinned="true" gr:side="3" gr:pos="0">
+          <NavigationFlow id="av1#scs1#scs7#scr15#enu7#oslte31#nf48" to="av1#scs1#scs7#scr12" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+      <Field id="av1#scs1#scs7#scr15#enu7#fld16" name="paparazzi images" type="blob" modifiable="true"/>
+    </Form>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs7#scr15#enu7">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs7#scr15#enu7#oslte31"/>
+          <layout:Field field="av1#scs1#scs7#scr15#enu7#fld16"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>
