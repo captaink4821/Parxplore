@@ -47,7 +47,7 @@
       </ErrorEvent>
     </Events>
   </Action>
-  <Action id="av1#scs1#act20" definition="tlads0#ad5" gr:x="1845" gr:y="35">
+  <Action id="av1#scs1#act20" definition="tlads0#ad5" gr:x="145" gr:y="595">
     <Events>
       <SuccessEvent id="av1#scs1#act20#scce20" definition="tlads0#ad5#spd5">
         <NavigationFlow id="av1#scs1#act20#scce20#nf102" to="av1#scs8#scr23" automaticCoupling="true" gr:bendpoints="-102,1,238,-89"/>
