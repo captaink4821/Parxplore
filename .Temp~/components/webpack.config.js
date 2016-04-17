@@ -9,13 +9,13 @@ module.exports = {
 			
 				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.7.4\\WebRatio\\plugins\\com.webratio.generator.mobile_8.7.4.201602272125\\BuiltinComponents\\src"
 			,
-				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.7.4\\WebRatio\\plugins\\com.webratio.components.mobile.content_8.7.4.201602272125\\src"
-			,
 				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.7.4\\WebRatio\\plugins\\com.webratio.components.mobile.utility_8.7.4.201602272125\\src"
 			,
-				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.7.4\\WebRatio\\plugins\\com.webratio.components.mobile.validation_8.7.4.201602272125\\src"
+				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.7.4\\WebRatio\\plugins\\com.webratio.components.mobile.content_8.7.4.201602272125\\src"
 			,
 				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.7.4\\WebRatio\\plugins\\com.webratio.components.mobile.operation_8.7.4.201602272125\\src"
+			,
+				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.7.4\\WebRatio\\plugins\\com.webratio.components.mobile.validation_8.7.4.201602272125\\src"
 			
 		]
 	},

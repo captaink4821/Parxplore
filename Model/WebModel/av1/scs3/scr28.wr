@@ -1,0 +1,138 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs3#scr28" name="General Info" gr:x="0" gr:y="0">
+  <ViewComponents>
+    <ViewComponent id="av1#scs3#scr28#gctu2" name="Rules Regulations" eventOrder="av1#scs3#scr28#gctu2#oslte51" gr:x="0" gr:y="0">
+      <Events>
+        <OnSelectEvent id="av1#scs3#scr28#gctu2#oslte51" name="Rules" gr:pinned="true" gr:side="1" gr:pos="0">
+          <NavigationFlow id="av1#scs3#scr28#gctu2#oslte51#nf61" to="av1#scs3#scr30" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <ViewComponent id="av1#scs3#scr28#gctu3" name="Activities" eventOrder="av1#scs3#scr28#gctu3#oslte52" gr:x="0" gr:y="80">
+      <Events>
+        <OnSelectEvent id="av1#scs3#scr28#gctu3#oslte52" name="Activities" gr:pinned="true" gr:side="1" gr:pos="0">
+          <NavigationFlow id="av1#scs3#scr28#gctu3#oslte52#nf66" to="av1#scs3#scr31" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <ViewComponent id="av1#scs3#scr28#gctu4" name="Photo Gallery" eventOrder="av1#scs3#scr28#gctu4#oslte53" gr:x="0" gr:y="165">
+      <Events>
+        <OnSelectEvent id="av1#scs3#scr28#gctu4#oslte53" name="Photo Gallery" gr:pinned="true" gr:side="1" gr:pos="0">
+          <NavigationFlow id="av1#scs3#scr28#gctu4#oslte53#nf67" to="av1#scs3#scr32#enu8" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <ViewComponent id="av1#scs3#scr28#gctu5" name="Contact Us" eventOrder="av1#scs3#scr28#gctu5#oslte54" gr:x="5" gr:y="255">
+      <Events>
+        <OnSelectEvent id="av1#scs3#scr28#gctu5#oslte54" name="Contact Us" gr:pinned="true" gr:side="1" gr:pos="0">
+          <NavigationFlow id="av1#scs3#scr28#gctu5#oslte54#nf69" to="av1#scs3#scr33#mssu18" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+    <ViewComponent id="av1#scs3#scr28#gctu11" name="Paparazzi Awards" eventOrder="av1#scs3#scr28#gctu11#oslte55" gr:x="5" gr:y="345">
+      <Events>
+        <OnSelectEvent id="av1#scs3#scr28#gctu11#oslte55" name="Paparazzi Awards" gr:pinned="true" gr:side="2" gr:pos="5">
+          <NavigationFlow id="av1#scs3#scr28#gctu11#oslte55#nf71" to="av1#scs3#scr34#enu9" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs3#scr28#gctu2">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs3#scr28#gctu2#oslte51"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs3#scr28#gctu3">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs3#scr28#gctu3#oslte52"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs3#scr28#gctu4">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs3#scr28#gctu4#oslte53"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs3#scr28#gctu5">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs3#scr28#gctu5#oslte54"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs3#scr28#gctu11">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs3#scr28#gctu11#oslte55"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:CustomLocation name="Top Bar" customizeContent="true">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell label="General Info"/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</Screen>

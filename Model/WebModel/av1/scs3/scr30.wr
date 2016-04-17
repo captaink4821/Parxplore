@@ -1,6 +1,6 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr18" name="Rules" gr:x="140" gr:y="1220">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs3#scr30" name="Rules" gr:x="235" gr:y="20">
   <ViewComponents>
-    <Message id="av1#scr18#mssu9" name="Rules" eventOrder="av1#scr18#mssu9#oslte30" gr:x="0" gr:y="0">
+    <Message id="av1#scs3#scr30#mssu16" name="Rules" eventOrder="av1#scs3#scr30#mssu16#oslte57" gr:x="0" gr:y="0">
       <Message xml:space="preserve">RULES &amp; REGULATIONS
 Section 26-1. Rules and Regulations Adopted
 
@@ -35,4 +35,4 @@ More Rules and Regulations
 
 
 http://www.miamidade.gov/parks/rules-regulations.asp
-</Message>      <Events>        <OnSelectEvent id="av1#scr18#mssu9#oslte30" name="Back To General Info" gr:pinned="true" gr:side="2" gr:pos="0">          <NavigationFlow id="av1#scr18#mssu9#oslte30#nf41" to="av1#scr21" automaticCoupling="true"/>        </OnSelectEvent>      </Events>    </Message>  </ViewComponents>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Component componentId="av1#scr18#mssu9">          <layout:Event eventType="OnSelectEvent" event="av1#scr18#mssu9#oslte30"/>        </layout:Component>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Screen>
+</Message>      <Events>        <OnSelectEvent id="av1#scs3#scr30#mssu16#oslte57" name="Back To General Info" gr:pinned="true" gr:side="2" gr:pos="0">          <NavigationFlow id="av1#scs3#scr30#mssu16#oslte57#nf64" to="av1#scs3#scr28" automaticCoupling="true"/>        </OnSelectEvent>      </Events>    </Message>  </ViewComponents>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Component componentId="av1#scs3#scr30#mssu16">          <layout:Event eventType="OnSelectEvent" event="av1#scs3#scr30#mssu16#oslte57"/>        </layout:Component>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Screen>

@@ -1,0 +1,18 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs3#scr31" name="Activities" gr:x="280" gr:y="230">
+  <ViewComponents>
+    <Message id="av1#scs3#scr31#mssu17" name="Activities" eventOrder="av1#scs3#scr31#mssu17#oslte58" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">&#61607;	Walking
+&#61607;	Hiking 
+&#61607;	Biking
+&#61607;	Horse Riding
+&#61607;	Swimming
+&#61607;	Nature Photography
+&#61607;	Bird Watching
+&#61607;	Botany
+&#61607;	Canoeing
+&#61607;	Kayaking
+&#61607;	Fishing
+&#61607;	Picnicking
+&#61607;	Environmental Education
+&#61607;	Cross Country Skiing
+</Message>      <Events>        <OnSelectEvent id="av1#scs3#scr31#mssu17#oslte58" name="Back to General Info" gr:pinned="true" gr:side="2" gr:pos="0">          <NavigationFlow id="av1#scs3#scr31#mssu17#oslte58#nf65" to="av1#scs3#scr28" automaticCoupling="true"/>        </OnSelectEvent>      </Events>    </Message>  </ViewComponents>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Component componentId="av1#scs3#scr31#mssu17">          <layout:Event eventType="OnSelectEvent" event="av1#scs3#scr31#mssu17#oslte58"/>        </layout:Component>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Screen>

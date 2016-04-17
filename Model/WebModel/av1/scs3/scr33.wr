@@ -1,0 +1,12 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs3#scr33" name="Contact Us" gr:x="295" gr:y="630">
+  <ViewComponents>
+    <Message id="av1#scs3#scr33#mssu18" name="Contact Us" eventOrder="av1#scs3#scr33#mssu18#oslte60" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Software Requirements	Engineering /CEN 6075
+
+Dr.	Shihong Huang Students
+Engineering	East	(EE	96)	Room	434
+561-297-1275
+shihong@fau.edu
+
+
+</Message>      <Events>        <OnSelectEvent id="av1#scs3#scr33#mssu18#oslte60" name="Back to General Info" gr:pinned="true" gr:side="3" gr:pos="0">          <NavigationFlow id="av1#scs3#scr33#mssu18#oslte60#nf70" to="av1#scs3#scr28" automaticCoupling="true"/>        </OnSelectEvent>      </Events>    </Message>  </ViewComponents>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Component componentId="av1#scs3#scr33#mssu18">          <layout:Event eventType="OnSelectEvent" event="av1#scs3#scr33#mssu18#oslte60"/>        </layout:Component>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Screen>

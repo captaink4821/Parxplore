@@ -1,4 +1,4 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr27" name="Message Error" gr:x="785" gr:y="1220">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr27" name="Message Error" gr:x="2930" gr:y="1330">
   <ViewComponents>
     <Message id="av1#scr27#mssu13" name="Error" eventOrder="av1#scr27#mssu13#oslte43" gr:x="0" gr:y="0">
       <Message xml:space="preserve">Error!!!!!!!!!!!!!!</Message>

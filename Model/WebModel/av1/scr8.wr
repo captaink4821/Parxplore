@@ -1,4 +1,4 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="100" gr:y="585" id="av1#scr8" name="Profile">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="430" gr:y="535" id="av1#scr8" name="Profile">
   <ViewComponents>
     <Details gr:x="0" gr:y="0" id="av1#scr8#dau2" name="User Profile" dataBinding="MUser" displayAttributes="mUsername MUser#att33 MUser#att15 MUser#att16 MUser#att154" gr:showAllParts="false" eventOrder="av1#scr8#dau2#oslte21">
       <Events>
@@ -6,9 +6,7 @@
           <NavigationFlow id="av1#scr8#dau2#oslte21#nf35" to="av1#act9" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>
-      <DataFlow id="av1#scr8#dau2#df23" to="av1#scr9#seu6">
-        <ParameterBinding id="av1#scr8#dau2#df23#par140" source="data.MUser#att154" target="av1#scr9#seu6#sc17#acond5" name="remote_oid - AttCondition5"/>
-      </DataFlow>
+      <DataFlow id="av1#scr8#dau2#df23" to="av1#scs2#scr16#seu9"/>
     </Details>
   </ViewComponents>
   <layout:Grid containerType="grid">

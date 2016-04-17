@@ -1,4 +1,4 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr25" name="Connect to Park" gr:x="750" gr:y="1440">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr25" name="Connect to Park" gr:x="2940" gr:y="1615">
   <ViewComponents>
     <Form id="av1#scr25#enu10" name="Barcode Info" gr:x="0" gr:y="0" fieldOrder="av1#scr25#enu10#fld22 av1#scr25#enu10#fld21 av1#scr25#enu10#fld20">
       <Field id="av1#scr25#enu10#fld20" name="Value Type" type="string" preloaded="true" modifiable="true"/>

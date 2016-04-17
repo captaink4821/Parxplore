@@ -1,4 +1,4 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-190" gr:y="75" id="av1#scr6" name="Registration">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-205" gr:y="-60" id="av1#scr6" name="Registration">
   <ViewComponents>
     <Form gr:x="0" gr:y="0" id="av1#scr6#enu4" name="Registration" fieldOrder="av1#scr6#enu4#fld7 av1#scr6#enu4#fld8 av1#scr6#enu4#fld9" eventOrder="av1#scr6#enu4#oslte12">
       <Field id="av1#scr6#enu4#fld9" name="Email" type="string" modifiable="true" contentType="text/plain">
