@@ -210,16 +210,26 @@ Caused by: com.webratio.web.model.problems.MalformedModelException: Element 'to'
 	at com.webratio.generator.cache.ZoneAwareCache.invokeInitializer1(ZoneAwareCache.java:67)
 	at com.webratio.web.model.query.cache.AbstractCache.internalGetOrInit1(AbstractCache.java:130)
 	... 66 more
-</Cause>    <TemplateEvaluateProblem description="Element 'to' reference(s) contain the invalid id 'act13' - &lt;NavigationFlow id=&quot;nf63&quot;&gt;" file="C:\WebRatio\WebRatio Mobile Platform Community 8.7.4\WebRatio\plugins\com.webratio.generator.mobile_8.7.4.201602272125\Logic\Screen.template" start="-1,4,0" end="-1,4,0"/>  </Exception>  <Exception target="Project">    <Title>Error generating application descriptor</Title>
-    <Reason>Element has no 'home' id reference - &lt;AppView id="av1"&gt;</Reason>
-    <Cause>com.webratio.web.model.problems.MalformedModelException: Element has no 'home' id reference - &lt;AppView id="av1"&gt;
-	at com.webratio.web.model.query.Explorer.getById(Explorer.java:256)
-	at com.webratio.web.model.query.mobile.MobileModelExplorer.getHomeElement(MobileModelExplorer.java:128)
-	at Logic/App_template.&lt;main&gt;(App.template:9)
-	at Logic/Main_template.&lt;closure20&gt;(Main.template:158)
+</Cause>    <TemplateEvaluateProblem description="Element 'to' reference(s) contain the invalid id 'act13' - &lt;NavigationFlow id=&quot;nf63&quot;&gt;" file="C:\WebRatio\WebRatio Mobile Platform Community 8.7.4\WebRatio\plugins\com.webratio.generator.mobile_8.7.4.201602272125\Logic\Screen.template" start="-1,4,0" end="-1,4,0"/>  </Exception>  <Exception target="av1#scs4#scr36">    <Title>Error generating Logic Descriptor</Title>
+    <Reason>null</Reason>
+    <Cause>java.lang.NullPointerException
+	at com.webratio.web.model.elements.NavigationFlowElements.is(NavigationFlowElements.java:29)
+	at com.webratio.web.model.elements.NavigationFlowElements.checkArgument(NavigationFlowElements.java:33)
+	at com.webratio.generator.helpers.mobile.MobileRuntimeHelper.getSecondarySubmitFlows(MobileRuntimeHelper.java:142)
+	at Logic/Screen_template.&lt;closure15&gt;(Screen.template:144)
+	at App/Helper_template.&lt;closure7&gt;(Helper.template:81)
+	at App/Helper_template.&lt;closure5&gt;(Helper.template:80)
+	at Logic/Screen_template.&lt;main&gt;(Screen.template:140)
+	at Logic/Main_template.&lt;closure2&gt;(Main.template:72)
 	at com.webratio.generator.helpers.GenerationHelpersBean.doProcessOutputFile(GenerationHelpersBean.java:141)
-	at com.webratio.generator.helpers.GenerationHelpersBean.processOutputFile(GenerationHelpersBean.java:118)
-	at Logic/Main_template.&lt;main&gt;(Main.template:157)
+	at com.webratio.generator.helpers.GenerationHelpersBean.doProcessOutputFile(GenerationHelpersBean.java:136)
+	at com.webratio.generator.helpers.GenerationHelpersBean.processOutputFile(GenerationHelpersBean.java:112)
+	at Logic/Main_template.&lt;closure1&gt;(Main.template:71)
+	at com.webratio.generator.OrderingScheduler.doProcessGroupElement(OrderingScheduler.java:263)
+	at com.webratio.generator.OrderingScheduler.doProcessGroup(OrderingScheduler.java:246)
+	at com.webratio.generator.OrderingScheduler.process(OrderingScheduler.java:233)
+	at com.webratio.generator.OrderingScheduler$process$1.call(Unknown Source)
+	at Logic/Main_template.&lt;main&gt;(Main.template:153)
 	at App/Main_template.&lt;main&gt;(Main.template:43)
 	at com.webratio.commons.transform.groovy.GroovyTemplate.evaluateObject(GroovyTemplate.java:249)
 	at com.webratio.commons.transform.groovy.GroovyTemplate.evaluateScript(GroovyTemplate.java:186)
@@ -233,4 +243,4 @@ Caused by: com.webratio.web.model.problems.MalformedModelException: Element 'to'
 	at com.webratio.project.build.tool.ProjectGenerator.generate(ProjectGenerator.java:131)
 	at com.webratio.ide.deploy.core.mobile.jobs.GenerateMobileAppJob.run(GenerateMobileAppJob.java:60)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-</Cause>    <TemplateEvaluateProblem description="Element has no 'home' id reference - &lt;AppView id=&quot;av1&quot;&gt;" file="C:\WebRatio\WebRatio Mobile Platform Community 8.7.4\WebRatio\plugins\com.webratio.generator.mobile_8.7.4.201602272125\Logic\App.template" start="-1,8,0" end="-1,8,0"/>  </Exception></Generation>
+</Cause>    <TemplateEvaluateProblem description="Problem" file="C:\WebRatio\WebRatio Mobile Platform Community 8.7.4\WebRatio\plugins\com.webratio.generator.mobile_8.7.4.201602272125\Logic\Screen.template" start="-1,139,0" end="-1,139,0"/>  </Exception></Generation>

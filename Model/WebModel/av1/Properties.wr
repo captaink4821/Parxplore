@@ -1,4 +1,4 @@
-<AppView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="av1" login="av1#scr4">
+<AppView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="av1" login="av1#scr4" home="av1#scs4#scr36">
   <Action id="av1#act1" gr:x="2070" gr:y="5" definition="tlads0#ad1">
     <Events>
       <SuccessEvent id="av1#act1#scce1" definition="tlads0#ad1#spd1">

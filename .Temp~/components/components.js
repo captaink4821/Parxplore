@@ -58,27 +58,27 @@
 
 	var mod2 = _interopRequireWildcard(_import3);
 
-	var _import4 = __webpack_require__(6);
+	var _import4 = __webpack_require__(15);
 
 	var mod3 = _interopRequireWildcard(_import4);
 
-	var _import5 = __webpack_require__(15);
+	var _import5 = __webpack_require__(16);
 
 	var mod4 = _interopRequireWildcard(_import5);
 
-	var _import6 = __webpack_require__(16);
+	var _import6 = __webpack_require__(6);
 
 	var mod5 = _interopRequireWildcard(_import6);
 
-	var _import7 = __webpack_require__(7);
+	var _import7 = __webpack_require__(1);
 
 	var mod6 = _interopRequireWildcard(_import7);
 
-	var _import8 = __webpack_require__(1);
+	var _import8 = __webpack_require__(2);
 
 	var mod7 = _interopRequireWildcard(_import8);
 
-	var _import9 = __webpack_require__(2);
+	var _import9 = __webpack_require__(7);
 
 	var mod8 = _interopRequireWildcard(_import9);
 
@@ -110,23 +110,23 @@
 
 	var mod15 = _interopRequireWildcard(_import16);
 
-	wrm.defineModule("wrm/comp/ViewComponentService", mod0);
+	wrm.defineModule("wrm/comp/FormService", mod0);
 
-	wrm.defineModule("wrm/comp/FormService", mod1);
+	wrm.defineModule("wrm/comp/DetailsService", mod1);
 
-	wrm.defineModule("wrm/comp/DetailsService", mod2);
+	wrm.defineModule("wrm/comp/MessageService", mod2);
 
-	wrm.defineModule("wrm/comp/MessageService", mod3);
+	wrm.defineModule("wrm/comp/val/EMailValidationRuleService", mod3);
 
-	wrm.defineModule("wrm/comp/val/EMailValidationRuleService", mod4);
+	wrm.defineModule("wrm/comp/val/MandatoryValidationRuleService", mod4);
 
-	wrm.defineModule("wrm/comp/val/MandatoryValidationRuleService", mod5);
+	wrm.defineModule("wrm/comp/ListService", mod5);
 
-	wrm.defineModule("wrm/comp/ListService", mod6);
+	wrm.defineModule("wrm/comp/SelectorService", mod6);
 
-	wrm.defineModule("wrm/comp/SelectorService", mod7);
+	wrm.defineModule("wrm/comp/MapService", mod7);
 
-	wrm.defineModule("wrm/comp/MapService", mod8);
+	wrm.defineModule("wrm/comp/ViewComponentService", mod8);
 
 	wrm.defineModule("wrm/comp/CreateService", mod9);
 
@@ -844,32 +844,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	/**
-	 * Service for View Component view components.
-	 * 
-	 * @constructor
-	 * @extends wrm.core.AbstractCachedViewComponentService
-	 * @param {string} id
-	 * @param {!Object} descr
-	 * @param {!wrm.core.Manager} manager
-	 */
-	exports.default = wrm.defineService(wrm.core.AbstractCachedViewComponentService, {
-
-	    /** @override */
-	    createResult: function (context) {
-	        return {};
-	    }
-
-	});
-	module.exports = exports.default;
-
-/***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
 	var RefreshMode = wrm.core.RefreshMode;
 
 	/**
@@ -1480,7 +1454,7 @@
 	module.exports = exports.default;
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, "__esModule", {
@@ -1603,7 +1577,7 @@
 	module.exports = exports.default;
 
 /***/ },
-/* 6 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, "__esModule", {
@@ -1672,7 +1646,7 @@
 	module.exports = exports.default;
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, "__esModule", {
@@ -1933,6 +1907,32 @@
 	            return true;
 	        }
 	    } });
+	module.exports = exports.default;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	/**
+	 * Service for View Component view components.
+	 * 
+	 * @constructor
+	 * @extends wrm.core.AbstractCachedViewComponentService
+	 * @param {string} id
+	 * @param {!Object} descr
+	 * @param {!wrm.core.Manager} manager
+	 */
+	exports.default = wrm.defineService(wrm.core.AbstractCachedViewComponentService, {
+
+	    /** @override */
+	    createResult: function (context) {
+	        return {};
+	    }
+
+	});
 	module.exports = exports.default;
 
 /***/ },

@@ -1,4 +1,4 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="430" gr:y="535" id="av1#scr8" name="Profile">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="245" gr:y="345" id="av1#scr8" name="Profile">
   <ViewComponents>
     <Details gr:x="0" gr:y="0" id="av1#scr8#dau2" name="User Profile" dataBinding="MUser" displayAttributes="mUsername MUser#att33 MUser#att15 MUser#att16 MUser#att154" gr:showAllParts="false" eventOrder="av1#scr8#dau2#oslte21">
       <Events>

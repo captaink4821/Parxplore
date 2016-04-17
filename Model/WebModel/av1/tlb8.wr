@@ -1,0 +1,54 @@
+<Toolbar xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="370" gr:y="835" id="av1#tlb8" name="main_toolbar">
+  <ViewComponents/>
+  <Events>
+    <OnSelectEvent id="av1#tlb8#oslte104" name="sighting details" gr:pinned="true" gr:side="2" gr:pos="2">
+      <NavigationFlow id="av1#tlb8#oslte104#nf99" to="av1#scs2#scr26" automaticCoupling="true"/>
+    </OnSelectEvent>
+    <OnSelectEvent id="av1#tlb8#oslte105" name="Profile" gr:pinned="true" gr:side="0" gr:pos="0">
+      <NavigationFlow id="av1#tlb8#oslte105#nf103" to="av1#scr8#dau2" automaticCoupling="true"/>
+    </OnSelectEvent>
+    <OnSelectEvent id="av1#tlb8#oslte106" name="Animals" gr:pinned="true" gr:side="1" gr:pos="1">
+      <NavigationFlow id="av1#tlb8#oslte106#nf101" to="av1#scs4#scr36" automaticCoupling="true"/>
+    </OnSelectEvent>
+    <OnSelectEvent id="av1#tlb8#oslte107" name="More" gr:pinned="true" gr:side="3" gr:pos="1">
+      <NavigationFlow id="av1#tlb8#oslte107#nf102" to="av1#scs3#scr28" automaticCoupling="true"/>
+    </OnSelectEvent>
+  </Events>
+  <layout:CustomLocation name="Top Bar">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell layout:cellLayout="MobileDefault/Bar">
+          <layout:Event eventType="HomeEvent"/>
+          <layout:Fragment type="screenTitle"/>
+          <layout:Event eventType="BackEvent"/>
+          <layout:LayoutParameter name="background-color" value="green" type="cell"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="Bottom Bar">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell layout:cellLayout="MobileDefault/ButtonBar">
+          <layout:Event panelId="av1#tlb8" event="av1#tlb8#oslte106" eventType="OnSelectEvent">
+            <layout:LayoutParameter name="show" value="icon" type="event"/>
+            <layout:LayoutParameter name="icon" value="ios-list-outline" type="event"/>
+          </layout:Event>
+          <layout:Event panelId="av1#tlb8" event="av1#tlb8#oslte107" eventType="OnSelectEvent">
+            <layout:LayoutParameter name="show" value="icon" type="event"/>
+            <layout:LayoutParameter name="icon" value="ios-gear" type="event"/>
+          </layout:Event>
+          <layout:Event panelId="av1#tlb8" event="av1#tlb8#oslte104" eventType="OnSelectEvent">
+            <layout:LayoutParameter name="show" value="icon" type="event"/>
+            <layout:LayoutParameter name="icon" value="camera" type="event"/>
+          </layout:Event>
+          <layout:Event panelId="av1#tlb8" event="av1#tlb8#oslte105" eventType="OnSelectEvent">
+            <layout:LayoutParameter name="show" value="icon" type="event"/>
+            <layout:LayoutParameter name="icon" value="person" type="event"/>
+          </layout:Event>
+          <layout:LayoutParameter name="background-color" value="green" type="cell"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</Toolbar>

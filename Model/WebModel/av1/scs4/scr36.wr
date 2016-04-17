@@ -26,12 +26,7 @@
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Component componentId="av1#scs4#scr36#enu13">
-          <layout:Event eventType="OnSelectEvent" event="av1#scs4#scr36#enu13#oslte69"/>
-          <layout:Field field="av1#scs4#scr36#enu13#fld23"/>
-        </layout:Component>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -80,12 +75,26 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="5"/>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="7"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -116,20 +125,6 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="7"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="5"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -162,9 +157,51 @@
       <OnSelectEvent id="av1#scs4#scr36#tlb4#oslte76" name="Logout" gr:pinned="true" gr:side="0" gr:pos="1">
         <NavigationFlow id="av1#scs4#scr36#tlb4#oslte76#nf77" to="av1#act5" automaticCoupling="true"/>
       </OnSelectEvent>
-      <OnSelectEvent id="av1#scs4#scr36#tlb4#oslte77" name="Menu" gr:pinned="true" gr:side="3" gr:pos="0">
-        <NavigationFlow id="av1#scs4#scr36#tlb4#oslte77#nf78" to="av1#scr11" automaticCoupling="true"/>
-      </OnSelectEvent>
+      <OnSelectEvent id="av1#scs4#scr36#tlb4#oslte77" name="Menu" gr:pinned="true" gr:side="3" gr:pos="0"/>
     </Events>
   </Toolbar>
+  <layout:CustomLocation name="Bottom Bar">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Grid containerType="cell">
+            <layout:Row>
+              <layout:Cell layout:cellLayout="MobileDefault/ButtonBar">
+                <layout:Event panelId="av1#tlb1" event="av1#tlb1#oslte1" eventType="OnSelectEvent">
+                  <layout:LayoutParameter name="show" value="icon" type="event"/>
+                  <layout:LayoutParameter name="icon" value="android-globe" type="event"/>
+                </layout:Event>
+                <layout:Event panelId="av1#tlb1" event="av1#tlb1#oslte2" eventType="OnSelectEvent">
+                  <layout:LayoutParameter name="show" value="icon" type="event"/>
+                  <layout:LayoutParameter name="icon" value="android-contacts" type="event"/>
+                </layout:Event>
+                <layout:Event panelId="av1#tlb1" event="av1#tlb1#oslte3" eventType="OnSelectEvent">
+                  <layout:LayoutParameter name="show" value="icon" type="event"/>
+                  <layout:LayoutParameter name="icon" value="calendar events" type="event"/>
+                </layout:Event>
+              </layout:Cell>
+            </layout:Row>
+          </layout:Grid>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="Top Bar" customizeContent="true">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell layout:cellLayout="MobileDefault/SearchBar">
+          <layout:Event eventType="HomeEvent">
+            <layout:LayoutParameter name="show" value="icon" type="event"/>
+            <layout:LayoutParameter name="icon" value="android-sunny" type="event"/>
+          </layout:Event>
+          <layout:Field componentId="av1#scs4#scr36#enu13" mode="full" field="av1#scs4#scr36#enu13#fld23"/>
+          <layout:Event componentId="av1#scs4#scr36#enu13" event="av1#scs4#scr36#enu13#oslte69" eventType="OnSelectEvent">
+            <layout:LayoutParameter name="show" value="icon" type="event"/>
+            <layout:LayoutParameter name="icon" value="search" type="event"/>
+          </layout:Event>
+          <layout:LayoutParameter name="background-color" value="green" type="cell"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
 </Screen>
