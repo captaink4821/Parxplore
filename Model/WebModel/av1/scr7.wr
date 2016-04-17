@@ -1,6 +1,6 @@
 <Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1130" gr:y="225" id="av1#scr7" name="Animal Sighting">
   <ViewComponents>
-    <Form gr:x="0" gr:y="0" id="av1#scr7#enu5" name="Add Sighting" fieldOrder="av1#scr7#enu5#fld12 av1#scr7#enu5#fld10 av1#scr7#enu5#fld11" eventOrder="av1#scr7#enu5#oslte15">
+    <Form gr:x="0" gr:y="0" id="av1#scr7#enu5" name="Add Sighting" fieldOrder="av1#scr7#enu5#fld12 av1#scr7#enu5#fld10 av1#scr7#enu5#fld11 av1#scr7#enu5#fld14" eventOrder="av1#scr7#enu5#oslte15">
       <Field id="av1#scr7#enu5#fld11" name="Address" type="string" modifiable="true"/>
       <Field id="av1#scr7#enu5#fld10" name="Animal" type="string" modifiable="false" preloaded="true"/>
       <Field id="av1#scr7#enu5#fld12" name="Image" type="blob" contentType="image" modifiable="true"/>
@@ -11,10 +11,12 @@
             <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par36" source="av1#scr7#enu5#fld11" target="av1#act6.tlads0#ad6#ipd6#pdp15" name="Address - address"/>
             <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par37" source="av1#scr7#enu5#fld13" target="av1#act6.tlads0#ad6#ipd6#pdp13" name="animal_id - animal_id"/>
             <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par52" source="av1#scr7#enu5#fld12" target="av1#act6.tlads0#ad6#ipd6#pdp16" name="Image - image"/>
-            <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par53" source="av1#scr7#enu5#fld10" target="av1#act6.tlads0#ad6#ipd6#pdp14" name="Animal - name"/>
+            <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par148" source="av1#scr7#enu5#fld10" target="av1#act6.tlads0#ad6#ipd6#pdp19" name="Animal - animalName"/>
+            <ParameterBinding id="av1#scr7#enu5#oslte15#nf23#par153" source="av1#scr7#enu5#fld14" target="av1#act6.tlads0#ad6#ipd6#pdp22" name="Title - title"/>
           </NavigationFlow>
         </OnSelectEvent>
       </Events>
+      <Field id="av1#scr7#enu5#fld14" name="Title" type="string" modifiable="true"/>
     </Form>
     <Selector gr:x="5" gr:y="95" id="av1#scr7#seu3" dataBinding="cls2" distinctAttributes="cls2#att18 cls2#att19">
       <ConditionalExpression id="av1#scr7#seu3#sc5" defaultPolicy="fill" booleanOperator="and">
@@ -30,10 +32,11 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Component componentId="av1#scr7#enu5">
+          <layout:Event event="av1#scr7#enu5#oslte15" eventType="OnSelectEvent"/>
           <layout:Field field="av1#scr7#enu5#fld12"/>
           <layout:Field field="av1#scr7#enu5#fld10"/>
           <layout:Field field="av1#scr7#enu5#fld11"/>
-          <layout:Event event="av1#scr7#enu5#oslte15" eventType="OnSelectEvent"/>
+          <layout:Field field="av1#scr7#enu5#fld14"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>

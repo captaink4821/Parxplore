@@ -28,7 +28,7 @@
     <Attribute id="cls2#att12" name="park_id" type="integer" key="false"/>
     <Attribute id="cls2#att155" name="remoteOid" type="integer"/>
   </Class>
-  <Class id="cls14" name="Animal_Sighting" duration="persistent" serverResourceMethods="create delete read update" gr:x="110" gr:y="340" dataSyncManual="true" attributeOrder="cls14#att141 cls14#att143 cls14#att144 cls14#att145 cls14#att146 cls14#att147 cls14#att148 cls14#att149 cls14#att150 cls14#att151 cls14#att1">
+  <Class id="cls14" name="Animal_Sighting" duration="persistent" serverResourceMethods="create delete read update" gr:x="110" gr:y="340" dataSyncManual="true" attributeOrder="cls14#att141 cls14#att143 cls14#att144 cls14#att145 cls14#att146 cls14#att147 cls14#att148 cls14#att149 cls14#att150 cls14#att151 cls14#att1 cls14#att2 cls14#att3">
     <Attribute id="cls14#att141" name="oid" type="integer" key="true" specialBehavior="implicitOid"/>
     <Attribute id="cls14#att143" name="user_id" type="integer" key="false"/>
     <Attribute id="cls14#att144" name="comment" type="string" key="false"/>
@@ -40,5 +40,7 @@
     <Attribute id="cls14#att150" name="longitude" type="float" key="false"/>
     <Attribute id="cls14#att151" name="image" type="blob" contentType="image" key="false"/>
     <Attribute id="cls14#att1" name="remoteId" type="integer"/>
+    <Attribute id="cls14#att2" name="animalName" type="string"/>
+    <Attribute id="cls14#att3" name="title" type="string"/>
   </Class>
 </DomainModel>

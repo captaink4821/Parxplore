@@ -1,6 +1,6 @@
 <Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-265" gr:y="665" id="av1#scr10" name="Sighting details">
   <ViewComponents>
-    <Details gr:x="85" gr:y="80" id="av1#scr10#dau3" name="Sighting Details" dataBinding="cls14" displayAttributes="cls14#att148 cls14#att151" eventOrder="av1#scr10#dau3#oslte17">
+    <Details gr:x="85" gr:y="80" id="av1#scr10#dau3" name="Sighting Details" dataBinding="cls14" displayAttributes="cls14#att3 cls14#att151 cls14#att2 cls14#att148 cls14#att149 cls14#att150" eventOrder="av1#scr10#dau3#oslte17 av1#scr10#dau3#oslte23">
       <ConditionalExpression id="av1#scr10#dau3#sc9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="av1#scr10#dau3#sc9#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </ConditionalExpression>
@@ -9,6 +9,14 @@
           <NavigationFlow id="av1#scr10#dau3#oslte17#nf28" to="av1#act7">
             <ParameterBinding id="av1#scr10#dau3#oslte17#nf28#par132" source="data.cls14#att141" target="av1#act7.tlads0#ad9#ipd9#pdp11" name="oid - localSightingId"/>
             <ParameterBinding id="av1#scr10#dau3#oslte17#nf28#par133" source="data.cls14#att1" target="av1#act7.tlads0#ad9#ipd9#pdp12" name="remoteId - remoteSightingId"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scr10#dau3#oslte23" name="Location">
+          <NavigationFlow id="av1#scr10#dau3#oslte23#nf38" to="av1#scr12#mpcmpnt1">
+            <ParameterBinding id="av1#scr10#dau3#oslte23#nf38#par141" source="data.cls14#att148" target="addresses" name="address - Addresses"/>
+            <ParameterBinding id="av1#scr10#dau3#oslte23#nf38#par142" source="data.cls14#att149" target="latitudes" name="latitude - Latitudes"/>
+            <ParameterBinding id="av1#scr10#dau3#oslte23#nf38#par143" source="data.cls14#att150" target="longitudes" name="longitude - Longitudes"/>
+            <ParameterBinding id="av1#scr10#dau3#oslte23#nf38#par147" source="data.cls14#att2" target="titles" name="animalName - Titles"/>
           </NavigationFlow>
         </OnSelectEvent>
       </Events>
@@ -25,9 +33,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Component componentId="av1#scr10#dau3">
-          <layout:Attribute attribute="cls14#att148"/>
-          <layout:Attribute attribute="cls14#att151"/>
           <layout:Event event="av1#scr10#dau3#oslte17" eventType="OnSelectEvent"/>
+          <layout:Event event="av1#scr10#dau3#oslte23" eventType="OnSelectEvent"/>
+          <layout:Attribute attribute="cls14#att3"/>
+          <layout:Attribute attribute="cls14#att151"/>
+          <layout:Attribute attribute="cls14#att2"/>
+          <layout:Attribute attribute="cls14#att148"/>
+          <layout:Attribute attribute="cls14#att149"/>
+          <layout:Attribute attribute="cls14#att150"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>

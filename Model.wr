@@ -2,7 +2,9 @@
 <?webml version="8.6.0.0"?>
 
 <WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${mobileapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" enableProjectDependencies="true" toolVersion="8.7.4" backEndBaseUrl="http://free13449-freeapp.eu.webratio.net/" checkCredentialsOnResume="false">
-  <ServiceDataProviders/>
+  <ServiceDataProviders>
+    <ServiceDataProvider id="sdp1" type="GoogleMapsProvider" name="Google Maps" platform="Android" apiKey="AIzaSyAndITY2pcPA4uEK43vFZOCUC0mJAgB2xY"/>
+  </ServiceDataProviders>
   <Roles/>
   <ReferencedProject name="Parxplore_Backend" natureId="com.webratio.ide.DataServiceNature"/>
 </WebProject>

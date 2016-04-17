@@ -1,6 +1,6 @@
 <Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-10" gr:y="840" id="av1#scr9" name="Sightings">
   <ViewComponents>
-    <List gr:x="0" gr:y="0" id="av1#scr9#pwu2" name="Animal Sightings" checkable="false" dataBinding="cls14" eventOrder="av1#scr9#pwu2#oslte18" displayAttributes="cls14#att143 cls14#att147 cls14#att148 cls14#att151">
+    <List gr:x="0" gr:y="0" id="av1#scr9#pwu2" name="Animal Sightings" checkable="false" dataBinding="cls14" eventOrder="av1#scr9#pwu2#oslte18" displayAttributes="cls14#att3 cls14#att143 cls14#att148 cls14#att151 cls14#att2">
       <Events>
         <OnSelectEvent id="av1#scr9#pwu2#oslte18" name="select sighting" validate="true">
           <NavigationFlow id="av1#scr9#pwu2#oslte18#nf29" to="av1#scr10#dau3" automaticCoupling="true"/>
@@ -20,10 +20,11 @@
       <layout:Cell colspan="12">
         <layout:Component componentId="av1#scr9#pwu2">
           <layout:Event event="av1#scr9#pwu2#oslte18" eventType="OnSelectEvent"/>
+          <layout:Attribute attribute="cls14#att3"/>
           <layout:Attribute attribute="cls14#att143"/>
-          <layout:Attribute attribute="cls14#att147"/>
           <layout:Attribute attribute="cls14#att148"/>
           <layout:Attribute attribute="cls14#att151"/>
+          <layout:Attribute attribute="cls14#att2"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>

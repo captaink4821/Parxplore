@@ -22,24 +22,27 @@
 	import * as mod6 from "wrm\/comp\/val\/MandatoryValidationRuleService";
 	wrm.defineModule("wrm\/comp\/val\/MandatoryValidationRuleService", mod6)
 
-	import * as mod7 from "wrm\/comp\/CreateService";
-	wrm.defineModule("wrm\/comp\/CreateService", mod7)
+	import * as mod7 from "wrm\/comp\/MapService";
+	wrm.defineModule("wrm\/comp\/MapService", mod7)
 
-	import * as mod8 from "wrm\/comp\/UpdateService";
-	wrm.defineModule("wrm\/comp\/UpdateService", mod8)
+	import * as mod8 from "wrm\/comp\/CreateService";
+	wrm.defineModule("wrm\/comp\/CreateService", mod8)
 
-	import * as mod9 from "wrm\/comp\/SwitchService";
-	wrm.defineModule("wrm\/comp\/SwitchService", mod9)
+	import * as mod9 from "wrm\/comp\/UpdateService";
+	wrm.defineModule("wrm\/comp\/UpdateService", mod9)
 
-	import * as mod10 from "wrm\/comp\/RestfulRequestResponseService";
-	wrm.defineModule("wrm\/comp\/RestfulRequestResponseService", mod10)
+	import * as mod10 from "wrm\/comp\/SwitchService";
+	wrm.defineModule("wrm\/comp\/SwitchService", mod10)
 
-	import * as mod11 from "wrm\/comp\/DeleteService";
-	wrm.defineModule("wrm\/comp\/DeleteService", mod11)
+	import * as mod11 from "wrm\/comp\/RestfulRequestResponseService";
+	wrm.defineModule("wrm\/comp\/RestfulRequestResponseService", mod11)
 
-	import * as mod12 from "wrm\/comp\/LoginService";
-	wrm.defineModule("wrm\/comp\/LoginService", mod12)
+	import * as mod12 from "wrm\/comp\/DeleteService";
+	wrm.defineModule("wrm\/comp\/DeleteService", mod12)
 
-	import * as mod13 from "wrm\/comp\/LogoutService";
-	wrm.defineModule("wrm\/comp\/LogoutService", mod13)
+	import * as mod13 from "wrm\/comp\/LoginService";
+	wrm.defineModule("wrm\/comp\/LoginService", mod13)
+
+	import * as mod14 from "wrm\/comp\/LogoutService";
+	wrm.defineModule("wrm\/comp\/LogoutService", mod14)
 

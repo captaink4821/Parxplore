@@ -16,6 +16,8 @@
           <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf31" name="userId" jsonType="integer"/>
           <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf32" name="animalId" jsonType="integer"/>
           <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf35" name="address" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf36" name="animalName" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#cpf2#spf37" name="title" jsonType="string"/>
         </ComplexParameterFragment>
         <SimpleParameterFragment id="tlads0#ad10#rfrr10#rrsp2#spf34" name="deletedObjectIds" jsonType="string" isArray="true"/>
       </ResponseParameter>
@@ -31,6 +33,8 @@
         <ParameterBinding id="tlads0#ad10#rfrr10#df17#par127" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf30" target="cls14#att146" name="response/data/updatedAt - remote updatedAt"/>
         <ParameterBinding id="tlads0#ad10#rfrr10#df17#par128" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf31" target="cls14#att143" name="response/data/userId - user_id"/>
         <ParameterBinding id="tlads0#ad10#rfrr10#df17#par131" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf29" target="cls14#att1" name="response/data/oid - remoteId"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par146" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf36" target="cls14#att2" name="response/data/animalName - animalName"/>
+        <ParameterBinding id="tlads0#ad10#rfrr10#df17#par152" source="tlads0#ad10#rfrr10#rrsp2#cpf2#spf37" target="cls14#att3" name="response/data/title - title"/>
       </DataFlow>
     </RestfulRequestResponse>
     <Create gr:x="450" gr:y="35" id="tlads0#ad10#cru4" dataBinding="cls14" bulk="true">
