@@ -1,4 +1,4 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="200" id="av1#scr1" name="Animals" protected="true">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="205" id="av1#scr1" name="Animals" protected="true">
   <ViewComponents>
     <List gr:x="260" gr:y="0" id="av1#scr1#pwu1" name="Animals" checkable="false" eventOrder="av1#scr1#pwu1#oslte1" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21">
       <Events>
@@ -96,6 +96,22 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Event panelId="av1#scr1#tlb1" event="av1#scr1#tlb1#oslte21" eventType="OnSelectEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
@@ -139,6 +155,9 @@
       </OnSelectEvent>
       <OnSelectEvent id="av1#scr1#tlb1#oslte20" name="Profile">
         <NavigationFlow id="av1#scr1#tlb1#oslte20#nf31" to="av1#scr8" automaticCoupling="true"/>
+      </OnSelectEvent>
+      <OnSelectEvent id="av1#scr1#tlb1#oslte21" name="Menu">
+        <NavigationFlow id="av1#scr1#tlb1#oslte21#nf34" to="av1#scr11" automaticCoupling="true"/>
       </OnSelectEvent>
     </Events>
   </Toolbar>

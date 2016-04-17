@@ -63,4 +63,14 @@
       </ErrorEvent>
     </Events>
   </Action>
+  <Action id="av1#act13" gr:x="515" gr:y="1330" name="Scan Barcode" definition="tlads0#ad10">
+    <Events>
+      <SuccessEvent id="av1#act13#scce13" definition="tlads0#ad10#spd10">
+        <NavigationFlow id="av1#act13#scce13#nf59" to="av1#scr25#enu10"/>
+      </SuccessEvent>
+      <ErrorEvent id="av1#act13#erre13" definition="tlads0#ad10#epd10">
+        <NavigationFlow id="av1#act13#erre13#nf61" to="av1#scr27#mssu13" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
 </AppView>
