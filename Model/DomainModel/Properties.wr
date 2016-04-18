@@ -43,4 +43,14 @@
     <Attribute id="cls14#att2" name="animalName" type="string"/>
     <Attribute id="cls14#att3" name="title" type="string"/>
   </Class>
+  <Class id="cls1" name="blog_post" duration="persistent" serverResourceMethods="create delete read update" gr:x="725" gr:y="290" attributeOrder="cls1#att4 cls1#att6 cls1#att7 cls1#att8 cls1#att9 cls1#att13 cls1#att17 cls1#att22">
+    <Attribute id="cls1#att4" name="oid" type="integer" key="true" specialBehavior="implicitOid"/>
+    <Attribute id="cls1#att6" name="user_id" type="integer" key="false"/>
+    <Attribute id="cls1#att7" name="date_created" type="timestamp" key="false"/>
+    <Attribute id="cls1#att8" name="Body" type="string" key="false"/>
+    <Attribute id="cls1#att9" name="Title" type="string" key="false"/>
+    <Attribute id="cls1#att13" name="remote createdAt" type="timestamp" key="false"/>
+    <Attribute id="cls1#att17" name="remote updatedAt" type="timestamp" key="false"/>
+    <Attribute id="cls1#att22" name="animal_sighting_id" type="string" key="false"/>
+  </Class>
 </DomainModel>

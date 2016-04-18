@@ -1,4 +1,4 @@
-<ScreenSet xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-230" gr:y="-140" id="av1#scs8" name="Public Area">
+<ScreenSet xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-460" gr:y="-335" id="av1#scs8" name="Public Area">
   <Action id="av1#scs8#act17" gr:x="745" gr:y="235" definition="tlads0#ad4">
     <Events>
       <SuccessEvent id="av1#scs8#act17#scce17" definition="tlads0#ad4#spd4">

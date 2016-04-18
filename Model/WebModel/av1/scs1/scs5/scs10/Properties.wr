@@ -1,0 +1,18 @@
+<ScreenSet xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="av1#scs1#scs5#scs10" name="Sighting Comments" gr:x="0" gr:y="25">
+  <Action id="av1#scs1#scs5#scs10#act24" definition="tlads0#ad13" gr:x="125" gr:y="570">
+    <Events>
+      <SuccessEvent id="av1#scs1#scs5#scs10#act24#scce24" definition="tlads0#ad13#spd13">
+        <NavigationFlow id="av1#scs1#scs5#scs10#act24#scce24#nf130" to="av1#scs1#scs5#scs10#scr28" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="av1#scs1#scs5#scs10#act24#erre24" definition="tlads0#ad13#epd13"/>
+    </Events>
+  </Action>
+  <Action id="av1#scs1#scs5#scs10#act25" definition="tlads0#ad12" gr:x="120" gr:y="0">
+    <Events>
+      <SuccessEvent id="av1#scs1#scs5#scs10#act25#scce25" definition="tlads0#ad12#spd12">
+        <NavigationFlow id="av1#scs1#scs5#scs10#act25#scce25#nf131" to="av1#scs1#scs5#scs10#scr28" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="av1#scs1#scs5#scs10#act25#erre25" definition="tlads0#ad12#epd12"/>
+    </Events>
+  </Action>
+</ScreenSet>

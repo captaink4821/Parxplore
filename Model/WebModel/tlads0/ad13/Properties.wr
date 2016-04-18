@@ -1,0 +1,50 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad13" name="Load Comments" defaultSuccessPortDefinition="tlads0#ad13#spd13" defaultErrorPortDefinition="tlads0#ad13#epd13">
+  <Operations>
+    <RestfulRequestResponse gr:x="320" gr:y="45" id="tlads0#ad13#rfrr12" name="Get Blog Post" requestMethod="GET" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/data/BlogPost">
+      <SuccessFlow id="tlads0#ad13#rfrr12#sf48" to="tlads0#ad13#cru5"/>
+      <ErrorFlow id="tlads0#ad13#rfrr12#ef24" to="tlads0#ad13#epd13" automaticCoupling="true"/>
+      <RequestHeader id="tlads0#ad13#rfrr12#rrh9" name="Authorization"/>
+      <ResponseParameter id="tlads0#ad13#rfrr12#rrsp17" name="Response" jsonType="string">
+        <ComplexParameterFragment id="tlads0#ad13#rfrr12#rrsp17#cpf3" name="data" isArray="true">
+          <SimpleParameterFragment id="tlads0#ad13#rfrr12#rrsp17#cpf3#spf10" name="title" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad13#rfrr12#rrsp17#cpf3#spf11" name="body" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad13#rfrr12#rrsp17#cpf3#spf12" name="userId" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad13#rfrr12#rrsp17#cpf3#spf13" name="animalSightingId" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad13#rfrr12#rrsp17#cpf3#spf16" name="oid" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad13#rfrr12#rrsp17#cpf3#spf17" name="dateCreated" jsonType="string"/>
+          <SimpleParameterFragment id="tlads0#ad13#rfrr12#rrsp17#cpf3#spf18" name="createdAt" jsonType="string"/>
+        </ComplexParameterFragment>
+        <SimpleParameterFragment id="tlads0#ad13#rfrr12#rrsp17#spf19" name="deletedObjectIds" jsonType="string" isArray="true"/>
+      </ResponseParameter>
+      <DataFlow id="tlads0#ad13#rfrr12#df25" to="tlads0#ad13#cru5">
+        <ParameterBinding id="tlads0#ad13#rfrr12#df25#par163" source="tlads0#ad13#rfrr12#rrsp17#cpf3#spf13" target="cls1#att22" name="Response/data/animalSightingId - animal_sighting_id"/>
+        <ParameterBinding id="tlads0#ad13#rfrr12#df25#par164" source="tlads0#ad13#rfrr12#rrsp17#cpf3#spf11" target="cls1#att8" name="Response/data/body - Body"/>
+        <ParameterBinding id="tlads0#ad13#rfrr12#df25#par165" source="tlads0#ad13#rfrr12#rrsp17#cpf3#spf17" target="cls1#att7" name="Response/data/dateCreated - date_created"/>
+        <ParameterBinding id="tlads0#ad13#rfrr12#df25#par166" source="tlads0#ad13#rfrr12#rrsp17#cpf3#spf18" target="cls1#att13" name="Response/data/createdAt - remote createdAt"/>
+        <ParameterBinding id="tlads0#ad13#rfrr12#df25#par167" source="tlads0#ad13#rfrr12#rrsp17#cpf3#spf10" target="cls1#att9" name="Response/data/title - Title"/>
+        <ParameterBinding id="tlads0#ad13#rfrr12#df25#par168" source="tlads0#ad13#rfrr12#rrsp17#cpf3#spf12" target="cls1#att6" name="Response/data/userId - user_id"/>
+      </DataFlow>
+      <RequestParameter id="tlads0#ad13#rfrr12#rrp28" name="Delta" isArray="false" jsonType="string"/>
+    </RestfulRequestResponse>
+    <Delete gr:x="265" gr:y="225" id="tlads0#ad13#dlu3" dataBinding="cls1">
+      <ConditionalExpression id="tlads0#ad13#dlu3#sc12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="tlads0#ad13#dlu3#sc12#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <SuccessFlow id="tlads0#ad13#dlu3#sf50" to="tlads0#ad13#rfrr12" automaticCoupling="true"/>
+    </Delete>
+    <Selector gr:x="230" gr:y="390" id="tlads0#ad13#seu10" dataBinding="cls1">
+      <SuccessFlow id="tlads0#ad13#seu10#sf49" to="tlads0#ad13#dlu3" automaticCoupling="true"/>
+    </Selector>
+    <Create gr:x="585" gr:y="105" id="tlads0#ad13#cru5" dataBinding="cls1" bulk="true">
+      <SuccessFlow id="tlads0#ad13#cru5#sf51" to="tlads0#ad13#spd13" automaticCoupling="true"/>
+    </Create>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad13#ipd13" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad13#ipd13#sf47" to="tlads0#ad13#seu10" automaticCoupling="true"/>
+    <DataFlow id="tlads0#ad13#ipd13#df23" to="tlads0#ad13#rfrr12">
+      <ParameterBinding id="tlads0#ad13#ipd13#df23#par148" sourceValue="$$TOKEN$$" target="tlads0#ad13#rfrr12#rrh9" name="&quot;$$TOKEN$$&quot; - Authorization"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad13#spd13" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad13#epd13" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

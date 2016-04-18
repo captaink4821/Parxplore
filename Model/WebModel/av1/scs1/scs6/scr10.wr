@@ -9,11 +9,11 @@
       <Events>
         <OnSelectEvent id="av1#scs1#scs6#scr10#enu5#oslte22" name="Save" validate="true" gr:pinned="true" gr:side="0" gr:pos="1">
           <NavigationFlow id="av1#scs1#scs6#scr10#enu5#oslte22#nf38" to="av1#scs1#act15">
-            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par52" name="Address - address" source="av1#scr7#enu5#fld11" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp15"/>
-            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par53" name="animal_id - animal_id" source="av1#scr7#enu5#fld13" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp13"/>
-            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par54" name="Image - image" source="av1#scr7#enu5#fld12" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp16"/>
-            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par55" name="Animal - animalName" source="av1#scr7#enu5#fld10" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp19"/>
-            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par57" name="Title - title" source="av1#scr7#enu5#fld14" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp22"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par132" source="av1#scs1#scs6#scr10#enu5#fld10" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp15" name="Address - address"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par133" source="av1#scs1#scs6#scr10#enu5#fld13" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp13" name="animal_id - animal_id"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par134" source="av1#scs1#scs6#scr10#enu5#fld11" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp19" name="Animal - animalName"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par137" source="av1#scs1#scs6#scr10#enu5#fld12" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp16" name="Image - image"/>
+            <ParameterBinding id="av1#scs1#scs6#scr10#enu5#oslte22#nf38#par138" source="av1#scs1#scs6#scr10#enu5#fld14" target="av1#scs1#act15.tlads0#ad6#ipd6#pdp22" name="Title - title"/>
           </NavigationFlow>
         </OnSelectEvent>
       </Events>
@@ -66,9 +66,4 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Events>
-    <BackEvent id="av1#scs1#scs6#scr10#bke1" gr:pinned="true" gr:side="3" gr:pos="4">
-      <NavigationFlow id="av1#scs1#scs6#scr10#bke1#nf39" to="av1#scs1#scs6#scr7" automaticCoupling="true"/>
-    </BackEvent>
-  </Events>
 </Screen>

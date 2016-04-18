@@ -7,9 +7,9 @@
       <Events>
         <OnSelectEvent id="av1#scs1#scs6#scr5#enu1#oslte5" name="Save" validate="true" gr:pinned="true" gr:side="3" gr:pos="0">
           <NavigationFlow id="av1#scs1#scs6#scr5#enu1#oslte5#nf16" to="av1#scs1#act16">
-            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par17" name="Name - Name" source="av1#scr3#enu1#fld1" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp2"/>
-            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par22" name="Native - Native" source="av1#scr3#enu1#fld5" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp4"/>
-            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par27" name="Species - Species" source="av1#scr3#enu1#fld2" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp3"/>
+            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par106" source="av1#scs1#scs6#scr5#enu1#fld2" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp2" name="Name - Name"/>
+            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par107" source="av1#scs1#scs6#scr5#enu1#fld4" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp4" name="seen - Seen"/>
+            <ParameterBinding id="av1#scs1#scs6#scr5#enu1#oslte5#nf16#par108" source="av1#scs1#scs6#scr5#enu1#fld1" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp3" name="Species - Species"/>
           </NavigationFlow>
         </OnSelectEvent>
       </Events>
@@ -23,12 +23,12 @@
         <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df4#par29" name="Species - Species" source="data.cls2#att20" target="av1#scs1#scs6#scr5#enu1#fld1_preload"/>
         <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df4#par30" name="Seen - seen" source="data.cls2#att21" target="av1#scs1#scs6#scr5#enu1#fld4_preload"/>
       </DataFlow>
-      <DataFlow id="av1#scs1#scs6#scr5#seu3#df5" to="av1#scs1#act16" gr:bendpoints="243,-99,-32,161">
-        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par31" name="oid - animal id" source="data.cls2#att155" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp1"/>
-        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par32" name="Name - Name" source="data.cls2#att19" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp2"/>
-        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par34" name="Seen - Seen" source="data.cls2#att21" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp4"/>
-        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par36" name="Species - Species" source="data.cls2#att20" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp3"/>
-        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df5#par37" name="oid - animal id" source="data.cls2#att18" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp6"/>
+      <DataFlow id="av1#scs1#scs6#scr5#seu3#df20" to="av1#scs1#act16" gr:bendpoints="243,-99,-32,161">
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df20#par101" name="oid - animal id" source="data.cls2#att155" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp1"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df20#par102" name="Name - Name" source="data.cls2#att19" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp2"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df20#par103" name="Seen - Seen" source="data.cls2#att21" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp4"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df20#par104" name="Species - Species" source="data.cls2#att20" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp3"/>
+        <ParameterBinding id="av1#scs1#scs6#scr5#seu3#df20#par105" name="oid - animal id" source="data.cls2#att18" target="av1#scs1#act16.tlads0#ad1#ipd1#pdp6"/>
       </DataFlow>
     </Selector>
   </ViewComponents>

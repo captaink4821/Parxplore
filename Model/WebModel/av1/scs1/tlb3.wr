@@ -2,7 +2,7 @@
   <ViewComponents/>
   <Events>
     <OnSelectEvent id="av1#scs1#tlb3#oslte34" name="sighting details" gr:pinned="true" gr:side="2" gr:pos="2">
-      <NavigationFlow id="av1#scs1#tlb3#oslte34#nf54" to="av1#scs1#scs5#scr1" automaticCoupling="true"/>
+      <NavigationFlow id="av1#scs1#tlb3#oslte34#nf54" to="av1#scs1#act12" automaticCoupling="true"/>
     </OnSelectEvent>
     <OnSelectEvent id="av1#scs1#tlb3#oslte35" name="Profile" gr:pinned="true" gr:side="0" gr:pos="0">
       <NavigationFlow id="av1#scs1#tlb3#oslte35#nf57" to="av1#scs1#scr19#dau4" automaticCoupling="true"/>
@@ -18,10 +18,10 @@
     <layout:Grid containerType="cell">
       <layout:Row>
         <layout:Cell layout:cellLayout="MobileDefault/Bar">
-          <layout:Event eventType="HomeEvent"/>
-          <layout:Fragment type="screenTitle"/>
           <layout:Event eventType="BackEvent"/>
+          <layout:Fragment type="screenTitle"/>
           <layout:LayoutParameter name="background-color" value="green" type="cell"/>
+          <layout:Event eventType="HomeEvent"/>
         </layout:Cell>
       </layout:Row>
     </layout:Grid>

@@ -1,18 +1,19 @@
 <Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs6#scr7" name="Animal Details" gr:x="930" gr:y="520">
   <ViewComponents>
-    <Details id="av1#scs1#scs6#scr7#dau3" name="Animal Details" eventOrder="av1#scs1#scs6#scr7#dau3#oslte7 av1#scs1#scs6#scr7#dau3#oslte9 av1#scs1#scs6#scr7#dau3#oslte10 av1#scs1#scs6#scr7#dau3#oslte13" gr:x="0" gr:y="15" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21">
+    <Details id="av1#scs1#scs6#scr7#dau3" name="Animal Details" eventOrder="av1#scs1#scs6#scr7#dau3#oslte7 av1#scs1#scs6#scr7#dau3#oslte10 av1#scs1#scs6#scr7#dau3#oslte13" gr:x="0" gr:y="15" dataBinding="cls2" displayAttributes="cls2#att19 cls2#att20 cls2#att21">
       <ConditionalExpression id="av1#scs1#scs6#scr7#dau3#sc6" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="av1#scs1#scs6#scr7#dau3#sc6#kcond5" name="KeyCondition1" predicate="in" implied="false"/>
       </ConditionalExpression>
       <Events>
         <OnSelectEvent id="av1#scs1#scs6#scr7#dau3#oslte7" name="Edit" gr:pinned="true" gr:side="2" gr:pos="2">
-          <NavigationFlow id="av1#scs1#scs6#scr7#dau3#oslte7#nf19" to="av1#scs1#scs6#scr5#seu3" gr:bendpoints="62,425,402,-5"/>
-        </OnSelectEvent>
-        <OnSelectEvent id="av1#scs1#scs6#scr7#dau3#oslte9" name="Back" gr:pinned="true" gr:side="3" gr:pos="0">
-          <NavigationFlow id="av1#scs1#scs6#scr7#dau3#oslte9#nf113" to="av1#scs1#scr24" automaticCoupling="true"/>
+          <NavigationFlow id="av1#scs1#scs6#scr7#dau3#oslte7#nf19" to="av1#scs1#scs6#scr5#seu3" gr:bendpoints="62,425,402,-5">
+            <ParameterBinding id="av1#scs1#scs6#scr7#dau3#oslte7#nf19#par109" source="data.cls2#att18" target="av1#scs1#scs6#scr5#seu3#sc5#kcond3.cls2#att18" name="oid - oid [oid]"/>
+          </NavigationFlow>
         </OnSelectEvent>
         <OnSelectEvent id="av1#scs1#scs6#scr7#dau3#oslte10" name="Add Sighting" gr:pinned="true" gr:side="3" gr:pos="1">
-          <NavigationFlow id="av1#scs1#scs6#scr7#dau3#oslte10#nf23" to="av1#scs1#scs6#scr10#seu4"/>
+          <NavigationFlow id="av1#scs1#scs6#scr7#dau3#oslte10#nf23" to="av1#scs1#scs6#scr10#seu4">
+            <ParameterBinding id="av1#scs1#scs6#scr7#dau3#oslte10#nf23#par129" source="data.cls2#att18" target="av1#scs1#scs6#scr10#seu4#sc9#kcond6.cls2#att18" name="remoteOid - oid [oid]"/>
+          </NavigationFlow>
         </OnSelectEvent>
         <OnSelectEvent id="av1#scs1#scs6#scr7#dau3#oslte13" name="Delete" gr:pinned="true" gr:side="3" gr:pos="3">
           <NavigationFlow id="av1#scs1#scs6#scr7#dau3#oslte13#nf26" to="av1#scs1#act13">
@@ -25,7 +26,7 @@
     <Message id="av1#scs1#scs6#scr7#mssu5" name="Message 4" eventOrder="av1#scs1#scs6#scr7#mssu5#oslte14" gr:x="125" gr:y="0">
       <Events>
         <OnSelectEvent id="av1#scs1#scs6#scr7#mssu5#oslte14" name="Ok" gr:pinned="true" gr:side="2" gr:pos="0">
-          <NavigationFlow id="av1#scs1#scs6#scr7#mssu5#oslte14#nf114" to="av1#scs1#scr24" automaticCoupling="true"/>
+          <NavigationFlow id="av1#scs1#scs6#scr7#mssu5#oslte14#nf120" to="av1#scs1#scs6#scr7#dau3" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>
     </Message>
@@ -38,7 +39,6 @@
           <layout:Attribute attribute="cls2#att20"/>
           <layout:Attribute attribute="cls2#att21"/>
           <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs6#scr7#dau3#oslte7"/>
-          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs6#scr7#dau3#oslte9"/>
           <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs6#scr7#dau3#oslte10"/>
           <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs6#scr7#dau3#oslte13"/>
         </layout:Component>

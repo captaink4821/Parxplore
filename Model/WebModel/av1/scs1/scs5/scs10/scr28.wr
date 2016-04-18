@@ -1,0 +1,57 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs5#scs10#scr28" name="Comments" gr:x="60" gr:y="300">
+  <ViewComponents>
+    <List id="av1#scs1#scs5#scs10#scr28#pwu5" name="Comments List" eventOrder="av1#scs1#scs5#scs10#scr28#pwu5#oslte56" gr:x="0" gr:y="0" checkable="false" dataBinding="cls1" displayAttributes="cls1#att9 cls1#att8">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs5#scs10#scr28#pwu5#oslte56" name="Select" validate="true">
+          <NavigationFlow id="av1#scs1#scs5#scs10#scr28#pwu5#oslte56#nf127" to="av1#scs1#scs5#scs10#scr30#dau6" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+      <SortAttribute attribute="cls1#att4" order="ascending"/>
+    </List>
+    <ViewComponent id="av1#scs1#scs5#scs10#scr28#gctu13" name="Add Comment" eventOrder="av1#scs1#scs5#scs10#scr28#gctu13#oslte57" gr:x="120" gr:y="105">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs5#scs10#scr28#gctu13#oslte57" name="Add">
+          <NavigationFlow id="av1#scs1#scs5#scs10#scr28#gctu13#oslte57#nf128" to="av1#scs1#scs5#scs10#scr29#enu14" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
+  </ViewComponents>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Event componentId="av1#scs1#scs5#scs10#scr28#gctu13" event="av1#scs1#scs5#scs10#scr28#gctu13#oslte57" eventType="OnSelectEvent"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs5#scs10#scr28#pwu5">
+          <layout:Attribute attribute="cls1#att9"/>
+          <layout:Attribute attribute="cls1#att8"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs5#scs10#scr28#pwu5#oslte56"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

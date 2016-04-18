@@ -1,6 +1,6 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs5#scr3" name="Sightings" gr:x="55" gr:y="0">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs5#scr3" name="Sightings" gr:x="480" gr:y="0">
   <ViewComponents>
-    <List id="av1#scs1#scs5#scr3#pwu1" name="Animal Sightings" gr:x="0" gr:y="0" checkable="false" dataBinding="cls14" displayAttributes="cls14#att3 cls14#att143 cls14#att148 cls14#att151 cls14#att2" eventOrder="av1#scs1#scs5#scr3#pwu1#oslte4">
+    <List id="av1#scs1#scs5#scr3#pwu1" name="Animal Sightings" gr:x="0" gr:y="0" checkable="false" dataBinding="cls14" displayAttributes="cls14#att3 cls14#att151 cls14#att2 cls14#att148" eventOrder="av1#scs1#scs5#scr3#pwu1#oslte4">
       <SortAttribute attribute="cls14#att141" order="ascending"/>
       <Events>
         <OnSelectEvent id="av1#scs1#scs5#scr3#pwu1#oslte4" name="On Select Event 42" validate="true">
@@ -19,12 +19,11 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Component componentId="av1#scs1#scs5#scr3#pwu1">
+          <layout:Event event="av1#scs1#scs5#scr3#pwu1#oslte4" eventType="OnSelectEvent"/>
           <layout:Attribute attribute="cls14#att3"/>
-          <layout:Attribute attribute="cls14#att143"/>
-          <layout:Attribute attribute="cls14#att148"/>
           <layout:Attribute attribute="cls14#att151"/>
           <layout:Attribute attribute="cls14#att2"/>
-          <layout:Event event="av1#scs1#scs5#scr3#pwu1#oslte4" eventType="OnSelectEvent"/>
+          <layout:Attribute attribute="cls14#att148"/>
         </layout:Component>
       </layout:Cell>
       <layout:Cell/>
@@ -40,17 +39,13 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="6">
-        <layout:Event eventType="BackEvent"/>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="6">
-        <layout:Event eventType="HomeEvent"/>
-      </layout:Cell>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

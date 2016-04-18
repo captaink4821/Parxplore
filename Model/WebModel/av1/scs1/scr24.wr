@@ -23,6 +23,13 @@
         </OnSelectEvent>
       </Events>
     </Form>
+    <ViewComponent gr:x="115" gr:y="110" id="av1#scs1#scr24#gctu11" name="Add Animal" eventOrder="av1#scs1#scr24#gctu11#oslte51">
+      <Events>
+        <OnSelectEvent id="av1#scs1#scr24#gctu11#oslte51" name="Add">
+          <NavigationFlow id="av1#scs1#scr24#gctu11#oslte51#nf119" to="av1#scs1#scs6#scr5#enu1" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+    </ViewComponent>
   </ViewComponents>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -175,10 +182,7 @@
     <layout:Grid containerType="cell">
       <layout:Row>
         <layout:Cell layout:cellLayout="MobileDefault/SearchBar">
-          <layout:Event eventType="HomeEvent">
-            <layout:LayoutParameter name="show" value="icon" type="event"/>
-            <layout:LayoutParameter name="icon" value="android-sunny" type="event"/>
-          </layout:Event>
+          <layout:Event componentId="av1#scs1#scr24#gctu11" event="av1#scs1#scr24#gctu11#oslte51" eventType="OnSelectEvent"/>
           <layout:Field componentId="av1#scs1#scr24#enu12" field="av1#scs1#scr24#enu12#fld25" mode="full"/>
           <layout:Event componentId="av1#scs1#scr24#enu12" eventType="OnSelectEvent" event="av1#scs1#scr24#enu12#oslte45">
             <layout:LayoutParameter name="show" value="icon" type="event"/>

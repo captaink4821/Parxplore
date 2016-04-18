@@ -37,7 +37,7 @@
     </ViewComponent>
     <ViewComponent id="av1#scs1#scs7#scr12#gctu10" name="Logout" eventOrder="av1#scs1#scs7#scr12#gctu10#oslte50" gr:x="65" gr:y="429">
       <Events>
-        <OnSelectEvent id="av1#scs1#scs7#scr12#gctu10#oslte50" name="Paparazzi Awards" gr:pinned="true" gr:side="2" gr:pos="5">
+        <OnSelectEvent id="av1#scs1#scs7#scr12#gctu10#oslte50" name="Logout" gr:pinned="true" gr:side="2" gr:pos="5">
           <NavigationFlow id="av1#scs1#scs7#scr12#gctu10#oslte50#nf118" to="av1#scs1#act20" automaticCoupling="true"/>
         </OnSelectEvent>
       </Events>

@@ -1,0 +1,40 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs5#scs10#scr29" name="Add Comment" gr:x="190" gr:y="85">
+  <ViewComponents>
+    <Form id="av1#scs1#scs5#scs10#scr29#enu14" name="Add Coment" eventOrder="av1#scs1#scs5#scs10#scr29#enu14#oslte58" gr:x="0" gr:y="0" fieldOrder="av1#scs1#scs5#scs10#scr29#enu14#fld31 av1#scs1#scs5#scs10#scr29#enu14#fld30">
+      <Field id="av1#scs1#scs5#scs10#scr29#enu14#fld29" name="sighting_id" type="string" preloaded="true" hidden="true"/>
+      <Field id="av1#scs1#scs5#scs10#scr29#enu14#fld30" name="Body" type="string" modifiable="true"/>
+      <Field id="av1#scs1#scs5#scs10#scr29#enu14#fld31" name="Title" type="string" modifiable="true"/>
+      <Events>
+        <OnSelectEvent id="av1#scs1#scs5#scs10#scr29#enu14#oslte58" name="Submit" validate="true">
+          <NavigationFlow id="av1#scs1#scs5#scs10#scr29#enu14#oslte58#nf129" to="av1#scs1#scs5#scs10#act25">
+            <ParameterBinding id="av1#scs1#scs5#scs10#scr29#enu14#oslte58#nf129#par169" name="Body - body" source="av1#scs1#scs5#scs10#scr29#enu14#fld30" target="av1#scs1#scs5#scs10#act25.tlads0#ad12#ipd12#pdp25"/>
+            <ParameterBinding id="av1#scs1#scs5#scs10#scr29#enu14#oslte58#nf129#par170" name="sighting_id - sighting_id" source="av1#scs1#scs5#scs10#scr29#enu14#fld29" target="av1#scs1#scs5#scs10#act25.tlads0#ad12#ipd12#pdp26"/>
+            <ParameterBinding id="av1#scs1#scs5#scs10#scr29#enu14#oslte58#nf129#par171" name="Title - title" source="av1#scs1#scs5#scs10#scr29#enu14#fld31" target="av1#scs1#scs5#scs10#act25.tlads0#ad12#ipd12#pdp23"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Form>
+  </ViewComponents>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs1#scs5#scs10#scr29#enu14">
+          <layout:Field field="av1#scs1#scs5#scs10#scr29#enu14#fld31"/>
+          <layout:Field field="av1#scs1#scs5#scs10#scr29#enu14#fld30"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs1#scs5#scs10#scr29#enu14#oslte58"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>

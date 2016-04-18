@@ -120,9 +120,9 @@
 
 	wrm.defineModule("wrm/comp/SelectorService", mod4);
 
-	wrm.defineModule("wrm/comp/FormService", mod5);
+	wrm.defineModule("wrm/comp/ViewComponentService", mod5);
 
-	wrm.defineModule("wrm/comp/ViewComponentService", mod6);
+	wrm.defineModule("wrm/comp/FormService", mod6);
 
 	wrm.defineModule("wrm/comp/val/EMailValidationRuleService", mod7);
 
@@ -600,6 +600,32 @@
 
 /***/ },
 /* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	/**
+	 * Service for View Component view components.
+	 * 
+	 * @constructor
+	 * @extends wrm.core.AbstractCachedViewComponentService
+	 * @param {string} id
+	 * @param {!Object} descr
+	 * @param {!wrm.core.Manager} manager
+	 */
+	exports.default = wrm.defineService(wrm.core.AbstractCachedViewComponentService, {
+
+	    /** @override */
+	    createResult: function (context) {
+	        return {};
+	    }
+
+	});
+	module.exports = exports.default;
+
+/***/ },
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	Object.defineProperty(exports, "__esModule", {
@@ -1212,32 +1238,6 @@
 	        SUFFIX: "_preload"
 	    }
 	};
-	module.exports = exports.default;
-
-/***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	/**
-	 * Service for View Component view components.
-	 * 
-	 * @constructor
-	 * @extends wrm.core.AbstractCachedViewComponentService
-	 * @param {string} id
-	 * @param {!Object} descr
-	 * @param {!wrm.core.Manager} manager
-	 */
-	exports.default = wrm.defineService(wrm.core.AbstractCachedViewComponentService, {
-
-	    /** @override */
-	    createResult: function (context) {
-	        return {};
-	    }
-
-	});
 	module.exports = exports.default;
 
 /***/ },

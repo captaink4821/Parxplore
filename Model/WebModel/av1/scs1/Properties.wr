@@ -1,4 +1,4 @@
-<ScreenSet xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="-20" gr:y="310" id="av1#scs1" name="Private Area" protected="true">
+<ScreenSet xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="305" gr:y="30" id="av1#scs1" name="Private Area" protected="true">
   <Action id="av1#scs1#act12" gr:x="2190" gr:y="1725" definition="tlads0#ad10">
     <Events>
       <SuccessEvent id="av1#scs1#act12#scce12" definition="tlads0#ad10#spd10">
@@ -30,10 +30,14 @@
   <Action id="av1#scs1#act15" gr:x="2745" gr:y="15" definition="tlads0#ad6">
     <Events>
       <SuccessEvent id="av1#scs1#act15#scce15" definition="tlads0#ad6#spd6">
-        <NavigationFlow id="av1#scs1#act15#scce15#nf73" to="av1#scs1#scs6#scr7#mssu5"/>
+        <NavigationFlow id="av1#scs1#act15#scce15#nf73" to="av1#scs1#scs6#scr7#mssu5">
+          <ParameterBinding id="av1#scs1#act15#scce15#nf73#par139" sourceValue="Sighting successfully added" target="messages" name="&quot;Sighting successfully added&quot; - Shown Messages"/>
+        </NavigationFlow>
       </SuccessEvent>
       <ErrorEvent id="av1#scs1#act15#erre15" definition="tlads0#ad6#epd6">
-        <NavigationFlow id="av1#scs1#act15#erre15#nf78" to="av1#scs1#scs6#scr7#mssu5"/>
+        <NavigationFlow id="av1#scs1#act15#erre15#nf78" to="av1#scs1#scs6#scr7#mssu5">
+          <ParameterBinding id="av1#scs1#act15#erre15#nf78#par140" sourceValue="Failed to create sighting" target="messages" name="&quot;Failed to create sighting&quot; - Shown Messages"/>
+        </NavigationFlow>
       </ErrorEvent>
     </Events>
   </Action>

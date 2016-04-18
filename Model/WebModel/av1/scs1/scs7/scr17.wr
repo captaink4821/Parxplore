@@ -1,4 +1,4 @@
-<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs7#scr17" name="Rules" gr:x="235" gr:y="20">
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs1#scs7#scr17" name="Rules" gr:x="290" gr:y="20">
   <ViewComponents>
     <Message id="av1#scs1#scs7#scr17#mssu8" name="Rules" eventOrder="av1#scs1#scs7#scr17#mssu8#oslte32" gr:x="0" gr:y="0">
       <Message xml:space="preserve">RULES &amp; REGULATIONS

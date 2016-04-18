@@ -16,11 +16,11 @@
 	import * as mod4 from "wrm\/comp\/SelectorService";
 	wrm.defineModule("wrm\/comp\/SelectorService", mod4)
 
-	import * as mod5 from "wrm\/comp\/FormService";
-	wrm.defineModule("wrm\/comp\/FormService", mod5)
+	import * as mod5 from "wrm\/comp\/ViewComponentService";
+	wrm.defineModule("wrm\/comp\/ViewComponentService", mod5)
 
-	import * as mod6 from "wrm\/comp\/ViewComponentService";
-	wrm.defineModule("wrm\/comp\/ViewComponentService", mod6)
+	import * as mod6 from "wrm\/comp\/FormService";
+	wrm.defineModule("wrm\/comp\/FormService", mod6)
 
 	import * as mod7 from "wrm\/comp\/val\/EMailValidationRuleService";
 	wrm.defineModule("wrm\/comp\/val\/EMailValidationRuleService", mod7)

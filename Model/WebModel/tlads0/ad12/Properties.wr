@@ -1,0 +1,42 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad12" name="Save Comment" defaultSuccessPortDefinition="tlads0#ad12#spd12" defaultErrorPortDefinition="tlads0#ad12#epd12">
+  <Operations>
+    <RestfulRequestResponse gr:x="300" gr:y="50" id="tlads0#ad12#rfrr11" name="Add Comment" requestMethod="POST" requestContentType="JSON" responseContentType="json" endpointURL="http://free13449-freeapp.eu.webratio.net/data/BlogPost">
+      <SuccessFlow id="tlads0#ad12#rfrr11#sf34" to="tlads0#ad12#act23" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad12#rfrr11#ef23" to="tlads0#ad12#epd12" automaticCoupling="true"/>
+      <RequestParameter id="tlads0#ad12#rfrr11#rrp20" name="animalSightingId" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad12#rfrr11#rrp25" name="title" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad12#rfrr11#rrp26" name="body" isArray="false" jsonType="string"/>
+      <RequestParameter id="tlads0#ad12#rfrr11#rrp27" name="userId" isArray="false" jsonType="string"/>
+      <RequestHeader id="tlads0#ad12#rfrr11#rrh10" name="Authorization"/>
+    </RestfulRequestResponse>
+    <Selector gr:x="255" gr:y="310" id="tlads0#ad12#seu9" dataBinding="MUser">
+      <SuccessFlow id="tlads0#ad12#seu9#sf46" to="tlads0#ad12#rfrr11">
+        <ParameterBinding id="tlads0#ad12#seu9#sf46#par141" source="data.mUserOID" target="tlads0#ad12#rfrr11#rrp27" name="oid - userId"/>
+      </SuccessFlow>
+    </Selector>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad12#ipd12" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad12#ipd12#pdp26" name="sighting_id"/>
+    <PortDefinitionParameter id="tlads0#ad12#ipd12#pdp25" name="body"/>
+    <PortDefinitionParameter id="tlads0#ad12#ipd12#pdp23" name="title"/>
+    <SuccessFlow id="tlads0#ad12#ipd12#sf33" to="tlads0#ad12#seu9" automaticCoupling="true"/>
+    <DataFlow id="tlads0#ad12#ipd12#df22" to="tlads0#ad12#rfrr11">
+      <ParameterBinding id="tlads0#ad12#ipd12#df22#par142" source="tlads0#ad12#ipd12#pdp26" target="tlads0#ad12#rfrr11#rrp20" name="sighting_id - animalSightingId"/>
+      <ParameterBinding id="tlads0#ad12#ipd12#df22#par143" source="tlads0#ad12#ipd12#pdp25" target="tlads0#ad12#rfrr11#rrp26" name="body - body"/>
+      <ParameterBinding id="tlads0#ad12#ipd12#df22#par147" source="tlads0#ad12#ipd12#pdp23" target="tlads0#ad12#rfrr11#rrp25" name="title - title"/>
+      <ParameterBinding id="tlads0#ad12#ipd12#df22#par158" sourceValue="$$TOKEN$$" target="tlads0#ad12#rfrr11#rrh10" name="&quot;$$TOKEN$$&quot; - Authorization"/>
+    </DataFlow>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad12#spd12" name="Success Port" gr:x="0" gr:y="30"/>
+  <ErrorPortDefinition id="tlads0#ad12#epd12" name="Error Port" gr:x="0" gr:y="300"/>
+  <Action id="tlads0#ad12#act23" gr:x="600" gr:y="120" definition="tlads0#ad13">
+    <Events>
+      <SuccessEvent id="tlads0#ad12#act23#scce22" definition="tlads0#ad13#spd13">
+        <SuccessFlow id="tlads0#ad12#act23#scce22#sf52" to="tlads0#ad12#spd12" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="tlads0#ad12#act23#erre22" definition="tlads0#ad13#epd13">
+        <ErrorFlow id="tlads0#ad12#act23#erre22#ef25" to="tlads0#ad12#epd12" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+</ActionDefinition>
